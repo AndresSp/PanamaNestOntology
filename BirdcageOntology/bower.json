@@ -1,0 +1,19 @@
+{
+  "name": "asp.net",
+  "private": true,
+  "dependencies": {
+    "jquery": "3.2.1",
+    "jquery-validation": "1.14.0",
+    "jquery-validation-unobtrusive": "3.2.6",
+    "font-awesome": "Font-Awesome#v4.7.0",
+    "DataTables": "RELEASE_1_9_4",
+    "datatables.net-plugins": "datatables-plugins#1.10.16",
+    "datatables-responsive": "2.2.0",
+    "metisMenu": "v2.7.1",
+    "bootstrap": "v3.3.7"
+  },
+  "resolutions": {
+    "jquery": "3.2.1",
+    "metisMenu": "v2.7.1"
+  }
+}

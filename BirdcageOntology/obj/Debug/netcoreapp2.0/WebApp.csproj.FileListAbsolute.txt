@@ -1,0 +1,13 @@
+C:\Users\omarg\documents\visual studio 2017\Projects\BirdcageOntology\BirdcageOntology\bin\Debug\netcoreapp2.0\WebApp.deps.json
+C:\Users\omarg\documents\visual studio 2017\Projects\BirdcageOntology\BirdcageOntology\bin\Debug\netcoreapp2.0\WebApp.runtimeconfig.json
+C:\Users\omarg\documents\visual studio 2017\Projects\BirdcageOntology\BirdcageOntology\bin\Debug\netcoreapp2.0\WebApp.runtimeconfig.dev.json
+C:\Users\omarg\documents\visual studio 2017\Projects\BirdcageOntology\BirdcageOntology\bin\Debug\netcoreapp2.0\WebApp.dll
+C:\Users\omarg\documents\visual studio 2017\Projects\BirdcageOntology\BirdcageOntology\bin\Debug\netcoreapp2.0\WebApp.pdb
+C:\Users\omarg\documents\visual studio 2017\Projects\BirdcageOntology\BirdcageOntology\bin\Debug\netcoreapp2.0\Entities.dll
+C:\Users\omarg\documents\visual studio 2017\Projects\BirdcageOntology\BirdcageOntology\bin\Debug\netcoreapp2.0\Entities.pdb
+C:\Users\omarg\documents\visual studio 2017\Projects\BirdcageOntology\BirdcageOntology\obj\Debug\netcoreapp2.0\WebApp.csprojResolveAssemblyReference.cache
+C:\Users\omarg\documents\visual studio 2017\Projects\BirdcageOntology\BirdcageOntology\obj\Debug\netcoreapp2.0\WebApp.csproj.CoreCompileInputs.cache
+C:\Users\omarg\documents\visual studio 2017\Projects\BirdcageOntology\BirdcageOntology\obj\Debug\netcoreapp2.0\WebApp.AssemblyInfoInputs.cache
+C:\Users\omarg\documents\visual studio 2017\Projects\BirdcageOntology\BirdcageOntology\obj\Debug\netcoreapp2.0\WebApp.AssemblyInfo.cs
+C:\Users\omarg\documents\visual studio 2017\Projects\BirdcageOntology\BirdcageOntology\obj\Debug\netcoreapp2.0\WebApp.dll
+C:\Users\omarg\documents\visual studio 2017\Projects\BirdcageOntology\BirdcageOntology\obj\Debug\netcoreapp2.0\WebApp.pdb
