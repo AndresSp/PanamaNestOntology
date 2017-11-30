@@ -673,11 +673,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\omarg\\documents\\visual studio 2017\\Projects\\BirdcageOntology\\Core\\Entities.csproj",
+      "projectUniqueName": "C:\\Users\\omarg\\Documents\\GitHub\\BirdcageOntology\\Core\\Entities.csproj",
       "projectName": "Entities",
-      "projectPath": "C:\\Users\\omarg\\documents\\visual studio 2017\\Projects\\BirdcageOntology\\Core\\Entities.csproj",
+      "projectPath": "C:\\Users\\omarg\\Documents\\GitHub\\BirdcageOntology\\Core\\Entities.csproj",
       "packagesPath": "C:\\Users\\omarg\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\omarg\\documents\\visual studio 2017\\Projects\\BirdcageOntology\\Core\\obj\\",
+      "outputPath": "C:\\Users\\omarg\\Documents\\GitHub\\BirdcageOntology\\Core\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

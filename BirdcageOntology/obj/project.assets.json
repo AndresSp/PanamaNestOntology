@@ -13140,11 +13140,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\omarg\\documents\\visual studio 2017\\Projects\\BirdcageOntology\\BirdcageOntology\\WebApp.csproj",
+      "projectUniqueName": "C:\\Users\\omarg\\Documents\\GitHub\\BirdcageOntology\\BirdcageOntology\\WebApp.csproj",
       "projectName": "WebApp",
-      "projectPath": "C:\\Users\\omarg\\documents\\visual studio 2017\\Projects\\BirdcageOntology\\BirdcageOntology\\WebApp.csproj",
+      "projectPath": "C:\\Users\\omarg\\Documents\\GitHub\\BirdcageOntology\\BirdcageOntology\\WebApp.csproj",
       "packagesPath": "C:\\Users\\omarg\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\omarg\\documents\\visual studio 2017\\Projects\\BirdcageOntology\\BirdcageOntology\\obj\\",
+      "outputPath": "C:\\Users\\omarg\\Documents\\GitHub\\BirdcageOntology\\BirdcageOntology\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -13163,8 +13163,8 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "C:\\Users\\omarg\\documents\\visual studio 2017\\Projects\\BirdcageOntology\\Core\\Entities.csproj": {
-              "projectPath": "C:\\Users\\omarg\\documents\\visual studio 2017\\Projects\\BirdcageOntology\\Core\\Entities.csproj"
+            "C:\\Users\\omarg\\Documents\\GitHub\\BirdcageOntology\\Core\\Entities.csproj": {
+              "projectPath": "C:\\Users\\omarg\\Documents\\GitHub\\BirdcageOntology\\Core\\Entities.csproj"
             }
           }
         }

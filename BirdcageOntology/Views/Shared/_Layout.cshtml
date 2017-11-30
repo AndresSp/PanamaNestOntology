@@ -8,9 +8,9 @@
 
     <environment include="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
-        @*<link rel="stylesheet" href="~/css/site.css" />*@
         <link rel="stylesheet" href="~/css/sb-admin-2.css" />
-        <link rel="stylesheet" href="~/lib/metisMenu/dist/metisMenu.min.css" />
+        <link rel="stylesheet" href="~/css/poppins.css" />
+        <link rel="stylesheet" href="~/css/style3.css" />
         <link rel="stylesheet" href="~/lib/font-awesome/css/font-awesome.min.css" />
     </environment>
     @*<environment exclude="Development">
@@ -23,11 +23,13 @@
 
 <body>
     <div class="wrapper">
-        @Html.Partial("_Sidebar")
-        <div id="page-wrapper">
+        @Html.Partial("_Sidebar")       
+        <div id="content">      
+            @Html.Partial("_Navbar")
             @RenderBody()
         </div>
     </div>
+    <div class="overlay"></div>
 
     @if (IsSectionDefined("BodyArea"))
     {
@@ -39,24 +41,27 @@
         <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
         <script src="~/lib/metisMenu/dist/metisMenu.js"></script>
         <script src="~/js/sb-admin-2.js"></script>
-        @*<script src="~/js/site.js" asp-append-version="true"></script>*@
+        <script src="~/js/mCustomScrollbar.js"></script>
     </environment>
-    @*<environment exclude="Development">
-        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js"
-                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
-                asp-fallback-test="window.jQuery"
-                crossorigin="anonymous"
-                integrity="sha384-K+ctZQ+LL8q6tP7I94W+qzQsfRV2a+AfHIi9k8z8l9ggpc8X+Ytst4yBo/hH+8Fk">
-        </script>
-        <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/bootstrap.min.js"
-                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
-                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
-                crossorigin="anonymous"
-                integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa">
-        </script>
-        <script src="~/js/site.min.js" asp-append-version="true"></script>
-    </environment>*@
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#sidebar").mCustomScrollbar({
+                theme: "minimal"
+            });
 
+            $('#dismiss, .overlay').on('click', function () {
+                $('#sidebar').removeClass('active');
+                $('.overlay').fadeOut();
+            });
+
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').addClass('active');
+                $('.overlay').fadeIn();
+                $('.collapse.in').toggleClass('in');
+                $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+            });
+        });
+    </script>
     @RenderSection("Scripts", required: false)
 </body>
 </html>

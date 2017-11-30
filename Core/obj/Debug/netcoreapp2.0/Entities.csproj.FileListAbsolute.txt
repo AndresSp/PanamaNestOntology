@@ -7,3 +7,12 @@ C:\Users\omarg\documents\visual studio 2017\Projects\BirdcageOntology\Core\obj\D
 C:\Users\omarg\documents\visual studio 2017\Projects\BirdcageOntology\Core\obj\Debug\netcoreapp2.0\Entities.AssemblyInfo.cs
 C:\Users\omarg\documents\visual studio 2017\Projects\BirdcageOntology\Core\obj\Debug\netcoreapp2.0\Entities.dll
 C:\Users\omarg\documents\visual studio 2017\Projects\BirdcageOntology\Core\obj\Debug\netcoreapp2.0\Entities.pdb
+C:\Users\omarg\Documents\GitHub\BirdcageOntology\Core\bin\Debug\netcoreapp2.0\Entities.deps.json
+C:\Users\omarg\Documents\GitHub\BirdcageOntology\Core\bin\Debug\netcoreapp2.0\Entities.dll
+C:\Users\omarg\Documents\GitHub\BirdcageOntology\Core\bin\Debug\netcoreapp2.0\Entities.pdb
+C:\Users\omarg\Documents\GitHub\BirdcageOntology\Core\obj\Debug\netcoreapp2.0\Entities.csprojResolveAssemblyReference.cache
+C:\Users\omarg\Documents\GitHub\BirdcageOntology\Core\obj\Debug\netcoreapp2.0\Entities.csproj.CoreCompileInputs.cache
+C:\Users\omarg\Documents\GitHub\BirdcageOntology\Core\obj\Debug\netcoreapp2.0\Entities.AssemblyInfoInputs.cache
+C:\Users\omarg\Documents\GitHub\BirdcageOntology\Core\obj\Debug\netcoreapp2.0\Entities.AssemblyInfo.cs
+C:\Users\omarg\Documents\GitHub\BirdcageOntology\Core\obj\Debug\netcoreapp2.0\Entities.dll
+C:\Users\omarg\Documents\GitHub\BirdcageOntology\Core\obj\Debug\netcoreapp2.0\Entities.pdb

@@ -20,10 +20,20 @@
             </div>
             <div class="panel-body">   
                 <div>
-                    <div class="row" style="margin-bottom:25px">
+                    <div class="row" style="margin-bottom:15px">
                         <div class="col-md-6">
                             <div class="row">
-                                <label class="col-sm-5 control-label text-right">Nombre de la especie</label>
+                                <label class="col-sm-5 control-label text-right">Nombre Científico</label>
+                                <div class="col-sm-6">
+                                    <input type="text" class="form-control" id="resourceName" maxlength="50" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <label control-label text-right">Nombre Común</label>
+                                </div>                               
                                 <div class="col-sm-6">
                                     <input type="text" class="form-control" id="resourceName" maxlength="50" />
                                 </div>
@@ -31,7 +41,7 @@
                         </div>
                     </div>
 
-                    <div class="row" style="margin-bottom:25px">
+                    <div class="row" style="margin-bottom:15px">
                         <div class="col-md-6">
                             <div class="row">
                                 <label class="col-md-5 control-label text-right">Pertenece al Order</label>
@@ -44,19 +54,19 @@
                             <div class="row">
                                 <div class="col-md-3">
                                     <button type="button" class="btn btn-primary" onclick="getEntities()">
-                                        <span class="fa-plus"></span>Seleccionar
+                                        <i class="fa fa-th-list"></i> Seleccionar
                                     </button>
                                 </div>
                                 <div class="col-md-3">
                                     <button type="button" class="btn btn-primary" onclick="showModal('AddEntityModal')">
-                                        <span class="fa-plus"></span>Añadir Nuevo
+                                        <i class="fa fa-plus"></i> Añadir Nuevo
                                     </button>
                                 </div>
-                            </div>
+                            </div>                            
                         </div>
                     </div>
 
-                    <div class="row" style="margin-bottom:25px">
+                    <div class="row" style="margin-bottom:15px">
                         <div class="col-md-6">
                             <div class="row">
                                 <label class="col-md-5 control-label text-right">Pertenece a la Familia</label>
@@ -68,20 +78,20 @@
                         <div class="col-md-6">
                             <div class="row">
                                 <div class="col-md-3">
-                                    <button type="button" class="btn btn-primary" onclick="showModal()">
-                                        <span class="fa-plus"></span>Seleccionar
+                                    <button type="button" class="btn btn-primary" onclick="getEntities()">
+                                        <i class="fa fa-th-list"></i> Seleccionar
                                     </button>
                                 </div>
                                 <div class="col-md-3">
-                                    <button type="button" class="btn btn-primary" onclick="showModal()">
-                                        <span class="fa-plus"></span>Añadir Nuevo
+                                    <button type="button" class="btn btn-primary" onclick="showModal('AddEntityModal')">
+                                        <i class="fa fa-plus"></i> Añadir Nuevo
                                     </button>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="row" style="margin-bottom:25px">
+                    <div class="row" style="margin-bottom:15px">
                         <div class="col-md-6">
                             <div class="row">
                                 <label class="col-md-5 control-label text-right">Pertenece al Gen</label>
@@ -93,13 +103,13 @@
                         <div class="col-md-6">
                             <div class="row">
                                 <div class="col-md-3">
-                                    <button type="button" class="btn btn-primary" onclick="showModal()">
-                                        <span class="fa-plus"></span>Seleccionar
+                                    <button type="button" class="btn btn-primary" onclick="getEntities()">
+                                        <i class="fa fa-th-list"></i> Seleccionar
                                     </button>
                                 </div>
                                 <div class="col-md-3">
-                                    <button type="button" class="btn btn-primary" onclick="showModal()">
-                                        <span class="fa-plus"></span>Añadir Nuevo
+                                    <button type="button" class="btn btn-primary" onclick="showModal('AddEntityModal')">
+                                        <i class="fa fa-plus"></i> Añadir Nuevo
                                     </button>
                                 </div>
                             </div>
@@ -110,6 +120,7 @@
             @*<div class="panel-footer">Footer del panel</div>*@
         </div>
     </div>    
+
     <div class="row" id="panel_featuresInfo">
         <div class="col-lg-12">
             <div class="panel panel-red">
@@ -119,7 +130,47 @@
             </div>
             <div class="panel-body">
                 <div>
-                    
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="row" style="margin-bottom:15px">
+                                <div>
+                                    <label class="col-md-5 control-label text-right">Tamaño Promedio</label>
+                                    <div class="col-md-3">
+                                        <input type="text" class="col-md-3 form-control" id="txtAvgSize" maxlength="10" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div>
+                                    <label class="col-md-5 control-label text-right">Color Promedio</label>
+                                    <div class="col-md-3">
+                                        <input type="text" class="form-control" id="txtAvgColor" maxlength="10" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <ul class="nav nav-pills">
+                                <li class="active">
+                                    <a href="#tabHabitat" data-toggle="tab" aria-expanded="true">Habitat</a>
+                                </li>
+                                <li>
+                                    <a href="#tabRegion" data-toggle="tab" aria-expanded="false">Región</a>
+                                </li>
+                            </ul>
+
+                            <div class="tab-content">
+                                <div class="tab-pane fade in active" id="tabHabitat">
+                                    <h4>Seleccione el Habitad</h4>
+                                    <p>Seleccione el habitad por favor</p>
+                                </div>
+                                <div class="tab-pane" id="tabRegion">
+                                    <h4>Seleccione la Región</h4>
+                                    <p>Seleccione la region por favor</p>
+                                </div>
+                            </div>                         
+                        </div>
+                    </div>                    
                 </div>
             </div>
             @*<div class="panel-footer">Footer del panel</div>*@
