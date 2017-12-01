@@ -16,3 +16,12 @@ C:\Users\omarg\Documents\GitHub\BirdcageOntology\Core\obj\Debug\netcoreapp2.0\En
 C:\Users\omarg\Documents\GitHub\BirdcageOntology\Core\obj\Debug\netcoreapp2.0\Entities.AssemblyInfo.cs
 C:\Users\omarg\Documents\GitHub\BirdcageOntology\Core\obj\Debug\netcoreapp2.0\Entities.dll
 C:\Users\omarg\Documents\GitHub\BirdcageOntology\Core\obj\Debug\netcoreapp2.0\Entities.pdb
+C:\Users\Carlos\Documents\GitHub\PanamenianNestOntology\Core\bin\Debug\netcoreapp2.0\Entities.deps.json
+C:\Users\Carlos\Documents\GitHub\PanamenianNestOntology\Core\bin\Debug\netcoreapp2.0\Entities.dll
+C:\Users\Carlos\Documents\GitHub\PanamenianNestOntology\Core\bin\Debug\netcoreapp2.0\Entities.pdb
+C:\Users\Carlos\Documents\GitHub\PanamenianNestOntology\Core\obj\Debug\netcoreapp2.0\Entities.csprojResolveAssemblyReference.cache
+C:\Users\Carlos\Documents\GitHub\PanamenianNestOntology\Core\obj\Debug\netcoreapp2.0\Entities.csproj.CoreCompileInputs.cache
+C:\Users\Carlos\Documents\GitHub\PanamenianNestOntology\Core\obj\Debug\netcoreapp2.0\Entities.AssemblyInfoInputs.cache
+C:\Users\Carlos\Documents\GitHub\PanamenianNestOntology\Core\obj\Debug\netcoreapp2.0\Entities.AssemblyInfo.cs
+C:\Users\Carlos\Documents\GitHub\PanamenianNestOntology\Core\obj\Debug\netcoreapp2.0\Entities.dll
+C:\Users\Carlos\Documents\GitHub\PanamenianNestOntology\Core\obj\Debug\netcoreapp2.0\Entities.pdb
