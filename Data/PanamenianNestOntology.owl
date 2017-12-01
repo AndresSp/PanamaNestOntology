@@ -12,7 +12,7 @@
 #    Object Properties
 #################################################################
 
-###  http://www.semanticweb.org/team/ontologies/2017/10/BirdsPanama#hasClassChild
+###  http://www.semanticweb.org/dinoa/ontologies/2017/10/BirdsPanama#hasClassChild
 :hasClassChild rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf owl:topObjectProperty ;
                owl:inverseOf :hasPhylumParent ;
@@ -20,28 +20,28 @@
                rdfs:range :Class .
 
 
-###  http://www.semanticweb.org/team/ontologies/2017/10/BirdsPanama#hasClassParent
+###  http://www.semanticweb.org/dinoa/ontologies/2017/10/BirdsPanama#hasClassParent
 :hasClassParent rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf :hasParentClasf ;
                 owl:inverseOf :hasOrderChild ;
                 rdfs:label "Class" .
 
 
-###  http://www.semanticweb.org/team/ontologies/2017/10/BirdsPanama#hasDomainChild
+###  http://www.semanticweb.org/dinoa/ontologies/2017/10/BirdsPanama#hasDomainChild
 :hasDomainChild rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf owl:topObjectProperty ;
                 rdfs:domain :Life ;
                 rdfs:range :Domain .
 
 
-###  http://www.semanticweb.org/team/ontologies/2017/10/BirdsPanama#hasDomainParent
+###  http://www.semanticweb.org/dinoa/ontologies/2017/10/BirdsPanama#hasDomainParent
 :hasDomainParent rdf:type owl:ObjectProperty ;
                  rdfs:subPropertyOf :hasParentClasf ;
                  owl:inverseOf :hasKingdomChild ;
                  rdfs:label "Domain" .
 
 
-###  http://www.semanticweb.org/team/ontologies/2017/10/BirdsPanama#hasFamilyChild
+###  http://www.semanticweb.org/dinoa/ontologies/2017/10/BirdsPanama#hasFamilyChild
 :hasFamilyChild rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf owl:topObjectProperty ;
                 owl:inverseOf :hasOrderParent ;
@@ -49,74 +49,74 @@
                 rdfs:range :Family .
 
 
-###  http://www.semanticweb.org/team/ontologies/2017/10/BirdsPanama#hasFamilyParent
+###  http://www.semanticweb.org/dinoa/ontologies/2017/10/BirdsPanama#hasFamilyParent
 :hasFamilyParent rdf:type owl:ObjectProperty ;
                  rdfs:subPropertyOf :hasParentClasf ;
                  owl:inverseOf :hasGenusChild ;
                  rdfs:label "Family" .
 
 
-###  http://www.semanticweb.org/team/ontologies/2017/10/BirdsPanama#hasGenusChild
+###  http://www.semanticweb.org/dinoa/ontologies/2017/10/BirdsPanama#hasGenusChild
 :hasGenusChild rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf owl:topObjectProperty ;
                rdfs:domain :Family ;
                rdfs:range :Genus .
 
 
-###  http://www.semanticweb.org/team/ontologies/2017/10/BirdsPanama#hasGenusParent
+###  http://www.semanticweb.org/dinoa/ontologies/2017/10/BirdsPanama#hasGenusParent
 :hasGenusParent rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf :hasParentClasf ;
                 owl:inverseOf :hasSpeciesChild ;
                 rdfs:label "Genus" .
 
 
-###  http://www.semanticweb.org/team/ontologies/2017/10/BirdsPanama#hasKingdomChild
+###  http://www.semanticweb.org/dinoa/ontologies/2017/10/BirdsPanama#hasKingdomChild
 :hasKingdomChild rdf:type owl:ObjectProperty ;
                  rdfs:subPropertyOf owl:topObjectProperty ;
                  rdfs:domain :Domain ;
                  rdfs:range :Kingdom .
 
 
-###  http://www.semanticweb.org/team/ontologies/2017/10/BirdsPanama#hasKingdomParent
+###  http://www.semanticweb.org/dinoa/ontologies/2017/10/BirdsPanama#hasKingdomParent
 :hasKingdomParent rdf:type owl:ObjectProperty ;
                   rdfs:subPropertyOf :hasParentClasf ;
                   owl:inverseOf :hasPhylumChild ;
                   rdfs:label "Kingdom" .
 
 
-###  http://www.semanticweb.org/team/ontologies/2017/10/BirdsPanama#hasOrderChild
+###  http://www.semanticweb.org/dinoa/ontologies/2017/10/BirdsPanama#hasOrderChild
 :hasOrderChild rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf owl:topObjectProperty ;
                rdfs:domain :Class ;
                rdfs:range :Order .
 
 
-###  http://www.semanticweb.org/team/ontologies/2017/10/BirdsPanama#hasOrderParent
+###  http://www.semanticweb.org/dinoa/ontologies/2017/10/BirdsPanama#hasOrderParent
 :hasOrderParent rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf :hasParentClasf ;
                 rdfs:label "Order" .
 
 
-###  http://www.semanticweb.org/team/ontologies/2017/10/BirdsPanama#hasParentClasf
+###  http://www.semanticweb.org/dinoa/ontologies/2017/10/BirdsPanama#hasParentClasf
 :hasParentClasf rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf owl:topObjectProperty ;
                 rdf:type owl:TransitiveProperty .
 
 
-###  http://www.semanticweb.org/team/ontologies/2017/10/BirdsPanama#hasPhylumChild
+###  http://www.semanticweb.org/dinoa/ontologies/2017/10/BirdsPanama#hasPhylumChild
 :hasPhylumChild rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf owl:topObjectProperty ;
                 rdfs:domain :Kingdom ;
                 rdfs:range :Phylum .
 
 
-###  http://www.semanticweb.org/team/ontologies/2017/10/BirdsPanama#hasPhylumParent
+###  http://www.semanticweb.org/dinoa/ontologies/2017/10/BirdsPanama#hasPhylumParent
 :hasPhylumParent rdf:type owl:ObjectProperty ;
                  rdfs:subPropertyOf :hasParentClasf ;
                  rdfs:label "Phylum" .
 
 
-###  http://www.semanticweb.org/team/ontologies/2017/10/BirdsPanama#hasSpeciesChild
+###  http://www.semanticweb.org/dinoa/ontologies/2017/10/BirdsPanama#hasSpeciesChild
 :hasSpeciesChild rdf:type owl:ObjectProperty ;
                  rdfs:subPropertyOf owl:topObjectProperty ;
                  rdfs:domain :Genus ;
@@ -127,46 +127,46 @@
 #    Classes
 #################################################################
 
-###  http://www.semanticweb.org/team/ontologies/2017/10/BirdsPanama#Class
+###  http://www.semanticweb.org/dinoa/ontologies/2017/10/BirdsPanama#Class
 :Class rdf:type owl:Class ;
        rdfs:subClassOf :Life .
 
 
-###  http://www.semanticweb.org/team/ontologies/2017/10/BirdsPanama#Domain
+###  http://www.semanticweb.org/dinoa/ontologies/2017/10/BirdsPanama#Domain
 :Domain rdf:type owl:Class ;
         rdfs:subClassOf :Life .
 
 
-###  http://www.semanticweb.org/team/ontologies/2017/10/BirdsPanama#Family
+###  http://www.semanticweb.org/dinoa/ontologies/2017/10/BirdsPanama#Family
 :Family rdf:type owl:Class ;
         rdfs:subClassOf :Life .
 
 
-###  http://www.semanticweb.org/team/ontologies/2017/10/BirdsPanama#Genus
+###  http://www.semanticweb.org/dinoa/ontologies/2017/10/BirdsPanama#Genus
 :Genus rdf:type owl:Class ;
        rdfs:subClassOf :Life .
 
 
-###  http://www.semanticweb.org/team/ontologies/2017/10/BirdsPanama#Kingdom
+###  http://www.semanticweb.org/dinoa/ontologies/2017/10/BirdsPanama#Kingdom
 :Kingdom rdf:type owl:Class ;
          rdfs:subClassOf :Life .
 
 
-###  http://www.semanticweb.org/team/ontologies/2017/10/BirdsPanama#Life
+###  http://www.semanticweb.org/dinoa/ontologies/2017/10/BirdsPanama#Life
 :Life rdf:type owl:Class .
 
 
-###  http://www.semanticweb.org/team/ontologies/2017/10/BirdsPanama#Order
+###  http://www.semanticweb.org/dinoa/ontologies/2017/10/BirdsPanama#Order
 :Order rdf:type owl:Class ;
        rdfs:subClassOf :Life .
 
 
-###  http://www.semanticweb.org/team/ontologies/2017/10/BirdsPanama#Phylum
+###  http://www.semanticweb.org/dinoa/ontologies/2017/10/BirdsPanama#Phylum
 :Phylum rdf:type owl:Class ;
         rdfs:subClassOf :Life .
 
 
-###  http://www.semanticweb.org/team/ontologies/2017/10/BirdsPanama#Species
+###  http://www.semanticweb.org/dinoa/ontologies/2017/10/BirdsPanama#Species
 :Species rdf:type owl:Class ;
          rdfs:subClassOf :Life .
 
@@ -175,98 +175,87 @@
 #    Individuals
 #################################################################
 
-###  http://www.semanticweb.org/team/ontologies/2017/10/BirdsPanama#Animalia
+###  http://www.semanticweb.org/dinoa/ontologies/2017/10/BirdsPanama#Animalia
 :Animalia rdf:type owl:NamedIndividual ,
                    :Kingdom ;
           :hasPhylumChild :Chordata ,
                           :Mollusca .
 
 
-###  http://www.semanticweb.org/team/ontologies/2017/10/BirdsPanama#Apodiformes
-:Apodiformes rdf:type owl:NamedIndividual ,
-                      :Order ;
+###  http://www.semanticweb.org/dinoa/ontologies/2017/10/BirdsPanama#Apodiformes
+:Apodiformes rdf:type owl:NamedIndividual ;
              :hasClassParent :Aves .
 
 
-###  http://www.semanticweb.org/team/ontologies/2017/10/BirdsPanama#Aves
+###  http://www.semanticweb.org/dinoa/ontologies/2017/10/BirdsPanama#Aves
 :Aves rdf:type owl:NamedIndividual ,
                :Class ;
       :hasPhylumParent :Chordata .
 
 
-###  http://www.semanticweb.org/team/ontologies/2017/10/BirdsPanama#Chordata
+###  http://www.semanticweb.org/dinoa/ontologies/2017/10/BirdsPanama#Chordata
 :Chordata rdf:type owl:NamedIndividual ,
                    :Phylum ;
           :hasKingdomParent :Animalia .
 
 
-###  http://www.semanticweb.org/team/ontologies/2017/10/BirdsPanama#Eukarya
+###  http://www.semanticweb.org/dinoa/ontologies/2017/10/BirdsPanama#Eukarya
 :Eukarya rdf:type owl:NamedIndividual ,
                   :Domain ;
          :hasKingdomChild :Animalia .
 
 
-###  http://www.semanticweb.org/team/ontologies/2017/10/BirdsPanama#Florisuga
-:Florisuga rdf:type owl:NamedIndividual ,
-                    :Genus ;
+###  http://www.semanticweb.org/dinoa/ontologies/2017/10/BirdsPanama#Florisuga
+:Florisuga rdf:type owl:NamedIndividual ;
            :hasFamilyParent :Trochilidae .
 
 
-###  http://www.semanticweb.org/team/ontologies/2017/10/BirdsPanama#Gastropoda
-:Gastropoda rdf:type owl:NamedIndividual ,
-                     :Class ;
+###  http://www.semanticweb.org/dinoa/ontologies/2017/10/BirdsPanama#Gastropoda
+:Gastropoda rdf:type owl:NamedIndividual ;
             :hasPhylumParent :Mollusca .
 
 
-###  http://www.semanticweb.org/team/ontologies/2017/10/BirdsPanama#Heterobranchia
-:Heterobranchia rdf:type owl:NamedIndividual ,
-                         :Order ;
+###  http://www.semanticweb.org/dinoa/ontologies/2017/10/BirdsPanama#Heterobranchia
+:Heterobranchia rdf:type owl:NamedIndividual ;
                 :hasClassParent :Gastropoda .
 
 
-###  http://www.semanticweb.org/team/ontologies/2017/10/BirdsPanama#Life
+###  http://www.semanticweb.org/dinoa/ontologies/2017/10/BirdsPanama#Life
 :Life rdf:type owl:NamedIndividual ,
                :Life .
 
 
-###  http://www.semanticweb.org/team/ontologies/2017/10/BirdsPanama#Mellivora
-:Mellivora rdf:type owl:NamedIndividual ,
-                    :Species ;
+###  http://www.semanticweb.org/dinoa/ontologies/2017/10/BirdsPanama#Mellivora
+:Mellivora rdf:type owl:NamedIndividual ;
            :hasGenusParent :Onchidella .
 
 
-###  http://www.semanticweb.org/team/ontologies/2017/10/BirdsPanama#Mollusca
-:Mollusca rdf:type owl:NamedIndividual ,
-                   :Phylum ;
+###  http://www.semanticweb.org/dinoa/ontologies/2017/10/BirdsPanama#Mollusca
+:Mollusca rdf:type owl:NamedIndividual ;
           :hasKingdomParent :Animalia .
 
 
-###  http://www.semanticweb.org/team/ontologies/2017/10/BirdsPanama#Nigricans
-:Nigricans rdf:type owl:NamedIndividual ,
-                    :Species ;
+###  http://www.semanticweb.org/dinoa/ontologies/2017/10/BirdsPanama#Nigricans
+:Nigricans rdf:type owl:NamedIndividual ;
            :hasGenusParent :Florisuga .
 
 
-###  http://www.semanticweb.org/team/ontologies/2017/10/BirdsPanama#Onchidella
-:Onchidella rdf:type owl:NamedIndividual ,
-                     :Genus ;
+###  http://www.semanticweb.org/dinoa/ontologies/2017/10/BirdsPanama#Onchidella
+:Onchidella rdf:type owl:NamedIndividual ;
             :hasFamilyParent :Onchidiidae .
 
 
-###  http://www.semanticweb.org/team/ontologies/2017/10/BirdsPanama#Onchidiidae
-:Onchidiidae rdf:type owl:NamedIndividual ,
-                      :Family ;
+###  http://www.semanticweb.org/dinoa/ontologies/2017/10/BirdsPanama#Onchidiidae
+:Onchidiidae rdf:type owl:NamedIndividual ;
              :hasOrderParent :Heterobranchia .
 
 
-###  http://www.semanticweb.org/team/ontologies/2017/10/BirdsPanama#Plantae
-:Plantae rdf:type owl:NamedIndividual ,
-                  :Kingdom .
+###  http://www.semanticweb.org/dinoa/ontologies/2017/10/BirdsPanama#Plantae
+:Plantae rdf:type owl:NamedIndividual .
 
 
-###  http://www.semanticweb.org/team/ontologies/2017/10/BirdsPanama#Trochilidae
-:Trochilidae rdf:type owl:NamedIndividual ,
-                      :Family ;
+###  http://www.semanticweb.org/dinoa/ontologies/2017/10/BirdsPanama#Trochilidae
+:Trochilidae rdf:type owl:NamedIndividual ;
              :hasOrderParent :Apodiformes .
 
 
