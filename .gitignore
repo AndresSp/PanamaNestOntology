@@ -45,3 +45,7 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+
+#CARPETAS QUE NO QUIERO LLEVAR TRACK
+bin/
+obj/
