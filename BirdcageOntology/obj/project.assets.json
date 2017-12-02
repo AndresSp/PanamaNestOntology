@@ -13131,7 +13131,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Usuario\\.nuget\\packages\\": {},
+    "C:\\Users\\Carlos\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
@@ -13140,17 +13140,17 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\Usuario\\Documents\\GitHub\\PanamenianNestOntology\\BirdcageOntology\\WebApp.csproj",
+      "projectUniqueName": "C:\\Users\\Carlos\\Documents\\GitHub\\PanamenianNestOntology\\BirdcageOntology\\WebApp.csproj",
       "projectName": "WebApp",
-      "projectPath": "C:\\Users\\Usuario\\Documents\\GitHub\\PanamenianNestOntology\\BirdcageOntology\\WebApp.csproj",
-      "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Usuario\\Documents\\GitHub\\PanamenianNestOntology\\BirdcageOntology\\obj\\",
+      "projectPath": "C:\\Users\\Carlos\\Documents\\GitHub\\PanamenianNestOntology\\BirdcageOntology\\WebApp.csproj",
+      "packagesPath": "C:\\Users\\Carlos\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Carlos\\Documents\\GitHub\\PanamenianNestOntology\\BirdcageOntology\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Carlos\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -13163,8 +13163,8 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "C:\\Users\\Usuario\\Documents\\GitHub\\PanamenianNestOntology\\Core\\Entities.csproj": {
-              "projectPath": "C:\\Users\\Usuario\\Documents\\GitHub\\PanamenianNestOntology\\Core\\Entities.csproj"
+            "C:\\Users\\Carlos\\Documents\\GitHub\\PanamenianNestOntology\\Core\\Entities.csproj": {
+              "projectPath": "C:\\Users\\Carlos\\Documents\\GitHub\\PanamenianNestOntology\\Core\\Entities.csproj"
             }
           }
         }
