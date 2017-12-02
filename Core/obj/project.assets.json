@@ -664,7 +664,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\gaby-\\.nuget\\packages\\": {},
+    "C:\\Users\\Usuario\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
@@ -673,17 +673,17 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\gaby-\\Documents\\GitHub\\PanamenianNestOntology\\Core\\Entities.csproj",
+      "projectUniqueName": "C:\\Users\\Usuario\\Documents\\GitHub\\PanamenianNestOntology\\Core\\Entities.csproj",
       "projectName": "Entities",
-      "projectPath": "C:\\Users\\gaby-\\Documents\\GitHub\\PanamenianNestOntology\\Core\\Entities.csproj",
-      "packagesPath": "C:\\Users\\gaby-\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\gaby-\\Documents\\GitHub\\PanamenianNestOntology\\Core\\obj\\",
+      "projectPath": "C:\\Users\\Usuario\\Documents\\GitHub\\PanamenianNestOntology\\Core\\Entities.csproj",
+      "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Usuario\\Documents\\GitHub\\PanamenianNestOntology\\Core\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\gaby-\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

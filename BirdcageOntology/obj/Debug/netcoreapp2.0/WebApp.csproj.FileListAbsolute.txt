@@ -37,3 +37,16 @@ C:\Users\Carlos\Documents\GitHub\PanamenianNestOntology\BirdcageOntology\obj\Deb
 C:\Users\Carlos\Documents\GitHub\PanamenianNestOntology\BirdcageOntology\obj\Debug\netcoreapp2.0\WebApp.AssemblyInfo.cs
 C:\Users\Carlos\Documents\GitHub\PanamenianNestOntology\BirdcageOntology\obj\Debug\netcoreapp2.0\WebApp.dll
 C:\Users\Carlos\Documents\GitHub\PanamenianNestOntology\BirdcageOntology\obj\Debug\netcoreapp2.0\WebApp.pdb
+C:\Users\Usuario\Documents\GitHub\PanamenianNestOntology\BirdcageOntology\bin\Debug\netcoreapp2.0\WebApp.deps.json
+C:\Users\Usuario\Documents\GitHub\PanamenianNestOntology\BirdcageOntology\bin\Debug\netcoreapp2.0\WebApp.runtimeconfig.json
+C:\Users\Usuario\Documents\GitHub\PanamenianNestOntology\BirdcageOntology\bin\Debug\netcoreapp2.0\WebApp.runtimeconfig.dev.json
+C:\Users\Usuario\Documents\GitHub\PanamenianNestOntology\BirdcageOntology\bin\Debug\netcoreapp2.0\WebApp.dll
+C:\Users\Usuario\Documents\GitHub\PanamenianNestOntology\BirdcageOntology\bin\Debug\netcoreapp2.0\WebApp.pdb
+C:\Users\Usuario\Documents\GitHub\PanamenianNestOntology\BirdcageOntology\bin\Debug\netcoreapp2.0\Entities.dll
+C:\Users\Usuario\Documents\GitHub\PanamenianNestOntology\BirdcageOntology\bin\Debug\netcoreapp2.0\Entities.pdb
+C:\Users\Usuario\Documents\GitHub\PanamenianNestOntology\BirdcageOntology\obj\Debug\netcoreapp2.0\WebApp.csprojResolveAssemblyReference.cache
+C:\Users\Usuario\Documents\GitHub\PanamenianNestOntology\BirdcageOntology\obj\Debug\netcoreapp2.0\WebApp.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Documents\GitHub\PanamenianNestOntology\BirdcageOntology\obj\Debug\netcoreapp2.0\WebApp.AssemblyInfoInputs.cache
+C:\Users\Usuario\Documents\GitHub\PanamenianNestOntology\BirdcageOntology\obj\Debug\netcoreapp2.0\WebApp.AssemblyInfo.cs
+C:\Users\Usuario\Documents\GitHub\PanamenianNestOntology\BirdcageOntology\obj\Debug\netcoreapp2.0\WebApp.dll
+C:\Users\Usuario\Documents\GitHub\PanamenianNestOntology\BirdcageOntology\obj\Debug\netcoreapp2.0\WebApp.pdb
