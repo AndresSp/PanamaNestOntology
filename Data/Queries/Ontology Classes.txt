@@ -1,0 +1,14 @@
+prefix : <http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#> 
+prefix dc: <http://purl.org/dc/elements/1.1/> 
+prefix owl: <http://www.w3.org/2002/07/owl#> 
+prefix pno: <http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#> 
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+prefix xml: <http://www.w3.org/XML/1998/namespace> 
+prefix xsd: <http://www.w3.org/2001/XMLSchema#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix terms: <http://purl.org/dc/terms/>
+
+SELECT DISTINCT ?class
+WHERE {
+  ?class a owl:Class.
+}

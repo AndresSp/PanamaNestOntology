@@ -8,8 +8,12 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX terms: <http://purl.org/dc/terms/>
 
-SELECT ?order ?bird
+SELECT ?domain ?bird
 WHERE {
+  ?domain pno:hasKingdomChild ?kingdom.
+  ?kingdom pno:hasPhylumChild ?phylum.
+  ?phylum pno:hasClassChild ?class.
+  ?class pno:hasOrderChild ?order.
   ?order pno:hasFamilyChild ?family.
   ?family pno:hasGenusChild ?genus.
   ?genus pno:hasSpeciesChild ?specie.

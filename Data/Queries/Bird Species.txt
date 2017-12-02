@@ -1,8 +1,12 @@
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX : <http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#> 
+PREFIX dc: <http://purl.org/dc/elements/1.1/> 
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+PREFIX pno: <http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX xml: <http://www.w3.org/XML/1998/namespace> 
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-prefix pno: <http://www.semanticweb.org/dinoa/ontologies/2017/10/BirdsPanama#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX terms: <http://purl.org/dc/terms/>
 
 SELECT ?specie ?bird
 WHERE {

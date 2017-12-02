@@ -12,9 +12,9 @@
 <http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology> rdf:type owl:Ontology ;
                                                                          terms:contributor "Jackelin Chong"^^xsd:string ,
                                                                                            "Ivan Martinez"^^xsd:string ,
-                                                                                           "Omar Mejia"^^xsd:string ;
+                                                                                           "Omar Mejia"^^xsd:string ,
+                                                                                           "Andres Tunon"^^xsd:string ;
                                                                          dc:description "The Panama Nest is an ontology focused on the taxonomy and characteristics of birds that can be found within Panamanian territory."@en ;
-                                                                         terms:contributor "Andres Tunon"^^xsd:string ;
                                                                          rdfs:label "Panama Nest Ontology"@en ;
                                                                          terms:contributor "Carlos Villarreal"^^xsd:string ,
                                                                                            "Gabriela Reyes"^^xsd:string .
@@ -29,6 +29,11 @@ dc:description rdf:type owl:AnnotationProperty .
 
 ###  http://purl.org/dc/terms/contributor
 terms:contributor rdf:type owl:AnnotationProperty .
+
+
+###  http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#CommonName
+:CommonName rdf:type owl:AnnotationProperty ;
+            rdfs:subPropertyOf rdfs:label .
 
 
 #################################################################
@@ -159,15 +164,6 @@ pno:hasSpeciesChild rdf:type owl:ObjectProperty ;
 
 
 #################################################################
-#    Data properties
-#################################################################
-
-###  http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#CommonName
-:CommonName rdf:type owl:DatatypeProperty ;
-            rdfs:range xsd:string .
-
-
-#################################################################
 #    Classes
 #################################################################
 
@@ -260,8 +256,7 @@ pno:Aves rdf:type owl:NamedIndividual ,
 
 ###  http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Black_Vulture
 pno:Black_Vulture rdf:type owl:NamedIndividual ,
-                           pno:Life ;
-                  :CommonName "Black Vulture"@en .
+                           pno:Life .
 
 
 ###  http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Cathartidae
@@ -296,8 +291,7 @@ pno:Harpia rdf:type owl:NamedIndividual ,
 
 ###  http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Harpy_Eagle
 pno:Harpy_Eagle rdf:type owl:NamedIndividual ,
-                         pno:Life ;
-                :CommonName "Harpy Eagle"@en .
+                         pno:Life .
 
 
 ###  http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Pseudastur
@@ -319,14 +313,13 @@ pno:Snail_Kite rdf:type owl:NamedIndividual ,
 
 ###  http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Tiny_Hawk
 pno:Tiny_Hawk rdf:type owl:NamedIndividual ,
-                       pno:Life ;
-              :CommonName "Tiny Hawk"@en .
+                       pno:Life .
 
 
 ###  http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#White_Hawk
 pno:White_Hawk rdf:type owl:NamedIndividual ,
                         pno:Life ;
-               :CommonName "White Hawk"@en .
+               :CommonName "White_Hawk"@en .
 
 
 ###  http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#albicollis
