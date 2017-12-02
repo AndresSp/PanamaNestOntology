@@ -1,0 +1,362 @@
+@prefix : <http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pno: <http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@base <http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology> .
+
+<http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology> rdf:type owl:Ontology ;
+                                                                         terms:contributor "Jackelin Chong"^^xsd:string ,
+                                                                                           "Ivan Martinez"^^xsd:string ,
+                                                                                           "Omar Mejia"^^xsd:string ;
+                                                                         dc:description "The Panama Nest is an ontology focused on the taxonomy and characteristics of birds that can be found within Panamanian territory."@en ;
+                                                                         terms:contributor "Andres Tunon"^^xsd:string ;
+                                                                         rdfs:label "Panama Nest Ontology"@en ;
+                                                                         terms:contributor "Carlos Villarreal"^^xsd:string ,
+                                                                                           "Gabriela Reyes"^^xsd:string .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/description
+dc:description rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/contributor
+terms:contributor rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Specie
+pno:Specie rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf pno:hasParentClasf ;
+           owl:inverseOf pno:hasBirdChild .
+
+
+###  http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#hasBirdChild
+pno:hasBirdChild rdf:type owl:ObjectProperty ;
+                 rdfs:domain pno:Specie ;
+                 rdfs:range pno:Bird .
+
+
+###  http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#hasClassChild
+pno:hasClassChild rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf owl:topObjectProperty ;
+                  owl:inverseOf pno:hasPhylumParent ;
+                  rdfs:domain pno:Phylum ;
+                  rdfs:range pno:Class .
+
+
+###  http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#hasClassParent
+pno:hasClassParent rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf pno:hasParentClasf ;
+                   owl:inverseOf pno:hasOrderChild ;
+                   rdfs:label "Class" .
+
+
+###  http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#hasDomainChild
+pno:hasDomainChild rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf owl:topObjectProperty ;
+                   rdfs:domain pno:Life ;
+                   rdfs:range pno:Domain .
+
+
+###  http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#hasDomainParent
+pno:hasDomainParent rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf pno:hasParentClasf ;
+                    owl:inverseOf pno:hasKingdomChild ;
+                    rdfs:label "Domain" .
+
+
+###  http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#hasFamilyChild
+pno:hasFamilyChild rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf owl:topObjectProperty ;
+                   owl:inverseOf pno:hasOrderParent ;
+                   rdfs:domain pno:Order ;
+                   rdfs:range pno:Family .
+
+
+###  http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#hasFamilyParent
+pno:hasFamilyParent rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf pno:hasParentClasf ;
+                    owl:inverseOf pno:hasGenusChild ;
+                    rdfs:label "Family" .
+
+
+###  http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#hasGenusChild
+pno:hasGenusChild rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf owl:topObjectProperty ;
+                  rdfs:domain pno:Family ;
+                  rdfs:range pno:Genus .
+
+
+###  http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#hasGenusParent
+pno:hasGenusParent rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf pno:hasParentClasf ;
+                   owl:inverseOf pno:hasSpeciesChild ;
+                   rdfs:label "Genus" .
+
+
+###  http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#hasKingdomChild
+pno:hasKingdomChild rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf owl:topObjectProperty ;
+                    rdfs:domain pno:Domain ;
+                    rdfs:range pno:Kingdom .
+
+
+###  http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#hasKingdomParent
+pno:hasKingdomParent rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf pno:hasParentClasf ;
+                     owl:inverseOf pno:hasPhylumChild ;
+                     rdfs:label "Kingdom" .
+
+
+###  http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#hasOrderChild
+pno:hasOrderChild rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf owl:topObjectProperty ;
+                  rdfs:domain pno:Class ;
+                  rdfs:range pno:Order .
+
+
+###  http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#hasOrderParent
+pno:hasOrderParent rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf pno:hasParentClasf ;
+                   rdfs:label "Order" .
+
+
+###  http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#hasParentClasf
+pno:hasParentClasf rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf owl:topObjectProperty ;
+                   rdf:type owl:TransitiveProperty .
+
+
+###  http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#hasPhylumChild
+pno:hasPhylumChild rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf owl:topObjectProperty ;
+                   rdfs:domain pno:Kingdom ;
+                   rdfs:range pno:Phylum .
+
+
+###  http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#hasPhylumParent
+pno:hasPhylumParent rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf pno:hasParentClasf ;
+                    rdfs:label "Phylum" .
+
+
+###  http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#hasSpeciesChild
+pno:hasSpeciesChild rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf owl:topObjectProperty ;
+                    rdfs:domain pno:Genus ;
+                    rdfs:range pno:Specie .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#CommonName
+:CommonName rdf:type owl:DatatypeProperty ;
+            rdfs:range xsd:string .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Bird
+pno:Bird rdf:type owl:Class ;
+         rdfs:subClassOf pno:Life .
+
+
+###  http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Class
+pno:Class rdf:type owl:Class ;
+          rdfs:subClassOf pno:Life .
+
+
+###  http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Domain
+pno:Domain rdf:type owl:Class ;
+           rdfs:subClassOf pno:Life .
+
+
+###  http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Family
+pno:Family rdf:type owl:Class ;
+           rdfs:subClassOf pno:Life .
+
+
+###  http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Genus
+pno:Genus rdf:type owl:Class ;
+          rdfs:subClassOf pno:Life .
+
+
+###  http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Kingdom
+pno:Kingdom rdf:type owl:Class ;
+            rdfs:subClassOf pno:Life .
+
+
+###  http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Life
+pno:Life rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Order
+pno:Order rdf:type owl:Class ;
+          rdfs:subClassOf pno:Life .
+
+
+###  http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Phylum
+pno:Phylum rdf:type owl:Class ;
+           rdfs:subClassOf pno:Life .
+
+
+###  http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Specie
+pno:Specie rdf:type owl:Class ;
+           rdfs:subClassOf pno:Life .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Accipiter
+pno:Accipiter rdf:type owl:NamedIndividual ,
+                       pno:Life ;
+              pno:hasSpeciesChild pno:superciliosus .
+
+
+###  http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Accipitridae
+pno:Accipitridae rdf:type owl:NamedIndividual ,
+                          pno:Life ;
+                 pno:hasGenusChild pno:Accipiter ,
+                                   pno:Harpia ,
+                                   pno:Pseudastur ,
+                                   pno:Rostrhamus .
+
+
+###  http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Accipitriformes
+pno:Accipitriformes rdf:type owl:NamedIndividual ,
+                             pno:Life ;
+                    pno:hasFamilyChild pno:Accipitridae ,
+                                       pno:Cathartidae .
+
+
+###  http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Animalia
+pno:Animalia rdf:type owl:NamedIndividual ,
+                      pno:Life ;
+             pno:hasPhylumChild pno:Chordata .
+
+
+###  http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Aves
+pno:Aves rdf:type owl:NamedIndividual ,
+                  pno:Life ;
+         pno:hasOrderChild pno:Accipitriformes .
+
+
+###  http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Black_Vulture
+pno:Black_Vulture rdf:type owl:NamedIndividual ,
+                           pno:Life ;
+                  :CommonName "Black Vulture"@en .
+
+
+###  http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Cathartidae
+pno:Cathartidae rdf:type owl:NamedIndividual ,
+                         pno:Life ;
+                pno:hasGenusChild pno:Coragyps .
+
+
+###  http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Chordata
+pno:Chordata rdf:type owl:NamedIndividual ,
+                      pno:Life ;
+             pno:hasClassChild pno:Aves .
+
+
+###  http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Coragyps
+pno:Coragyps rdf:type owl:NamedIndividual ,
+                      pno:Life ;
+             pno:hasSpeciesChild pno:atratus .
+
+
+###  http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Eukarya
+pno:Eukarya rdf:type owl:NamedIndividual ,
+                     pno:Life ;
+            pno:hasKingdomChild pno:Animalia .
+
+
+###  http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Harpia
+pno:Harpia rdf:type owl:NamedIndividual ,
+                    pno:Life ;
+           pno:hasSpeciesChild pno:harpyja .
+
+
+###  http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Harpy_Eagle
+pno:Harpy_Eagle rdf:type owl:NamedIndividual ,
+                         pno:Life ;
+                :CommonName "Harpy Eagle"@en .
+
+
+###  http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Pseudastur
+pno:Pseudastur rdf:type owl:NamedIndividual ,
+                        pno:Life ;
+               pno:hasSpeciesChild pno:albicollis .
+
+
+###  http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Rostrhamus
+pno:Rostrhamus rdf:type owl:NamedIndividual ,
+                        pno:Life ;
+               pno:hasSpeciesChild pno:sociabilis .
+
+
+###  http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Snail_Kite
+pno:Snail_Kite rdf:type owl:NamedIndividual ,
+                        pno:Life .
+
+
+###  http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Tiny_Hawk
+pno:Tiny_Hawk rdf:type owl:NamedIndividual ,
+                       pno:Life ;
+              :CommonName "Tiny Hawk"@en .
+
+
+###  http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#White_Hawk
+pno:White_Hawk rdf:type owl:NamedIndividual ,
+                        pno:Life ;
+               :CommonName "White Hawk"@en .
+
+
+###  http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#albicollis
+pno:albicollis rdf:type owl:NamedIndividual ,
+                        pno:Life ;
+               pno:hasBirdChild pno:White_Hawk .
+
+
+###  http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#atratus
+pno:atratus rdf:type owl:NamedIndividual ,
+                     pno:Life ;
+            pno:hasBirdChild pno:Black_Vulture .
+
+
+###  http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#harpyja
+pno:harpyja rdf:type owl:NamedIndividual ,
+                     pno:Life ;
+            pno:hasBirdChild pno:Harpy_Eagle .
+
+
+###  http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#sociabilis
+pno:sociabilis rdf:type owl:NamedIndividual ,
+                        pno:Life ;
+               pno:hasBirdChild pno:Snail_Kite .
+
+
+###  http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#superciliosus
+pno:superciliosus rdf:type owl:NamedIndividual ,
+                           pno:Life ;
+                  pno:hasBirdChild pno:Tiny_Hawk .
+
+
+###  Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi
