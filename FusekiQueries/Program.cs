@@ -21,7 +21,6 @@ namespace FusekiConnection
             e = selectQueries.SelectGenuses();
             e = selectQueries.SelectSpecies();*/
             e = selectQueries.SelectBirds();
-            e = selectQueries.Se
 
             PrintEntities(e); //print
             Console.ReadLine();
