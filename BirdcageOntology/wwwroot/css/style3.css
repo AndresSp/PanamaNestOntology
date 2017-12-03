@@ -148,6 +148,10 @@ ul ul a {
     background: #6d7fcc;
 }
 
+.special a[aria-expanded="true"] {
+    background: #ffffff !important;
+}
+
 ul.CTAs {
     padding: 20px;
 }

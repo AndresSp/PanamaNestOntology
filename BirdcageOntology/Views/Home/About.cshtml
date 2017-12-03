@@ -1,14 +1,18 @@
 ﻿@{
     ViewData["Title"] = "About";
 }
-<h2 align="center">@ViewData["Title"]</h2>
 
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">About</h1>
+    </div>
+    </div>
 <div class="row" id="panel_generalInfo">
     <div class="col-lg-12">
         <div class="panel panel-primary">
             <div class="panel-heading">
-                <div align="center">
-                    <font size="4">
+                <div>
+                    <font size="3">
                         Learn about  Panama Nest
                     </font>
                 </div>
@@ -27,81 +31,83 @@
     </div>
 </div>
 
-<p>
-    <font color="black" size="4">
-        <div style="margin-left:45px">
-            <div style="margin-right:45px">
-                The Panama Nest Ontology is a project developed by Computer Systems Engineering students from the Universidad Tecnológica de Panamá.
-                The Panama Nest is an ontology focused on the taxonomy and characteristics of birds that can be found within Panamanian territory.
-                <br />
+    @*Preguntas Colapsables*@
+
+    <div class="panel-group" id="accordion">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" class="special"><font color="black" size="5">What can be found on Panama Nest Ontology?</font></a>
+                </h3>
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse in" aria-expanded="true">
+                <div class="panel-body">
+                    <font color="black" size="4">
+                        The aviafauna of Panama includes a total of 987 species according to Bird Checklists of the World. Most of this species can be found all over America and even in other continents. As an small country, the number of species within Panama's territory is immense. <br />
+                        This ontology will provide information about birds of different orders and families. The data handled by the ontology includes the taxonomic rank of the birds and other characteristics like size, habitat, and common name. <br /> <br />
+                        You can search data about any bird or you can use other parameters like the family, or the gen. The ontology will show the result according to the information you have searched.
+                    </font>
+                </div>
             </div>
         </div>
-    </font>
-</p>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" class="collapsed" aria-expanded="false"><font color="black" size="5">Why choose an ontology?</font></a>
+                </h3>
+            </div>
+            <div id="collapseTwo" class="panel-collapse collapse" aria-expanded="false">
+                <div class="panel-body">
+                    <font color="black" size="4">
+                        In order to maintain structured information on a web application you can use Semantic Web.
+                        This can be defined as an extension of the Worldwide Web that contains information with explicit meaning  making it easier for machines to automatically process and integrate information available on the Web.
+                        <br /> <br /> Semantic Web make use of many tools as vocabularies and ontologies to fullfill this goal. Ontologies
+                        allow users to clasify content (like a taxonomy) which allows you to relate data based on the information in it as opposed to a term describing it. <br />
+                        <br />This represents great value for organizatios because it allows to:
 
-<h3 style="margin-left:47px">What can be found on Panama Nest Ontology?</h3>
-<p>
-    <font color="black" size="4">
-        <div style="margin-left:45px">
-            <div style="margin-right:45px">
-                The aviafauna of Panama includes a total of 987 species according to Bird Checklists of the World. Most of this species can be found all over America and even in other continents. As an small country, the number of species within Panama's territory is immense. <br />
-                This ontology will provide information about birds of different orders and families. The data handled by the ontology includes the taxonomic rank of the birds and other characteristics like size, habitat, and common name. <br/> <br />
-                You can search data about any bird or you can use other parameters like the family, or the gen. The ontology will show the result according to the information you have searched. 
+                        <ul>
+                            <br />
+                            <li>Manage content more effectively.</li>
+                            <li>Maximize findability and discoverability of information.</li>
+                            <li>Increase the reuse of “hidden” and unknown information.</li>
+                            <li>Elevate SEO on external search engines.</li>
+                        </ul>
 
-                <br />
+                    </font>
+                </div>
+            </div>
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" class="collapsed" aria-expanded="false"><font color="black" size="5">Resources/Development</font></a>
+                    </h3>
+                </div>
+                <div id="collapseThree" class="panel-collapse collapse" aria-expanded="false">
+                    <div class="panel-body">
+                        <font color="black" size="4">
+                            Hi
+                        </font>
+                    </div>
+                </div>
             </div>
         </div>
-    </font>
-</p>
 
-<h3 style="margin-left:47px">Why choose an ontology?</h3>
-<p>
-    <font color="black" size="4">
-        <div style="margin-left:47px">
-            <div style="margin-right:47px">
-               In order to maintain structured information on a web application you can use Semantic Web. 
-               This can be defined as an extension of the Worldwide Web that contains information with explicit meaning  making it easier for machines to automatically process and integrate information available on the Web. 
-                <br/> <br /> Semantic Web make use of many tools as vocabularies and ontologies to fullfill this goal. Ontologies
-                allow users to clasify content (like a taxonomy) which allows you to relate data based on the information in it as opposed to a term describing it. <br/>
-                <br/>This represents great value for organizatios because it allows to:
-               
-                <ul> <br/>
-                    <li>Manage content more effectively.</li>
-                    <li>Maximize findability and discoverability of information.</li>
-                    <li>Increase the reuse of “hidden” and unknown information.</li>
-                    <li>Elevate SEO on external search engines.</li>
-                </ul>
-
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour" class="collapsed" aria-expanded="false"><font color="black" size="5">Academic Value</font></a>
+                </h3>
+            </div>
+            <div id="collapseFour" class="panel-collapse collapse" aria-expanded="false">
+                <div class="panel-body">
+                    <font color="black" size="4">
+                        This project could benefit investigators, scientists, students and people interested on birds. The idea of creating this project is to acquired knowledge about birds
+                        and also to expand the data found on the ontology with sources of information from anywhere.
+                        It could be a great tool for bird studies and also a way to teach undergraduate students about the taxonomic rank of birds and other characteristics assorted on the website.
+                    </font>
+                </div>
             </div>
         </div>
-    </font>
-</p>
-
-<h3 style="margin-left:47px">Resources/Development</h3>
-<p>
-    <font color="black" size="4">
-        <div style="margin-left:45px">
-            <div style="margin-right:45px">
-              
-                <br />
-            </div>
-        </div>
-    </font>
-</p>
-
-
-<h3 style="margin-left:47px">Academic Value</h3>
-<p>
-    <font color="black" size="4">
-        <div style="margin-left:45px">
-            <div style="margin-right:45px">
-               This project could benefit investigators, scientists, students and people interested on birds. The idea of creating this project is to acquired knowledge about birds
-               and also to expand the data found on the ontology with sources of information from anywhere. 
-               It could be a great tool for bird studies and also a way to teach undergraduate students about the taxonomic rank of birds and other characteristics assorted on the website. 
-                <br />
-            </div>
-        </div>
-    </font>
-</p>
-
+    </div>
 
