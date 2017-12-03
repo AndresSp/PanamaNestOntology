@@ -244,6 +244,41 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#BinomialName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#BinomialName"/>
+    
+
+
+    <!-- http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#Habitat -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#Habitat"/>
+    
+
+
+    <!-- http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#Region -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#Region"/>
+    
+
+
+    <!-- http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#Size -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#Size"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
     // Classes
     //
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -346,6 +381,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Accipiter">
         <rdf:type rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Life"/>
         <pno:hasSpeciesChild rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#superciliosus"/>
+        <rdfs:label>Accipitier</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -358,6 +394,7 @@
         <pno:hasGenusChild rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Harpia"/>
         <pno:hasGenusChild rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Pseudastur"/>
         <pno:hasGenusChild rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Rostrhamus"/>
+        <rdfs:label>Accipitridae</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -368,6 +405,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Life"/>
         <pno:hasFamilyChild rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Accipitridae"/>
         <pno:hasFamilyChild rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Cathartidae"/>
+        <rdfs:label>Accipitriformes</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -387,6 +425,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Aves">
         <rdf:type rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Life"/>
         <pno:hasOrderChild rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Accipitriformes"/>
+        <rdfs:label>Aves</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -395,6 +434,16 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Black_Vulture">
         <rdf:type rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Life"/>
+        <BinomialName>Coragyps atratus</BinomialName>
+        <Habitat>Forest Area</Habitat>
+        <Habitat>Urban Area</Habitat>
+        <Region>Caribbean</Region>
+        <Region>Central America</Region>
+        <Region>North America</Region>
+        <Region>South America</Region>
+        <Size rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">58-69 cm</Size>
+        <CommonName>Black Vulture</CommonName>
+        <rdfs:label>Black_Vulture</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -404,6 +453,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Cathartidae">
         <rdf:type rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Life"/>
         <pno:hasGenusChild rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Coragyps"/>
+        <rdfs:label>Cathartidae</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -413,6 +463,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Chordata">
         <rdf:type rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Life"/>
         <pno:hasClassChild rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Aves"/>
+        <rdfs:label>Chordata</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -422,6 +473,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Coragyps">
         <rdf:type rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Life"/>
         <pno:hasSpeciesChild rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#atratus"/>
+        <rdfs:label>Coragyps</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -441,6 +493,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Harpia">
         <rdf:type rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Life"/>
         <pno:hasSpeciesChild rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#harpyja"/>
+        <rdfs:label>Harpia</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -449,6 +502,13 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Harpy_Eagle">
         <rdf:type rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Life"/>
+        <BinomialName>Harpia harpyja</BinomialName>
+        <Habitat>Forest Area</Habitat>
+        <Region>Central America</Region>
+        <Region>South America</Region>
+        <Size rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">89-100 cm</Size>
+        <CommonName>Harpy Eagle</CommonName>
+        <rdfs:label>Harpy_Eagle</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -458,6 +518,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Pseudastur">
         <rdf:type rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Life"/>
         <pno:hasSpeciesChild rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#albicollis"/>
+        <rdfs:label>Pseudastur</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -467,6 +528,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Rostrhamus">
         <rdf:type rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Life"/>
         <pno:hasSpeciesChild rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#sociabilis"/>
+        <rdfs:label>Rostrhamus</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -475,6 +537,16 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Snail_Kite">
         <rdf:type rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Life"/>
+        <BinomialName>Rostrhamus sociabilis</BinomialName>
+        <Habitat>Coastal Area</Habitat>
+        <Habitat>Wetlands</Habitat>
+        <Region>Caribbean</Region>
+        <Region>Central America</Region>
+        <Region>North America</Region>
+        <Region>South America</Region>
+        <Size rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">36-48 cm</Size>
+        <CommonName>Snail Kite</CommonName>
+        <rdfs:label>Snail_Kite</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -483,6 +555,13 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Tiny_Hawk">
         <rdf:type rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Life"/>
+        <BinomialName>Accipiter superciliosus</BinomialName>
+        <Habitat>Forest Area</Habitat>
+        <Region>Central America</Region>
+        <Region>South America</Region>
+        <Size rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">20-26 cm</Size>
+        <CommonName>Tiny Hawk</CommonName>
+        <rdfs:label>Tiny_Hawk</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -491,7 +570,13 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#White_Hawk">
         <rdf:type rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Life"/>
-        <CommonName xml:lang="en">White_Hawk</CommonName>
+        <BinomialName>Pseudastur albicollis</BinomialName>
+        <Habitat>Woodlands</Habitat>
+        <Region>Central America</Region>
+        <Region>South America</Region>
+        <Size rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">50 cm</Size>
+        <CommonName xml:lang="en">White Hawk</CommonName>
+        <rdfs:label>White_Hawk</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -501,6 +586,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#albicollis">
         <rdf:type rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Life"/>
         <pno:hasBirdChild rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#White_Hawk"/>
+        <rdfs:label>albicollis</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -510,6 +596,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#atratus">
         <rdf:type rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Life"/>
         <pno:hasBirdChild rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Black_Vulture"/>
+        <rdfs:label>atratus</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -519,6 +606,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#harpyja">
         <rdf:type rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Life"/>
         <pno:hasBirdChild rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Harpy_Eagle"/>
+        <rdfs:label>harpyja</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -528,6 +616,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#sociabilis">
         <rdf:type rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Life"/>
         <pno:hasBirdChild rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Snail_Kite"/>
+        <rdfs:label>sociabilis</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -537,6 +626,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#superciliosus">
         <rdf:type rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Life"/>
         <pno:hasBirdChild rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Tiny_Hawk"/>
+        <rdfs:label>superciliosus</rdfs:label>
     </owl:NamedIndividual>
 </rdf:RDF>
 
