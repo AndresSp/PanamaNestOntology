@@ -54,7 +54,7 @@
                         <div class="col-md-6">
                             <div class="row">
                                 <div class="col-md-3">
-                                    <button type="button" class="btn btn-primary" onclick="getEntities()">
+                                    <button type="button" class="btn btn-primary" onclick="getEntities('GetOrders')">
                                         <i class="fa fa-th-list"></i> Seleccionar
                                     </button>
                                 </div>
@@ -81,7 +81,7 @@
                         <div class="col-md-6">
                             <div class="row">
                                 <div class="col-md-3">
-                                    <button type="button" class="btn btn-primary" onclick="getEntities()">
+                                    <button type="button" class="btn btn-primary" onclick="getEntities('GetFamilies')">
                                         <i class="fa fa-th-list"></i> Seleccionar
                                     </button>
                                 </div>
@@ -108,7 +108,7 @@
                         <div class="col-md-6">
                             <div class="row">
                                 <div class="col-md-3">
-                                    <button type="button" class="btn btn-primary" onclick="getEntities()">
+                                    <button type="button" class="btn btn-primary" onclick="getEntities('GetGenus')">
                                         <i class="fa fa-th-list"></i> Seleccionar
                                     </button>
                                 </div>
@@ -265,7 +265,7 @@
 
 @section Scripts{
     <script type="text/javascript">
-        var showNewEntityModal = function(modalTitle, id) {
+        var showNewEntityModal = function (modalTitle, id) {
             $('#EntityModal').modal('show');
             $('#EntityModal #modalTitle').html(modalTitle);
 
@@ -283,32 +283,14 @@
             $('#EntityModal #txtContent').val('');
         }
 
-        var loadEntityModal = function(data){
-            $('#entityTable tbody').DataTable({
-                data: data,
-                columns: [
-                    { data: 'uri' },
-                    { data: 'resouceName' },
-                    { data: 'childNumber' }
-                ]
-            });
-            $('#SelectEntityModal').modal('show');
-        }
+        var getEntities = function (action) {
 
-        var getEntities = function (filter = '') {
-
-            var entityFilter = {
-                'entity': 'Order',
-                'filter': [{
-                    'propertyName': 'hasParent',
-                    'value': 'Oscar'
-                }]
-            };
+            var link = '@Url.Action("action", "Ontology")';
+            link.replace("action", action);
 
             $.ajax({
                 type: 'POST',
-                url: '@Url.Action("GetOrders", "Ontology")',
-                data: JSON.stringify(entityFilter),
+                url: link,
                 contentType: 'application/json;charset=utf-8',
                 dataType: 'json',
 
@@ -323,7 +305,6 @@
                     var code = JSON.stringify(data.error.code);
                     if (code == 200) {
                         console.log(result);
-                        loadEntityModal(result);
                     }
                 },
 
