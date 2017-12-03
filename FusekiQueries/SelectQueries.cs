@@ -21,6 +21,7 @@ namespace FusekiConnection
             store = new PersistentTripleStore(fuseki);
         }
 
+        #region Master Queries
         /// <summary>
         /// Dont have Parents :'( (Y/N)
         /// </summary>
@@ -70,45 +71,96 @@ namespace FusekiConnection
             return list;
         }
 
+        /// <summary>
+        /// *Domain Master*
+        /// Select all Domains
+        /// </summary>
+        /// <returns></returns>
         public List<Entity> SelectDomains()
         {
-            return SelectMaster(SparqlUtilities.QStrings.Domains, false);
+            return SelectMaster(SparqlUtilities.QStrings.Domains, haveParents:false);
         }
 
+        /// <summary>
+        /// *Kingdom Master*
+        /// Select all Kingdoms
+        /// </summary>
+        /// <returns></returns>
         public List<Entity> SelectKingdoms()
         {
             return SelectMaster(SparqlUtilities.QStrings.Kingdoms);
         }
 
+        /// <summary>
+        /// *Phylum Master*
+        /// Select all Phylums
+        /// </summary>
+        /// <returns></returns>
         public List<Entity> SelectPhylums()
         {
             return SelectMaster(SparqlUtilities.QStrings.Phylums);
         }
 
+        /// <summary>
+        /// *Class Master*
+        /// Select all Classes
+        /// </summary>
+        /// <returns></returns>
         public List<Entity> SelectClasses()
         {
             return SelectMaster(SparqlUtilities.QStrings.Classes);
         }
 
+        /// <summary>
+        /// *Order Master*
+        /// Select all Orders
+        /// </summary>
+        /// <returns></returns>
         public List<Entity> SelectOrders()
         {
             return SelectMaster(SparqlUtilities.QStrings.Orders);
         }
 
+        /// <summary>
+        /// *Family Master*
+        /// Select all Families
+        /// </summary>
+        /// <returns></returns>
         public List<Entity> SelectFamilies()
         {
             return SelectMaster(SparqlUtilities.QStrings.Families);
         }
 
+        /// <summary>
+        /// *Genus Master*
+        /// Select all Genuses
+        /// </summary>
+        /// <returns></returns>
         public List<Entity> SelectGenuses()
         {
             return SelectMaster(SparqlUtilities.QStrings.Genuses);
         }
 
+        /// <summary>
+        /// *Specie Master*
+        /// Select Species
+        /// </summary>
+        /// <returns></returns>
         public List<Entity> SelectSpecies()
         {
             return SelectMaster(SparqlUtilities.QStrings.Species);
         }
+
+        /// <summary>
+        /// *Bird Master*
+        /// Select all Birds
+        /// </summary>
+        /// <returns></returns>
+        public List<Entity> SelectBirds()
+        {
+            return SelectMaster(SparqlUtilities.QStrings.Birds, haveChilds:false);
+        }
+        #endregion
 
         private void Example()
         {

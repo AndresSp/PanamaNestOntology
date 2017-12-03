@@ -6,17 +6,10 @@ namespace Entities.Model
 {
     public class Entity
     {
-        private string uri;
         private List<string> childsName = new List<string>();
         private List<string> childsUri = new List<string>();
 
-        public string Uri
-        {
-            get
-            { return this.uri; }
-            set
-            { this.uri = value; }
-        }
+        public string Uri { get; set; }
         public string Name { get; set; }
         public string ParentUri { get; set; }
         public string ParentName { get; set; }

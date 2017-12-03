@@ -9,9 +9,21 @@ namespace FusekiConnection
         public static void Main(string[] args)
         {
             SelectQueries selectQueries = new SelectQueries();
-            List<Entity> e = selectQueries.SelectSpecies();
+            List<Entity> e = new List<Entity>();
 
-            PrintEntities(e);
+            /* Examples
+            e = selectQueries.SelectDomains();
+            e = selectQueries.SelectKingdoms();
+            e = selectQueries.SelectPhylums();
+            e = selectQueries.SelectClasses();
+            e = selectQueries.SelectOrders();
+            e = selectQueries.SelectFamilies();
+            e = selectQueries.SelectGenuses();
+            e = selectQueries.SelectSpecies();*/
+            e = selectQueries.SelectBirds();
+            e = selectQueries.Se
+
+            PrintEntities(e); //print
             Console.ReadLine();
         }
 
