@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Entities.Model;
+using FusekiConnection;
 
 namespace WebApp.Controllers
 {
@@ -12,28 +13,104 @@ namespace WebApp.Controllers
     [Route("api/Ontology")]
     public class OntologyController : Controller
     {
-       /* [Route("GetOrders")]
-        [HttpPost]
-        public JsonResult GetOrders([FromBody] EntityFilter entityFilter)
+         [Route("getorders")]
+         [HttpGet]
+         public JsonResult GetOrders()
+         {
+            ResultResponseModel response = new ResultResponseModel();
+            try
+            {
+                SelectQueries query = new SelectQueries();
+                var result = query.SelectOrders();
+
+                response.data = result;
+                response.error = new Error(200, "OK");
+            }
+            catch(Exception ex)
+            {
+                response.error = new Error(500, ex.Message);
+            }
+             return Json(response);
+         }
+
+        [Route("getfamilies")]
+        [HttpGet]
+        public JsonResult GetFamilies()
         {
-            ResultResponseModel result = new ResultResponseModel();
-            //call ontology logic
-            var entityList = new List<Entity>();
-            entityList.Add(new Entity
+            ResultResponseModel response = new ResultResponseModel();
+            try
             {
-                uri = "MyOntology.com/Mollusca",
-                resourceName = "Mollusca",
-                childNumber = 5
-            });
-            entityList.Add(new Entity
+                SelectQueries query = new SelectQueries();
+                var result = query.SelectFamilies();
+
+                response.data = result;
+                response.error = new Error(200, "OK");
+            }
+            catch (Exception ex)
             {
-                uri = "MyOntology.com/Aveary",
-                resourceName = "Aveary",
-                childNumber = 17
-            });
-            result.data = entityList;
-            result.error = new { Code = 200, Info = "OK" };
-            return Json(result);
-        } */
+                response.error = new Error(500, ex.Message);
+            }
+            return Json(response);
+        }
+
+        [Route("getgenus")]
+        [HttpGet]
+        public JsonResult GetGenus()
+        {
+            ResultResponseModel response = new ResultResponseModel();
+            try
+            {
+                SelectQueries query = new SelectQueries();
+                var result = query.SelectGenuses();
+
+                response.data = result;
+                response.error = new Error(200, "OK");
+            }
+            catch (Exception ex)
+            {
+                response.error = new Error(500, ex.Message);
+            }
+            return Json(response);
+        }
+
+        [Route("getspecies")]
+        [HttpGet]
+        public JsonResult GetSpecies()
+        {
+            ResultResponseModel response = new ResultResponseModel();
+            try
+            {
+                SelectQueries query = new SelectQueries();
+                var result = query.SelectGenuses();
+
+                response.data = result;
+                response.error = new Error(200, "OK");
+            }
+            catch (Exception ex)
+            {
+                response.error = new Error(500, ex.Message);
+            }
+            return Json(response);
+        }
+
+        [Route("getphylum")]
+        [HttpGet]
+        public JsonResult GetPhylum()
+        {
+            ResultResponseModel response = new ResultResponseModel();
+            try
+            {
+                SelectQueries query = new SelectQueries();
+                var result = query.SelectPhylums();
+
+                response.data = result;
+                response.error = new Error(200, "OK");
+            }
+            catch (Exception ex)
+            {
+                response.error = new Error(500, ex.Message);
+            }
+            return Json(response);
+        }
     }
 }

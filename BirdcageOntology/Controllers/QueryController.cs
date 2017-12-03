@@ -6,14 +6,19 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace WebApp.Controllers
 {
-    public class SpeciesController : Controller
+    public class QueryController : Controller
     {
         public IActionResult Index()
         {
             return View();
-        }        
+        }
 
-        public IActionResult ViewSpecie()
+        public IActionResult Querie1()
+        {
+            return View();
+        }
+
+        public IActionResult Querie2()
         {
             return View();
         }

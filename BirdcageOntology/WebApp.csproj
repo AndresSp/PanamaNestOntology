@@ -15,6 +15,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Core\Entities.csproj" />
+    <ProjectReference Include="..\FusekiQueries\FusekiConnection.csproj" />
   </ItemGroup>
 
 </Project>
