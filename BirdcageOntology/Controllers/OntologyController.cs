@@ -12,7 +12,7 @@ namespace WebApp.Controllers
     [Route("api/Ontology")]
     public class OntologyController : Controller
     {
-        [Route("GetOrders")]
+       /* [Route("GetOrders")]
         [HttpPost]
         public JsonResult GetOrders([FromBody] EntityFilter entityFilter)
         {
@@ -34,6 +34,6 @@ namespace WebApp.Controllers
             result.data = entityList;
             result.error = new { Code = 200, Info = "OK" };
             return Json(result);
-        }
+        } */
     }
 }

@@ -12,5 +12,16 @@ namespace WebApp.Controllers
         {
             return View();
         }
+
+        public IActionResult Querie1()
+        {
+            return View();
+        }
+
+        public IActionResult Querie2()
+        {
+            return View();
+        }
     }
+
 }
