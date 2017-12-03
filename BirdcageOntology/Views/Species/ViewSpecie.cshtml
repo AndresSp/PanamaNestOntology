@@ -1,0 +1,196 @@
+﻿
+@{
+    ViewData["Title"] = "ViewSpecie";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">Ver Especie</h1>
+        <h4>Seleccione la taxonomía de la especie</h4>
+    </div>
+</div>
+<div class="row" id="pSearch">
+    <div class="col-lg-12">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <div>
+                    Información de la Especie
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="panel-body">
+        <div>
+            <div class="row" style="margin-bottom:15px">
+                <div class="col-md-6">
+                    <div class="row">
+                        <label class="col-md-5 control-label text-right">Pertenece al Order</label>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" id="pOrden" maxlength="35" readonly />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <button type="button" class="btn btn-primary" onclick="getEntities()">
+                                <i class="fa fa-th-list"></i> Seleccionar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row" style="margin-bottom:15px">
+                <div class="col-md-6">
+                    <div class="row">
+                        <label class="col-md-5 control-label text-right">Pertenece a la Familia</label>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" id="pFamilia" maxlength="35" readonly />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <button type="button" class="btn btn-primary" onclick="getEntities()">
+                                <i class="fa fa-th-list"></i> Seleccionar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row" style="margin-bottom:15px">
+                <div class="col-md-6">
+                    <div class="row">
+                        <label class="col-md-5 control-label text-right">Pertenece al Gen</label>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" id="pGen" maxlength="35" readonly />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <button type="button" class="btn btn-primary" onclick="getEntities()">
+                                <i class="fa fa-th-list"></i> Seleccionar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row" id="pResults">
+    <div class="col-lg-12">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <div>
+                    Resultados de la Especie
+                </div>
+            </div>
+        </div>
+        <div class="panel-body">
+            <div>
+                <div class="row" style="margin-bottom:15px">
+                    <div class="col-md-6">
+                        <div class="row">
+                            <label class="col-sm-5 control-label text-right">Nombre Científico</label>
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control" id="txtCientifico" maxlength="50" readonly />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="row">
+
+                            <label class="col-sm-3 control-label text-right">Nombre Común</label>
+
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control" id="txtComun" maxlength="50" readonly />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row" style="margin-bottom:15px">
+                    <div class="col-md-6">
+                        <div class="row">
+                            <label class="col-sm-5 control-label text-right">Gen</label>
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control" id="txtGen" maxlength="50" readonly />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="row">
+
+                            <label class="col-sm-3 control-label text-right">Tamaño</label>
+
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control" id="txtTamano" maxlength="50" readonly />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row" style="margin-bottom:15px">
+                    <div class="col-md-6">
+                        <div class="row">
+                            <label class="col-sm-5 control-label text-right">Especie</label>
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control" id="txtEspecie" maxlength="50" readonly />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="row">
+
+                            <label class="col-sm-3 control-label text-right">Habitat</label>
+
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control" id="txtHabitat" maxlength="50" readonly />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row" style="margin-bottom:15px">
+                    <div class="col-md-6">
+                        <div class="row">
+                            <label class="col-sm-5 control-label text-right">Orden</label>
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control" id="txtOrden" maxlength="50" readonly />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="row">
+
+                            <label class="col-sm-3 control-label text-right">Paises</label>
+
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control" id="txtPaises" maxlength="50" readonly />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row" style="margin-bottom:15px">
+                    <div class="col-md-6">
+                        <div class="row">
+                            <label class="col-sm-5 control-label text-right">Familia</label>
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control" id="txtFamilia" maxlength="50" readonly />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

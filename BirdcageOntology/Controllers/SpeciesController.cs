@@ -12,5 +12,10 @@ namespace WebApp.Controllers
         {
             return View();
         }
+
+        public IActionResult ViewSpecie()
+        {
+            return View();
+        }
     }
 }
