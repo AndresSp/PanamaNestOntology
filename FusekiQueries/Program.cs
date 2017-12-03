@@ -6,7 +6,9 @@ namespace FusekiConnection
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Queries queries = new Queries();
+            queries.Select();
+            Console.ReadLine();
         }
     }
 }

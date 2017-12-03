@@ -6,9 +6,8 @@ namespace Entities.Model
 {
     public class Entity
     {
-        public string uri { get; set; }
-        public string resourceName { get; set; }
-        public int childNumber { get; set; }
-        //public list<Properties> properties { get; set; }
+        public string Uri { get; set; }
+        public string Name { get; set; }
+        public string Parent { get; set; }
     }
 }
