@@ -270,6 +270,12 @@
     
 
 
+    <!-- http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#Size -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#Size"/>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -435,6 +441,7 @@
         <Region>Central America</Region>
         <Region>North America</Region>
         <Region>South America</Region>
+        <Size rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">58-69 cm</Size>
         <CommonName>Black Vulture</CommonName>
         <rdfs:label>Black_Vulture</rdfs:label>
     </owl:NamedIndividual>
@@ -499,6 +506,7 @@
         <Habitat>Forest Area</Habitat>
         <Region>Central America</Region>
         <Region>South America</Region>
+        <Size rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">89-100 cm</Size>
         <CommonName>Harpy Eagle</CommonName>
         <rdfs:label>Harpy_Eagle</rdfs:label>
     </owl:NamedIndividual>
@@ -536,6 +544,7 @@
         <Region>Central America</Region>
         <Region>North America</Region>
         <Region>South America</Region>
+        <Size rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">36-48 cm</Size>
         <CommonName>Snail Kite</CommonName>
         <rdfs:label>Snail_Kite</rdfs:label>
     </owl:NamedIndividual>
@@ -550,6 +559,7 @@
         <Habitat>Forest Area</Habitat>
         <Region>Central America</Region>
         <Region>South America</Region>
+        <Size rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">20-26 cm</Size>
         <CommonName>Tiny Hawk</CommonName>
         <rdfs:label>Tiny_Hawk</rdfs:label>
     </owl:NamedIndividual>
@@ -564,6 +574,7 @@
         <Habitat>Woodlands</Habitat>
         <Region>Central America</Region>
         <Region>South America</Region>
+        <Size rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">50 cm</Size>
         <CommonName xml:lang="en">White Hawk</CommonName>
         <rdfs:label>White_Hawk</rdfs:label>
     </owl:NamedIndividual>
