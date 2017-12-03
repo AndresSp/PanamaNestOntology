@@ -12,28 +12,28 @@ namespace WebApp.Controllers
     [Route("api/Ontology")]
     public class OntologyController : Controller
     {
-        [Route("GetOrders")]
-        [HttpPost]
-        public JsonResult GetOrders([FromBody] EntityFilter entityFilter)
-        {
-            ResultResponseModel result = new ResultResponseModel();
-            //call ontology logic
-            var entityList = new List<Entity>();
-            entityList.Add(new Entity
-            {
-                uri = "MyOntology.com/Mollusca",
-                resourceName = "Mollusca",
-                childNumber = 5
-            });
-            entityList.Add(new Entity
-            {
-                uri = "MyOntology.com/Aveary",
-                resourceName = "Aveary",
-                childNumber = 17
-            });
-            result.data = entityList;
-            result.error = new { Code = 200, Info = "OK" };
-            return Json(result);
-        }
+        //[Route("GetOrders")]
+        //[HttpPost]
+        //public JsonResult GetOrders([FromBody] EntityFilter entityFilter)
+        //{
+        //    ResultResponseModel result = new ResultResponseModel();
+        //    //call ontology logic
+        //    var entityList = new List<Entity>();
+        //    entityList.Add(new Entity
+        //    {
+        //        uri = "MyOntology.com/Mollusca",
+        //        resourceName = "Mollusca",
+        //        childNumber = 5
+        //    });
+        //    entityList.Add(new Entity
+        //    {
+        //        uri = "MyOntology.com/Aveary",
+        //        resourceName = "Aveary",
+        //        childNumber = 17
+        //    });
+        //    result.data = entityList;
+        //    result.error = new { Code = 200, Info = "OK" };
+        //    return Json(result);
+        //}
     }
 }

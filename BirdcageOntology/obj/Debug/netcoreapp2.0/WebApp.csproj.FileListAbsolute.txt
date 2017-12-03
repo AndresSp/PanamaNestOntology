@@ -63,3 +63,16 @@ C:\Users\gaby-\Documents\GitHub\PanamenianNestOntology\BirdcageOntology\obj\Debu
 C:\Users\gaby-\Documents\GitHub\PanamenianNestOntology\BirdcageOntology\obj\Debug\netcoreapp2.0\WebApp.AssemblyInfo.cs
 C:\Users\gaby-\Documents\GitHub\PanamenianNestOntology\BirdcageOntology\obj\Debug\netcoreapp2.0\WebApp.dll
 C:\Users\gaby-\Documents\GitHub\PanamenianNestOntology\BirdcageOntology\obj\Debug\netcoreapp2.0\WebApp.pdb
+C:\Users\FranciscoIvan\Documents\GitHub\PanamenianNestOntology\BirdcageOntology\obj\Debug\netcoreapp2.0\WebApp.csprojResolveAssemblyReference.cache
+C:\Users\FranciscoIvan\Documents\GitHub\PanamenianNestOntology\BirdcageOntology\obj\Debug\netcoreapp2.0\WebApp.csproj.CoreCompileInputs.cache
+C:\Users\FranciscoIvan\Documents\GitHub\PanamenianNestOntology\BirdcageOntology\obj\Debug\netcoreapp2.0\WebApp.AssemblyInfoInputs.cache
+C:\Users\FranciscoIvan\Documents\GitHub\PanamenianNestOntology\BirdcageOntology\obj\Debug\netcoreapp2.0\WebApp.AssemblyInfo.cs
+C:\Users\FranciscoIvan\Documents\GitHub\PanamenianNestOntology\BirdcageOntology\obj\Debug\netcoreapp2.0\WebApp.dll
+C:\Users\FranciscoIvan\Documents\GitHub\PanamenianNestOntology\BirdcageOntology\obj\Debug\netcoreapp2.0\WebApp.pdb
+C:\Users\FranciscoIvan\Documents\GitHub\PanamenianNestOntology\BirdcageOntology\bin\Debug\netcoreapp2.0\WebApp.deps.json
+C:\Users\FranciscoIvan\Documents\GitHub\PanamenianNestOntology\BirdcageOntology\bin\Debug\netcoreapp2.0\WebApp.runtimeconfig.json
+C:\Users\FranciscoIvan\Documents\GitHub\PanamenianNestOntology\BirdcageOntology\bin\Debug\netcoreapp2.0\WebApp.runtimeconfig.dev.json
+C:\Users\FranciscoIvan\Documents\GitHub\PanamenianNestOntology\BirdcageOntology\bin\Debug\netcoreapp2.0\WebApp.dll
+C:\Users\FranciscoIvan\Documents\GitHub\PanamenianNestOntology\BirdcageOntology\bin\Debug\netcoreapp2.0\WebApp.pdb
+C:\Users\FranciscoIvan\Documents\GitHub\PanamenianNestOntology\BirdcageOntology\bin\Debug\netcoreapp2.0\Entities.dll
+C:\Users\FranciscoIvan\Documents\GitHub\PanamenianNestOntology\BirdcageOntology\bin\Debug\netcoreapp2.0\Entities.pdb
