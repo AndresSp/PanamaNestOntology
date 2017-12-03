@@ -166,47 +166,9 @@ namespace FusekiConnection
         }
         #endregion
 
-        private void Example()
-        {
-            SparqlUtilities sparqlUtilities = new SparqlUtilities();
-            FusekiConnector fuseki = new FusekiConnector(sparqlUtilities.GraphPath);
-            PersistentTripleStore store = new PersistentTripleStore(fuseki);
-
-            if (store.HasGraph(sparqlUtilities.GraphPath))
-            {
-                //Get the graph out of the in-memory view (note that if it changes in the underlying store in the meantime you will not see those changes)
-                Console.WriteLine("Hay un grafo");
-
-                //Do something with the Graph...
-            }
-            
-            Object results = store.ExecuteQuery("SELECT * WHERE {?s ?p ?o}");
-
-            if (results is SparqlResultSet)
-            {
-                //Print out the Results
-                SparqlResultSet rset = (SparqlResultSet)results;
-                foreach (SparqlResult result in rset)
-                {
-                    Console.WriteLine(result.ToString());
-                }
-            }
-
-            Console.ReadLine();
-
-            results = store.ExecuteQuery("SELECT ?s WHERE {?s ?p ?o}");
-            if (results is SparqlResultSet)
-            {
-                //Print out the Results
-                SparqlResultSet rset = (SparqlResultSet)results;
-                foreach (SparqlResult result in rset)
-                {
-                    Console.WriteLine(result.ToString());
-                }
-            }
-
-
-        }
+        #region Specific Queries
         
+        #endregion
+
     }
 }
