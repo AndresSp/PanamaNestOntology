@@ -69,12 +69,12 @@ C:\Users\omarg\Documents\GitHub\PanamenianNestOntology\BirdcageOntology\bin\Debu
 C:\Users\omarg\Documents\GitHub\PanamenianNestOntology\BirdcageOntology\bin\Debug\netcoreapp2.0\WebApp.dll
 C:\Users\omarg\Documents\GitHub\PanamenianNestOntology\BirdcageOntology\bin\Debug\netcoreapp2.0\WebApp.pdb
 C:\Users\omarg\Documents\GitHub\PanamenianNestOntology\BirdcageOntology\bin\Debug\netcoreapp2.0\Entities.dll
+C:\Users\omarg\Documents\GitHub\PanamenianNestOntology\BirdcageOntology\bin\Debug\netcoreapp2.0\FusekiConnection.dll
 C:\Users\omarg\Documents\GitHub\PanamenianNestOntology\BirdcageOntology\bin\Debug\netcoreapp2.0\Entities.pdb
+C:\Users\omarg\Documents\GitHub\PanamenianNestOntology\BirdcageOntology\bin\Debug\netcoreapp2.0\FusekiConnection.pdb
 C:\Users\omarg\Documents\GitHub\PanamenianNestOntology\BirdcageOntology\obj\Debug\netcoreapp2.0\WebApp.csprojResolveAssemblyReference.cache
 C:\Users\omarg\Documents\GitHub\PanamenianNestOntology\BirdcageOntology\obj\Debug\netcoreapp2.0\WebApp.csproj.CoreCompileInputs.cache
 C:\Users\omarg\Documents\GitHub\PanamenianNestOntology\BirdcageOntology\obj\Debug\netcoreapp2.0\WebApp.AssemblyInfoInputs.cache
 C:\Users\omarg\Documents\GitHub\PanamenianNestOntology\BirdcageOntology\obj\Debug\netcoreapp2.0\WebApp.AssemblyInfo.cs
 C:\Users\omarg\Documents\GitHub\PanamenianNestOntology\BirdcageOntology\obj\Debug\netcoreapp2.0\WebApp.dll
 C:\Users\omarg\Documents\GitHub\PanamenianNestOntology\BirdcageOntology\obj\Debug\netcoreapp2.0\WebApp.pdb
-C:\Users\omarg\Documents\GitHub\PanamenianNestOntology\BirdcageOntology\bin\Debug\netcoreapp2.0\FusekiConnection.dll
-C:\Users\omarg\Documents\GitHub\PanamenianNestOntology\BirdcageOntology\bin\Debug\netcoreapp2.0\FusekiConnection.pdb
