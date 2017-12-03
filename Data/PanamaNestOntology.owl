@@ -377,6 +377,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Animalia">
         <rdf:type rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Life"/>
         <pno:hasPhylumChild rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Chordata"/>
+        <rdfs:label>Animalia</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -430,6 +431,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Eukarya">
         <rdf:type rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Life"/>
         <pno:hasKingdomChild rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Animalia"/>
+        <rdfs:label>Eukarya</rdfs:label>
     </owl:NamedIndividual>
     
 

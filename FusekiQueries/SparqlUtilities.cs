@@ -51,7 +51,7 @@ namespace FusekiConnection
         {
         }
 
-        public void AddNamespaces(SparqlParameterizedString sparqlprmtS)
+        private void AddNamespaces(SparqlParameterizedString sparqlprmtS)
         {
             sparqlprmtS.Namespaces.AddNamespace("dc", new Uri("http://purl.org/dc/elements/1.1/"));
             sparqlprmtS.Namespaces.AddNamespace("owl", new Uri("http://www.w3.org/2002/07/owl#"));
@@ -65,17 +65,19 @@ namespace FusekiConnection
 
         public void AddQueryCommand(SparqlParameterizedString sparqlprmtS, QStrings qStrings)
         {
+            AddNamespaces(sparqlprmtS);
             string query = "";
             switch(qStrings)
             {
-                case QStrings.Domains: query = "SELECT DISTINCT ?domain WHERE { ?domain pno:hasKingdomChild? x. } "; break;
-                case QStrings.Kingdoms: query = "SELECT DISTINCT ?kingdom WHERE {  ?kingdom pno:hasPhylumChild? x. } "; break;
-                case QStrings.Phylums: query = "SELECT DISTINCT ?phylum WHERE { ?phylum pno:hasClassChild ?x. }"; break;
-                case QStrings.Classes: query = "SELECT DISTINCT ?class WHERE { ?class pno:hasOrderChild ?x. }"; break;
-                case QStrings.Orders: query = "SELECT DISTINCT ?order WHERE { ?order pno:hasFamilyChild ?x. }"; break;
-                case QStrings.Families: query = "SELECT DISTINCT ?family WHERE { ?family pno:hasGenusChild ?x. }"; break;
-                case QStrings.Genuses: query = "SELECT DISTINCT ?genus WHERE { ?genus pno:hasSpeciesChild ?x. }"; break;
-                case QStrings.Species: query = "SELECT DISTINCT ?specie WHERE { ?specie pno:hasBirdChild ?x. }"; break;
+                case QStrings.Domains: query = "SELECT DISTINCT ?uri ?name ?child ?childname WHERE { ?uri pno:hasKingdomChild ?child. OPTIONAL {?uri rdfs:label ?name} OPTIONAL {?child rdfs:label ?childname} }"; break;
+                case QStrings.Kingdoms: query = "SELECT DISTINCT ?uri ?name ?parent ?parentname ?child ?childname WHERE { ?uri pno:hasPhylumChild ?child. ?parent pno:hasKingdomChild ?uri. OPTIONAL {?uri rdfs:label ?name} OPTIONAL {?parent rdfs:label ?parentname} OPTIONAL {?child rdfs:label ?childname} }"; break;
+                case QStrings.Phylums: query = "SELECT DISTINCT ?uri ?name ?parent ?parentname ?child ?childname WHERE { ?uri pno:hasClassChild ?child. ?parent pno:hasPhylumChild ?uri. OPTIONAL {?uri rdfs:label ?name} OPTIONAL {?parent rdfs:label ?parentname} OPTIONAL {?child rdfs:label ?childname} }"; break;
+                case QStrings.Classes: query = "SELECT DISTINCT ?uri ?name ?parent ?parentname ?child ?childname WHERE { ?uri pno:hasOrderChild ?child. ?parent pno:hasClassChild ?uri. OPTIONAL {?uri rdfs:label ?name} OPTIONAL {?parent rdfs:label ?parentname} OPTIONAL {?child rdfs:label ?childname} }"; break;
+                case QStrings.Orders: query = "SELECT DISTINCT ?uri ?name ?parent ?parentname ?child ?childname WHERE { ?uri pno:hasFamilyChild ?child. ?parent pno:hasOrderChild ?uri. OPTIONAL {?uri rdfs:label ?name} OPTIONAL {?parent rdfs:label ?parentname} OPTIONAL {?child rdfs:label ?childname} }"; break;
+                case QStrings.Families: query = "SELECT DISTINCT ?uri ?name ?parent ?parentname ?child ?childname WHERE { ?uri pno:hasGenusChild ?child. ?parent pno:hasFamilyChild ?uri. OPTIONAL {?uri rdfs:label ?name} OPTIONAL {?parent rdfs:label ?parentname} OPTIONAL {?child rdfs:label ?childname} }"; break;
+                case QStrings.Genuses: query = "SELECT DISTINCT ?uri ?name ?parent ?parentname ?child ?childname WHERE { ?uri pno:hasSpeciesChild ?child. ?parent pno:hasGenusChild ?uri. OPTIONAL {?uri rdfs:label ?name} OPTIONAL {?parent rdfs:label ?parentname} OPTIONAL {?child rdfs:label ?childname} }"; break;
+                case QStrings.Species: query = "SELECT DISTINCT ?uri ?name ?parent ?parentname ?child ?childname WHERE { ?uri pno:hasBirdChild ?child. ?parent pno:hasSpeciesChild ?uri. OPTIONAL {?uri rdfs:label ?name} OPTIONAL {?parent rdfs:label ?parentname} OPTIONAL {?child rdfs:label ?childname} }"; break;
+                //Corregir
                 case QStrings.Birds: query = "SELECT DISTINCT ?bird WHERE { ?x pno:hasBirdChild ?bird. }"; break;
                 case QStrings.Bird_Domains: query = "SELECT ?domain ?bird WHERE {  ?domain pno:hasKingdomChild ?kingdom.  ?kingdom pno:hasPhylumChild ?phylum.  ?phylum pno:hasClassChild ?class.  ?class pno:hasOrderChild ?order.  ?order pno:hasFamilyChild ?family.  ?family pno:hasGenusChild ?genus.  ?genus pno:hasSpeciesChild ?specie.  ?specie pno:hasBirdChild ?bird.}"; break;
                 case QStrings.Bird_Kingdoms: query = "SELECT ?kingdom ?bird WHERE {  ?kingdom pno:hasPhylumChild ?phylum.  ?phylum pno:hasClassChild ?class.  ?class pno:hasOrderChild ?order.  ?order pno:hasFamilyChild ?family.  ?family pno:hasGenusChild ?genus.  ?genus pno:hasSpeciesChild ?specie.  ?specie pno:hasBirdChild ?bird.}"; break;
@@ -94,5 +96,6 @@ namespace FusekiConnection
 
             sparqlprmtS.CommandText = query;
         }
+
     }
 }

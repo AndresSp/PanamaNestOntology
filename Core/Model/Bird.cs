@@ -11,7 +11,8 @@ namespace Entities.Model
         string Genus { get; set; }
         string Specie { get; set; }
         string CommonName { get; set; }
-        string Habitat { get; set; }
-        string Region { get; set }
+        string BinomialName { get; set; }
+        List<String> Habitat { get; set; }
+        List<String> Region { get; set; }
     }
 }

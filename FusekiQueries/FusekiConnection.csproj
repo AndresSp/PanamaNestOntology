@@ -11,4 +11,8 @@
     <PackageReference Include="dotNetRDF" Version="2.0.0-pre0010" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Core\Entities.csproj" />
+  </ItemGroup>
+
 </Project>

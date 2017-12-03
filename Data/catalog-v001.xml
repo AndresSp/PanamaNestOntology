@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1512244739274" name="http://www.owl-ontologies.com/GeographicalRegion.owl" uri="Turtle%20Ontology/GeographicalRegion.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1512244739274" name="http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology" uri="PanamaNestOntology.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1512289888949" name="http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology" uri="PanamaNestOntology.owl"/>
     </group>
 </catalog>

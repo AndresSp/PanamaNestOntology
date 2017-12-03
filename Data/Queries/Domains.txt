@@ -8,7 +8,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX terms: <http://purl.org/dc/terms/>
 
-SELECT DISTINCT ?domain
-WHERE {
-  ?domain pno:hasKingdomChild ?x.
+SELECT DISTINCT ?name ?domain ?child ?childname
+WHERE 
+{ 
+  ?domain pno:hasKingdomChild ?child.
+  OPTIONAL {?domain rdfs:label ?name}
+  OPTIONAL {?child rdfs:label ?childname}
 }
