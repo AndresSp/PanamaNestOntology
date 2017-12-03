@@ -41,6 +41,8 @@ namespace FusekiConnection
                 foreach (SparqlResult result in rset.Results)
                 {
                     Entity entity = new Entity();
+                    Entity child = new Entity();
+
                     entity.Uri = result.Value("uri").ToString();
                     if (result.HasBoundValue("name"))
                     {
@@ -58,11 +60,13 @@ namespace FusekiConnection
 
                     if (haveChilds)
                     {
-                        entity.ChildsUri.Add(result.Value("child").ToString());
+                        child.Uri = result.Value("child").ToString();
                         if (result.HasBoundValue("childname"))
                         {
-                            entity.ChildsName.Add(result.Value("childname").ToString());
+                            child.Name = result.Value("childname").ToString();
                         }
+                        
+                        entity.Children.Add(child);
                     }
 
                     list.Add(entity);

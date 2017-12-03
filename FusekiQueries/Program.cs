@@ -11,16 +11,16 @@ namespace FusekiConnection
             SelectQueries selectQueries = new SelectQueries();
             List<Entity> e = new List<Entity>();
 
-            /* Examples
-            e = selectQueries.SelectDomains();
-            e = selectQueries.SelectKingdoms();
-            e = selectQueries.SelectPhylums();
-            e = selectQueries.SelectClasses();
-            e = selectQueries.SelectOrders();
-            e = selectQueries.SelectFamilies();
-            e = selectQueries.SelectGenuses();
-            e = selectQueries.SelectSpecies();*/
-            e = selectQueries.SelectBirds();
+            /* Examples */
+            //e = selectQueries.SelectDomains();
+            //e = selectQueries.SelectKingdoms();
+            //e = selectQueries.SelectPhylums();
+            //e = selectQueries.SelectClasses();
+            //e = selectQueries.SelectOrders();
+            //e = selectQueries.SelectFamilies();
+            //e = selectQueries.SelectGenuses();
+            //e = selectQueries.SelectSpecies();
+            //e = selectQueries.SelectBirds();
 
             PrintEntities(e); //print
             Console.ReadLine();
@@ -30,19 +30,16 @@ namespace FusekiConnection
         {
             foreach (Entity entity in list)
             {
-                Console.WriteLine(entity.Name);
-                Console.WriteLine(entity.Uri);
-                Console.WriteLine(entity.ParentName);
-                Console.WriteLine(entity.ParentUri);
-                foreach (var ename in entity.ChildsName)
+                Console.WriteLine("Name: " + entity.Name);
+                Console.WriteLine("Uri: " + entity.Uri);
+                Console.WriteLine("Parent: " + entity.ParentName);
+                Console.WriteLine("Parent Uri: " + entity.ParentUri);
+                foreach (var child in entity.Children)
                 {
-                    Console.WriteLine(ename);
+                    Console.WriteLine("Child Name: " + child.Name);
+                    Console.WriteLine("Child Uri: " + child.Uri);
                 }
 
-                foreach (var euri in entity.ChildsUri)
-                {
-                    Console.WriteLine(euri);
-                }
             }
         }
     }
