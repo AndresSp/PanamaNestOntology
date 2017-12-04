@@ -1,0 +1,5 @@
+GetBird(orden, genero, familia)
+return Birds
+
+GetLoc(Regions, Habitats, average size)
+return birds

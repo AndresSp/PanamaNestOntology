@@ -4,17 +4,23 @@ using System.Text;
 
 namespace Entities.Model
 {
-    class Bird
+    public class Bird
     {
         public string Uri { get; set; }
         public string Name { get; set; }
-        Entity Order { get; set; }
-        Entity Family { get; set; }
-        Entity Genus { get; set; }
-        Entity Specie { get; set; }
-        string CommonName { get; set; }
-        string BinomialName { get; set; }
-        List<string> Habitat { get; set; }
-        List<string> Region { get; set; }
+        public Entity Order { get; set; }
+        public Entity Family { get; set; }
+        public Entity Genus { get; set; }
+        public Entity Specie { get; set; }
+        public string CommonName { get; set; }
+        public string BinomialName { get; set; }
+        public List<string> Habitat { get; set; }
+        public List<string> Region { get; set; }
+
+        public Bird()
+        {
+            Habitat = new List<string>();
+            Region = new List<string>();
+        }
     }
 }

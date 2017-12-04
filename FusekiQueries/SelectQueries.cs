@@ -167,7 +167,154 @@ namespace FusekiConnection
         #endregion
 
         #region Specific Queries
-        
+        public List<Bird> FilterBird(string orderPrmt, string genusPrmt, string familyPrmt)
+        {
+            List<Bird> list = new List<Bird>();
+            SparqlParameterizedString sparqlprmtS = new SparqlParameterizedString();
+            sparqlUtilities.AddQueryCommand(sparqlprmtS, SparqlUtilities.QStrings.Filter_Birds);
+            //sparqlprmtS.SetUri("o", new Uri("http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#" + orderPrmt));
+            //sparqlprmtS.SetUri("g", new Uri("http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#" + genusPrmt));
+            //sparqlprmtS.SetUri("f", new Uri("http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#" + familyPrmt));
+
+            Object results = store.ExecuteQuery(sparqlprmtS.ToString());
+            Console.WriteLine(sparqlprmtS);
+            if (results is SparqlResultSet)
+            {
+                SparqlResultSet rset = (SparqlResultSet)results;
+
+                Console.WriteLine("Count: " + rset.Count.ToString());
+
+                foreach (SparqlResult result in rset.Results)
+                {
+                    Bird bird = new Bird();
+                    Entity order = new Entity();
+                    Entity genus = new Entity();
+                    Entity family = new Entity();
+                    Entity specie = new Entity();
+
+                    bird.Uri = result.Value("bird").ToString();
+                    Console.WriteLine(result.Value("bird").ToString());
+                    if (result.HasBoundValue("name"))
+                    {
+                        bird.Name = result.Value("name").ToString();
+                    }
+
+                    order.Uri = result.Value("order").ToString();
+
+                    if (result.HasBoundValue("ordername"))
+                    {
+                        order.Name = result.Value("ordername").ToString();
+                    }
+                    bird.Order = order;
+
+                    genus.Uri = result.Value("genus").ToString();
+
+                    if (result.HasBoundValue("genusname"))
+                    {
+                        genus.Name = result.Value("genusname").ToString();
+                    }
+                    bird.Genus = genus;
+
+                    family.Uri = result.Value("family").ToString();
+
+                    if (result.HasBoundValue("familyname"))
+                    {
+                        family.Name = result.Value("familyname").ToString();
+                    }
+                    bird.Family = family;
+
+                    specie.Uri = result.Value("specie").ToString();
+
+                    if (result.HasBoundValue("speciename"))
+                    {
+                        specie.Name = result.Value("speciename").ToString();
+                    }
+                    bird.Specie = specie;
+
+                    bird.CommonName = result.Value("commonname").ToString();
+                    bird.BinomialName = result.Value("binomialname").ToString();
+                    bird.Habitat.Add(result.Value("habitat").ToString());
+                    bird.Region.Add(result.Value("region").ToString());
+
+                    list.Add(bird);
+                }
+            }
+            return list;
+        }
+        public List<Bird> FilterBird1(string orderPrmt, string genusPrmt, string familyPrmt)
+        {
+            List<Bird> list = new List<Bird>();
+            SparqlParameterizedString sparqlprmtS = new SparqlParameterizedString();
+            sparqlUtilities.AddQueryCommand(sparqlprmtS, SparqlUtilities.QStrings.Families);
+            //sparqlprmtS.SetUri("o", new Uri("http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#" + orderPrmt));
+            //sparqlprmtS.SetUri("g", new Uri("http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#" + genusPrmt));
+            //sparqlprmtS.SetUri("f", new Uri("http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#" + familyPrmt));
+            
+            Object results = store.ExecuteQuery(sparqlprmtS.ToString());
+            Console.WriteLine(sparqlprmtS);
+            if (results is SparqlResultSet)
+            {
+                SparqlResultSet rset = (SparqlResultSet)results;
+
+                Console.WriteLine("Count: "+rset.Count.ToString());
+
+                foreach (SparqlResult result in rset.Results)
+                {
+                    Bird bird = new Bird();
+                    Entity order = new Entity();
+                    Entity genus = new Entity();
+                    Entity family = new Entity();
+                    Entity specie = new Entity();
+
+                    bird.Uri = result.Value("bird").ToString();
+                    Console.WriteLine(result.Value("bird").ToString());
+                    if (result.HasBoundValue("name"))
+                    {
+                        bird.Name = result.Value("name").ToString();
+                    }
+
+                    order.Uri = result.Value("order").ToString();
+
+                    if (result.HasBoundValue("ordername"))
+                    {
+                        order.Name = result.Value("ordername").ToString();
+                    }
+                    bird.Order = order;
+
+                    genus.Uri = result.Value("genus").ToString();
+
+                    if (result.HasBoundValue("genusname"))
+                    {
+                        genus.Name = result.Value("genusname").ToString();
+                    }
+                    bird.Genus = genus;
+
+                    family.Uri = result.Value("family").ToString();
+
+                    if (result.HasBoundValue("familyname"))
+                    {
+                        family.Name = result.Value("familyname").ToString();
+                    }
+                    bird.Family = family;
+
+                    specie.Uri = result.Value("specie").ToString();
+
+                    if (result.HasBoundValue("speciename"))
+                    {
+                        specie.Name = result.Value("speciename").ToString();
+                    }
+                    bird.Specie = specie;
+
+                    bird.CommonName = result.Value("commonname").ToString();
+                    bird.BinomialName = result.Value("binomialname").ToString();
+                    bird.Habitat.Add(result.Value("habitat").ToString());
+                    bird.Region.Add(result.Value("region").ToString());
+                    
+                    list.Add(bird);
+                }
+            }
+                return list;
+        }
         #endregion
 
     }

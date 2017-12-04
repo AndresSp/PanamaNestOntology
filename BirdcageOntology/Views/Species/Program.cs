@@ -9,7 +9,7 @@ namespace FusekiConnection
         public static void Main(string[] args)
         {
             SelectQueries selectQueries = new SelectQueries();
-            List<Bird> e = new List<Bird>();
+            List<Entity> e = new List<Entity>();
 
             /* Examples */
             //e = selectQueries.SelectDomains();
@@ -27,29 +27,20 @@ namespace FusekiConnection
             Console.ReadLine();
         }
 
-        public static void PrintEntities(List<Bird> list)
+        public static void PrintEntities(List<Entity> list)
         {
-            foreach (Bird bird in list)
+            foreach (Entity entity in list)
             {
-                Console.WriteLine("Name: " + bird.Name);
-                Console.WriteLine("Uri: " + bird.Uri);
-                Console.WriteLine("Order: " + bird.Order.Name);
-                Console.WriteLine("Family: " + bird.Family.Name);
-                Console.WriteLine("Genus: " + bird.Genus.Name);
-                Console.WriteLine("Specie: " + bird.Specie.Name);
-                Console.WriteLine("CommonName: " + bird.CommonName);
-                Console.WriteLine("BinomialName: " + bird.BinomialName);
-
-                foreach(string habitat in bird.Habitat)
+                Console.WriteLine("Name: " + entity.Name);
+                Console.WriteLine("Uri: " + entity.Uri);
+                Console.WriteLine("Parent: " + entity.ParentName);
+                Console.WriteLine("Parent Uri: " + entity.ParentUri);
+                foreach (var child in entity.Children)
                 {
-                    Console.WriteLine("Habitat: " + habitat);
+                    Console.WriteLine("Child Name: " + child.Name);
+                    Console.WriteLine("Child Uri: " + child.Uri);
                 }
 
-                foreach (string region in bird.Region)
-                {
-                    Console.WriteLine("Region: " + region);
-                }
-                Console.WriteLine();
             }
         }
     }
