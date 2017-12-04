@@ -13,10 +13,11 @@ namespace WebApp.Controllers
     [Route("api/Ontology")]
     public class OntologyController : Controller
     {
+        #region Maestros
         [Route("getorders")]
         [HttpGet]
         public JsonResult GetOrders()
-         {
+        {
             ResultResponseModel response = new ResultResponseModel();
             try
             {
@@ -26,12 +27,12 @@ namespace WebApp.Controllers
                 response.data = result;
                 response.error = new Error(200, "OK");
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 response.error = new Error(500, ex.Message);
             }
-             return Json(response);
-         }
+            return Json(response);
+        }
 
         [Route("getfamilies")]
         [HttpGet]
@@ -112,6 +113,27 @@ namespace WebApp.Controllers
             }
             return Json(response);
         }
+
+        [Route("getbirds")]
+        [HttpGet]
+        public JsonResult GetBirds()
+        {
+            ResultResponseModel response = new ResultResponseModel();
+            try
+            {
+                SelectQueries query = new SelectQueries();
+                var result = query.SelectBirds();
+
+                response.data = result;
+                response.error = new Error(200, "OK");
+            }
+            catch (Exception ex)
+            {
+                response.error = new Error(500, ex.Message);
+            }
+            return Json(response);
+        }
+        #endregion
 
         [Route("createbird")]
         [HttpPost]
