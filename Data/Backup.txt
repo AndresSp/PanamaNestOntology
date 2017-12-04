@@ -1,0 +1,249 @@
+@prefix pno:   <http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology>
+        a                  owl:Ontology ;
+        rdfs:label         "Panama Nest Ontology"@en ;
+        dc:description     "The Panama Nest is an ontology focused on the taxonomy and characteristics of birds that can be found within Panamanian territory."@en ;
+        terms:contributor  "Jackelin Chong" , "Ivan Martinez" , "Omar Mejia" , "Andres Tunon" , "Carlos Villarreal" , "Gabriela Reyes" .
+
+terms:contributor  a  owl:AnnotationProperty .
+
+dc:description  a  owl:AnnotationProperty .
+
+pno:Specie  a               owl:ObjectProperty , owl:Class ;
+        rdfs:subClassOf     pno:Life ;
+        rdfs:subPropertyOf  pno:hasParentClasf ;
+        owl:inverseOf       pno:hasBirdChild .
+
+pno:hasParentClasf  a       owl:ObjectProperty , owl:TransitiveProperty ;
+        rdfs:subPropertyOf  owl:topObjectProperty .
+
+pno:hasBirdChild  a  owl:ObjectProperty ;
+        rdfs:domain  pno:Specie ;
+        rdfs:range   pno:Bird .
+
+pno:Bird  a              owl:Class ;
+        rdfs:subClassOf  pno:Life .
+
+pno:hasClassChild  a        owl:ObjectProperty ;
+        rdfs:domain         pno:Phylum ;
+        rdfs:range          pno:Class ;
+        rdfs:subPropertyOf  owl:topObjectProperty ;
+        owl:inverseOf       pno:hasPhylumParent .
+
+pno:hasPhylumParent  a      owl:ObjectProperty ;
+        rdfs:label          "Phylum" ;
+        rdfs:subPropertyOf  pno:hasParentClasf .
+
+pno:Phylum  a            owl:Class ;
+        rdfs:subClassOf  pno:Life .
+
+pno:Class  a             owl:Class ;
+        rdfs:subClassOf  pno:Life .
+
+pno:hasClassParent  a       owl:ObjectProperty ;
+        rdfs:label          "Class" ;
+        rdfs:subPropertyOf  pno:hasParentClasf ;
+        owl:inverseOf       pno:hasOrderChild .
+
+pno:hasOrderChild  a        owl:ObjectProperty ;
+        rdfs:domain         pno:Class ;
+        rdfs:range          pno:Order ;
+        rdfs:subPropertyOf  owl:topObjectProperty .
+
+pno:hasDomainChild  a       owl:ObjectProperty ;
+        rdfs:domain         pno:Life ;
+        rdfs:range          pno:Domain ;
+        rdfs:subPropertyOf  owl:topObjectProperty .
+
+pno:Life  a     owl:Class .
+
+pno:Domain  a            owl:Class ;
+        rdfs:subClassOf  pno:Life .
+
+pno:hasDomainParent  a      owl:ObjectProperty ;
+        rdfs:label          "Domain" ;
+        rdfs:subPropertyOf  pno:hasParentClasf ;
+        owl:inverseOf       pno:hasKingdomChild .
+
+pno:hasKingdomChild  a      owl:ObjectProperty ;
+        rdfs:domain         pno:Domain ;
+        rdfs:range          pno:Kingdom ;
+        rdfs:subPropertyOf  owl:topObjectProperty .
+
+pno:hasFamilyChild  a       owl:ObjectProperty ;
+        rdfs:domain         pno:Order ;
+        rdfs:range          pno:Family ;
+        rdfs:subPropertyOf  owl:topObjectProperty ;
+        owl:inverseOf       pno:hasOrderParent .
+
+pno:hasOrderParent  a       owl:ObjectProperty ;
+        rdfs:label          "Order" ;
+        rdfs:subPropertyOf  pno:hasParentClasf .
+
+pno:Order  a             owl:Class ;
+        rdfs:subClassOf  pno:Life .
+
+pno:Family  a            owl:Class ;
+        rdfs:subClassOf  pno:Life .
+
+pno:hasFamilyParent  a      owl:ObjectProperty ;
+        rdfs:label          "Family" ;
+        rdfs:subPropertyOf  pno:hasParentClasf ;
+        owl:inverseOf       pno:hasGenusChild .
+
+pno:hasGenusChild  a        owl:ObjectProperty ;
+        rdfs:domain         pno:Family ;
+        rdfs:range          pno:Genus ;
+        rdfs:subPropertyOf  owl:topObjectProperty .
+
+pno:Genus  a             owl:Class ;
+        rdfs:subClassOf  pno:Life .
+
+pno:hasGenusParent  a       owl:ObjectProperty ;
+        rdfs:label          "Genus" ;
+        rdfs:subPropertyOf  pno:hasParentClasf ;
+        owl:inverseOf       pno:hasSpeciesChild .
+
+pno:hasSpeciesChild  a      owl:ObjectProperty ;
+        rdfs:domain         pno:Genus ;
+        rdfs:range          pno:Specie ;
+        rdfs:subPropertyOf  owl:topObjectProperty .
+
+pno:Kingdom  a           owl:Class ;
+        rdfs:subClassOf  pno:Life .
+
+pno:hasKingdomParent  a     owl:ObjectProperty ;
+        rdfs:label          "Kingdom" ;
+        rdfs:subPropertyOf  pno:hasParentClasf ;
+        owl:inverseOf       pno:hasPhylumChild .
+
+pno:hasPhylumChild  a       owl:ObjectProperty ;
+        rdfs:domain         pno:Kingdom ;
+        rdfs:range          pno:Phylum ;
+        rdfs:subPropertyOf  owl:topObjectProperty .
+
+pno:Accipiter  a             pno:Life , owl:NamedIndividual ;
+        rdfs:label           "Accipitier" ;
+        pno:hasSpeciesChild  pno:superciliosus .
+
+pno:superciliosus  a      pno:Life , owl:NamedIndividual ;
+        rdfs:label        "superciliosus" ;
+        pno:hasBirdChild  pno:Tiny_Hawk .
+
+pno:Accipitridae  a        pno:Life , owl:NamedIndividual ;
+        rdfs:label         "Accipitridae" ;
+        pno:hasGenusChild  pno:Accipiter , pno:Harpia , pno:Pseudastur , pno:Rostrhamus .
+
+pno:Harpia  a                pno:Life , owl:NamedIndividual ;
+        rdfs:label           "Harpia" ;
+        pno:hasSpeciesChild  pno:harpyja .
+
+pno:Pseudastur  a            pno:Life , owl:NamedIndividual ;
+        rdfs:label           "Pseudastur" ;
+        pno:hasSpeciesChild  pno:albicollis .
+
+pno:Rostrhamus  a            pno:Life , owl:NamedIndividual ;
+        rdfs:label           "Rostrhamus" ;
+        pno:hasSpeciesChild  pno:sociabilis .
+
+pno:Accipitriformes  a      pno:Life , owl:NamedIndividual ;
+        rdfs:label          "Accipitriformes" ;
+        pno:hasFamilyChild  pno:Accipitridae , pno:Cathartidae .
+
+pno:Cathartidae  a         pno:Life , owl:NamedIndividual ;
+        rdfs:label         "Cathartidae" ;
+        pno:hasGenusChild  pno:Coragyps .
+
+pno:Animalia  a             pno:Life , owl:NamedIndividual ;
+        rdfs:label          "Animalia" ;
+        pno:hasPhylumChild  pno:Chordata .
+
+pno:Chordata  a            pno:Life , owl:NamedIndividual ;
+        rdfs:label         "Chordata" ;
+        pno:hasClassChild  pno:Aves .
+
+pno:Aves  a                pno:Life , owl:NamedIndividual ;
+        rdfs:label         "Aves" ;
+        pno:hasOrderChild  pno:Accipitriformes .
+
+pno:Black_Vulture  a      pno:Life , owl:NamedIndividual ;
+        rdfs:label        "Black_Vulture" ;
+        pno:BinomialName  "Coragyps atratus" ;
+        pno:CommonName    "Black Vulture" ;
+        pno:Habitat       "Forest Area" , "Urban Area" ;
+        pno:Region        "Caribbean" , "Central America" , "North America" , "South America" ;
+        pno:Size          "58-69 cm" .
+
+pno:Coragyps  a              pno:Life , owl:NamedIndividual ;
+        rdfs:label           "Coragyps" ;
+        pno:hasSpeciesChild  pno:atratus .
+
+pno:atratus  a            pno:Life , owl:NamedIndividual ;
+        rdfs:label        "atratus" ;
+        pno:hasBirdChild  pno:Black_Vulture .
+
+pno:Eukarya  a               pno:Life , owl:NamedIndividual ;
+        rdfs:label           "Eukarya" ;
+        pno:hasKingdomChild  pno:Animalia .
+
+pno:harpyja  a            pno:Life , owl:NamedIndividual ;
+        rdfs:label        "harpyja" ;
+        pno:hasBirdChild  pno:Harpy_Eagle .
+
+pno:Harpy_Eagle  a        pno:Life , owl:NamedIndividual ;
+        rdfs:label        "Harpy_Eagle" ;
+        pno:BinomialName  "Harpia harpyja" ;
+        pno:CommonName    "Harpy Eagle" ;
+        pno:Habitat       "Forest Area" ;
+        pno:Region        "Central America" , "South America" ;
+        pno:Size          "89-100 cm" .
+
+pno:albicollis  a         pno:Life , owl:NamedIndividual ;
+        rdfs:label        "albicollis" ;
+        pno:hasBirdChild  pno:White_Hawk .
+
+pno:sociabilis  a         pno:Life , owl:NamedIndividual ;
+        rdfs:label        "sociabilis" ;
+        pno:hasBirdChild  pno:Snail_Kite .
+
+pno:Snail_Kite  a         pno:Life , owl:NamedIndividual ;
+        rdfs:label        "Snail_Kite" ;
+        pno:BinomialName  "Rostrhamus sociabilis" ;
+        pno:CommonName    "Snail Kite" ;
+        pno:Habitat       "Coastal Area" , "Wetlands" ;
+        pno:Region        "Caribbean" , "Central America" , "North America" , "South America" ;
+        pno:Size          "36-48 cm" .
+
+pno:Tiny_Hawk  a          pno:Life , owl:NamedIndividual ;
+        rdfs:label        "Tiny_Hawk" ;
+        pno:BinomialName  "Accipiter superciliosus" ;
+        pno:CommonName    "Tiny Hawk" ;
+        pno:Habitat       "Forest Area" ;
+        pno:Region        "Central America" , "South America" ;
+        pno:Size          "20-26 cm" .
+
+pno:White_Hawk  a         pno:Life , owl:NamedIndividual ;
+        rdfs:label        "White_Hawk" ;
+        pno:BinomialName  "Pseudastur albicollis" ;
+        pno:CommonName    "White Hawk"@en ;
+        pno:Habitat       "Woodlands" ;
+        pno:Region        "Central America" , "South America" ;
+        pno:Size          "50 cm" .
+
+pno:CommonName  a           owl:AnnotationProperty ;
+        rdfs:subPropertyOf  rdfs:label .
+
+pno:BinomialName  a  owl:DatatypeProperty .
+
+pno:Habitat  a  owl:DatatypeProperty .
+
+pno:Region  a   owl:DatatypeProperty .
+
+pno:Size  a     owl:DatatypeProperty .

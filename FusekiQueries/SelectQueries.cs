@@ -21,6 +21,11 @@ namespace FusekiConnection
             store = new PersistentTripleStore(fuseki);
         }
 
+        public void CloseConnection()
+        {
+            store.Dispose();
+        }
+
         #region Master Queries
         /// <summary>
         /// Dont have Parents :'( (Y/N)

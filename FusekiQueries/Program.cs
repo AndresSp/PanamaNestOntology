@@ -8,6 +8,9 @@ namespace FusekiConnection
     {
         public static void Main(string[] args)
         {
+            InsertQueries insertQueries = new InsertQueries();
+            insertQueries.CreateBird(new Bird());
+            
             SelectQueries selectQueries = new SelectQueries();
             List<Entity> e = new List<Entity>();
             List<Bird> b = new List<Bird>();
@@ -38,6 +41,7 @@ namespace FusekiConnection
             //bird.Family = family;
             //b = selectQueries.FilterBirdTaxon(bird);
 
+
             Bird bird = new Bird();
             List<string> h = new List<string>();
             h.Add("Woodlands");
@@ -49,7 +53,7 @@ namespace FusekiConnection
             b = selectQueries.FilterBirdLoc(bird);
 
 
-            PrintEntities(e);
+            //PrintEntities(e);
             PrintFilterBirds(b); //print
             Console.ReadLine();
         }
@@ -75,6 +79,7 @@ namespace FusekiConnection
 
         public static void PrintFilterBirds(List<Bird> list)
         {
+            Console.WriteLine();
             foreach (Bird bird in list)
             {
                 Console.WriteLine("Name: " + bird.Name);
