@@ -7,7 +7,7 @@
 <div>
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header">Querie 1</h1>
+            <h1 class="page-header">Query 1</h1>
             <h4>Select the taxonomy of the species </h4>
         </div>
     </div>
@@ -80,7 +80,7 @@
                     </div>
 
                     <div class="row" style="margin-bottom:15px">
-                        <button type="button" class="btn btn-warning" onclick="" style="margin-left:290px;width:300px">
+                        <button type="button" class="btn btn-warning" onclick="getFilterBirds()" style="margin-left:290px;width:300px">
                             <i class="fa fa-search"></i> Search
                         </button> 
                     </div>
@@ -98,6 +98,9 @@
                     <th><strong>URI</strong></th>
                     <th><strong>Binomial Name</strong></th>
                     <th><strong>Common Name</strong></th>
+                    <th><strong>Order</strong></th>
+                    <th><strong>Family</strong></th>
+                    <th><strong>Genus</strong></th>
                 </tr>
             </thead>
             <tbody></tbody>
@@ -161,20 +164,21 @@
                 uri: ""
             };
 
-            global.table = $('#entityTable').DataTable();
+            global.modalTable = $('#entityTable').DataTable();
+            global.resultTable = $('#resultTable').DataTable();
 
             $('#entityTable tbody').on('click', 'tr', function () {
                 if ($(this).hasClass('selected')) {
                     $(this).removeClass('selected');
                 }
                 else {
-                    global.table.$('tr.selected').removeClass('selected');
+                    global.modalTable.$('tr.selected').removeClass('selected');
                     $(this).addClass('selected');
                 }
             });
             $('#modalAccept').bind('click', function () {
                 console.log('Estoy en el boton' + global.item.id);
-                data = global.table.rows('.selected').data()[0];
+                data = global.modalTable.rows('.selected').data()[0];
                 console.log(data);
                 $('#' + global.item.id + ' #txtName').val(data.name);
                 $('#' + global.item.id + ' #txtUri').val(data.uri);
@@ -182,14 +186,33 @@
             });
         });
 
-        var setDataTable = function (content) {
+        var getFilterObject = function () {
+            var bird = {                
+                Order: {
+                    Uri: $('#Order #txtUri').val(),
+                    Name: $('#Order #txtName').val(),
+                },
+                Family: {
+                    Uri: $('#Family #txtUri').val(),
+                    Name: $('#Family #txtName').val()
+                },
+                Genus: {
+                    Uri: $('#Gen #txtUri').val(),
+                    Name: $('#Gen #txtName').val()
+                }
+            };
+
+            return bird;
+        }
+
+        var setModalDataTable = function (content) {
             console.log('Antes de crear la tabla');
             console.log(content);
 
-            global.table = $('#entityTable').DataTable();
-            global.table.destroy();
+            global.modalTable = $('#entityTable').DataTable();
+            global.modalTable.destroy();
 
-            global.table = $('#entityTable').DataTable({
+            global.modalTable = $('#entityTable').DataTable({
                 autoWidth: true,
                 ordering: true,
                 data: content,
@@ -208,6 +231,70 @@
             });
 
             $('#SelectEntityModal').modal('show');
+        }
+
+        var setResultDataTable = function (content) {
+            console.log('Antes de crear la tabla');
+            console.log(content);
+
+            global.resultTable = $('#resultTable').DataTable();
+            global.resultTable.destroy();
+
+            global.resultTable = $('#resultTable').DataTable({
+                autoWidth: true,
+                ordering: true,
+                data: content,
+                columnDefs: [{
+                    targets: 0,
+                    render: function (data, type, row) {
+                        return type === 'display' && data.length > 10 ?
+                            data.substr(0, 47) + '…' :
+                            data;
+                    }
+                }],
+                columns: [
+                    { data: 'uri' },
+                    { data: 'binomialName' },
+                    { data: 'commonName' },                    
+                    { data: 'order.name' },
+                    { data: 'family.name' },
+                    { data: 'genus.name' }
+                ]
+            });
+        }
+
+        var getFilterBirds = function () {
+            var content = getFilterObject();
+            $.ajax({
+                type: 'POST',
+                url: '@Url.Action("FilterBirdByTax", "Ontology")',
+                contentType: 'application/json;charset=utf-8',
+                dataType: 'json',
+                data: JSON.stringify(content),
+
+                beforeSend: function () {
+                    $('#Loading').modal('show');
+                    console.log(this.data);
+                },
+
+                success: function (data, id) {
+                    $('#Loading').modal('hide');
+                    var result = data.data;
+                    if (data.error.code == 200) {
+                        console.log(result);
+                        setResultDataTable(result);
+                    }
+                    else {
+                        swal("Error!", 'Ocurrio un error al cargar tus datos...', "error");
+                    }
+                },   
+
+                error: function (jqXHR, textStatus, errorThrown) {
+                    $('#Loading').modal('hide');
+                    swal("Error!", errorThrown, "error");
+                    console.log("getData" + " errorThrown: " + errorThrown + " jqXHR: " + jqXHR + " textStatus " + textStatus);
+                }
+            });
         }
 
         var getEntities = function (action, id) {
@@ -233,7 +320,7 @@
                     var result = data.data;
                     if (data.error.code == 200) {
                         console.log(result);
-                        setDataTable(result);
+                        setModalDataTable(result);
                     }
                     else {
                         swal("Error!", 'Ocurrio un error al cargar tus datos...', "error");
