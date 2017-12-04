@@ -9,36 +9,57 @@ namespace FusekiConnection
         public static void Main(string[] args)
         {
             SelectQueries selectQueries = new SelectQueries();
-            List<Bird> e = new List<Bird>();
+            List<Entity> e = new List<Entity>();
+            List<Bird> b = new List<Bird>();
 
             /* Examples */
             //e = selectQueries.SelectDomains();
             //e = selectQueries.SelectKingdoms();
             //e = selectQueries.SelectPhylums();
             //e = selectQueries.SelectClasses();
-            //e = selectQueries.SelectOrders();
+            e = selectQueries.SelectOrders();
             //e = selectQueries.SelectFamilies();
             //e = selectQueries.SelectGenuses();
             //e = selectQueries.SelectSpecies();
             //e = selectQueries.SelectBirds();
-            Bird bird = new Bird();
-            Entity entity = new Entity();
-            entity.Uri = "";
-            bird.Order = entity;
-            bird.Genus = entity;
-            bird.Family = entity;
-            e = selectQueries.FilterBird(bird);
+            //e = selectQueries.SelectHabitats();
+            //e = selectQueries.SelectRegions();
 
-            PrintFilterBirds(e); //print
+            /*
+            Bird bird = new Bird();
+            Entity order = new Entity();
+            Entity genus = new Entity();
+            Entity family = new Entity();
+            order.Uri = "http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Accipitriformes";
+            bird.Order = order;
+            genus.Uri = "http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Coragyps";
+            bird.Genus = genus;
+            family.Uri = "http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Cathartidae";
+            bird.Family = family;
+            b = selectQueries.FilterBird(bird);*/
+
+            PrintEntities(e);
+            //PrintFilterBirds(b); //print
             Console.ReadLine();
         }
 
         public static void PrintEntities(List<Entity> list)
-        {/*
-            foreach (Entity in list)
+        {
+            foreach (Entity e in list)
             {
-
-            }*/
+                Console.WriteLine("Name: " + e.Name);
+                Console.WriteLine("Uri: " + e.Uri);
+                Console.WriteLine("ParentName: " + e.ParentName);
+                Console.WriteLine("ParentUri: " + e.ParentUri);
+                int i = 1;
+                foreach(Entity child in e.Children)
+                {
+                    Console.WriteLine(string.Format("Child[{0}] Name: {1}",i,child.Name));
+                    Console.WriteLine(string.Format("Child[{0}] Uri: {1}", i, child.Uri));
+                    Console.WriteLine();
+                    i++;
+                }
+            }
         }
 
         public static void PrintFilterBirds(List<Bird> list)

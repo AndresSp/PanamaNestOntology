@@ -43,7 +43,10 @@ namespace FusekiConnection
                     Entity entity = new Entity();
                     Entity child = new Entity();
 
-                    entity.Uri = result.Value("uri").ToString();
+                    if (result.HasBoundValue("uri"))
+                    {
+                        entity.Uri = result.Value("uri").ToString();
+                    }
                     if (result.HasBoundValue("name"))
                     {
                         entity.Name = result.Value("name").ToString();
@@ -60,7 +63,10 @@ namespace FusekiConnection
 
                     if (haveChilds)
                     {
-                        child.Uri = result.Value("child").ToString();
+                        if (result.HasBoundValue("childname"))
+                        {
+                            child.Uri = result.Value("child").ToString();
+                        }
                         if (result.HasBoundValue("childname"))
                         {
                             child.Name = result.Value("childname").ToString();
@@ -164,11 +170,32 @@ namespace FusekiConnection
         {
             return SelectMaster(SparqlUtilities.QStrings.Birds, haveChilds:false);
         }
+
+        /// <summary>
+        /// *Habitat Master*
+        /// Select all Habitats
+        /// </summary>
+        /// <returns></returns>
+        public List<Entity> SelectHabitats()
+        {
+            return SelectMaster(SparqlUtilities.QStrings.Habitats, haveParents: false, haveChilds: false);
+        }
+
+        /// <summary>
+        /// *Region Master*
+        /// Select all Regions
+        /// </summary>
+        /// <returns></returns>
+        public List<Entity> SelectRegions()
+        {
+            return SelectMaster(SparqlUtilities.QStrings.Regions, haveParents: false, haveChilds: false);
+        }
+
         #endregion
 
         #region Specific Queries
 
-        public List<Bird> FilterBird(Bird birdPrmts)
+        public List<Bird> FilterBirdTaxon(Bird birdPrmts)
         {
             List<Bird> list = new List<Bird>();
             SparqlParameterizedString sparqlprmtS = new SparqlParameterizedString();
@@ -246,6 +273,8 @@ namespace FusekiConnection
             }
             return list;
         }
+
+        
 
         #endregion
 

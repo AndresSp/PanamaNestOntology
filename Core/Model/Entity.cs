@@ -11,6 +11,7 @@ namespace Entities.Model
         public string ParentUri { get; set; }
         public string ParentName { get; set; }
         public List<Entity> Children { get; set; }
+        public int ChildsCount { get; set; }
 
         public Entity()
         {
