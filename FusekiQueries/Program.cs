@@ -17,7 +17,7 @@ namespace FusekiConnection
             //e = selectQueries.SelectKingdoms();
             //e = selectQueries.SelectPhylums();
             //e = selectQueries.SelectClasses();
-            e = selectQueries.SelectOrders();
+            //e = selectQueries.SelectOrders();
             //e = selectQueries.SelectFamilies();
             //e = selectQueries.SelectGenuses();
             //e = selectQueries.SelectSpecies();
@@ -25,21 +25,32 @@ namespace FusekiConnection
             //e = selectQueries.SelectHabitats();
             //e = selectQueries.SelectRegions();
 
-            /*
+
+            //Bird bird = new Bird();
+            //Entity order = new Entity();
+            //Entity genus = new Entity();
+            //Entity family = new Entity();
+            //order.Uri = "http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Accipitriformes";
+            //bird.Order = order;
+            //genus.Uri = "http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Coragyps";
+            //bird.Genus = genus;
+            //family.Uri = "http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Cathartidae";
+            //bird.Family = family;
+            //b = selectQueries.FilterBirdTaxon(bird);
+
             Bird bird = new Bird();
-            Entity order = new Entity();
-            Entity genus = new Entity();
-            Entity family = new Entity();
-            order.Uri = "http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Accipitriformes";
-            bird.Order = order;
-            genus.Uri = "http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Coragyps";
-            bird.Genus = genus;
-            family.Uri = "http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Cathartidae";
-            bird.Family = family;
-            b = selectQueries.FilterBird(bird);*/
+            List<string> h = new List<string>();
+            h.Add("Woodlands");
+            List<string> r = new List<string>();
+            r.Add("Central America");
+            bird.Habitat = h;
+            bird.Region = r;
+            bird.Size = "50 cm";
+            b = selectQueries.FilterBirdLoc(bird);
+
 
             PrintEntities(e);
-            //PrintFilterBirds(b); //print
+            PrintFilterBirds(b); //print
             Console.ReadLine();
         }
 
@@ -84,6 +95,8 @@ namespace FusekiConnection
                 {
                     Console.WriteLine("Region: " + region);
                 }
+
+                Console.WriteLine("Size: " + bird.Size);
                 Console.WriteLine();
             }
         }

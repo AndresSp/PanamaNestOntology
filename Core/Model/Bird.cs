@@ -16,6 +16,7 @@ namespace Entities.Model
         public string BinomialName { get; set; }
         public List<string> Habitat { get; set; }
         public List<string> Region { get; set; }
+        public string Size { get; set; }
 
         public Bird()
         {
