@@ -21,13 +21,27 @@ namespace FusekiConnection
             //e = selectQueries.SelectGenuses();
             //e = selectQueries.SelectSpecies();
             //e = selectQueries.SelectBirds();
-            e = selectQueries.FilterBird("Accipitriformes", "Coragyps", "Cathartidae");
+            Bird bird = new Bird();
+            Entity entity = new Entity();
+            entity.Uri = "";
+            bird.Order = entity;
+            bird.Genus = entity;
+            bird.Family = entity;
+            e = selectQueries.FilterBird(bird);
 
-            PrintEntities(e); //print
+            PrintFilterBirds(e); //print
             Console.ReadLine();
         }
 
-        public static void PrintEntities(List<Bird> list)
+        public static void PrintEntities(List<Entity> list)
+        {/*
+            foreach (Entity in list)
+            {
+
+            }*/
+        }
+
+        public static void PrintFilterBirds(List<Bird> list)
         {
             foreach (Bird bird in list)
             {
