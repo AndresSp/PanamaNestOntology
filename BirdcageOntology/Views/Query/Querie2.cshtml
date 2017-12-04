@@ -44,7 +44,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-md-12">
-                                    <button type="button" class="btn btn-danger btn-block" onclick="getQueryObject()">
+                                    <button type="button" class="btn btn-danger btn-block" onclick="executeFilterQuery()">
                                         <i class="fa fa-search"></i> Search
                                     </button>
                                 </div>
@@ -112,16 +112,46 @@
             });
         }
 
+        var setResultDataTable = function (content) {
+            //console.log('Antes de crear la tabla');
+            //console.log(content);
+
+            global.resultTable = $('#resultTable').DataTable();
+            global.resultTable.destroy();
+
+            global.resultTable = $('#resultTable').DataTable({
+                autoWidth: true,
+                ordering: true,
+                data: content,
+                columnDefs: [{
+                    targets: 0,
+                    render: function (data, type, row) {
+                        return type === 'display' && data.length > 10 ?
+                            data.substr(0, 47) + '…' :
+                            data;
+                    }
+                }],
+                columns: [
+                    { data: 'uri' },
+                    { data: 'binomialName' },
+                    { data: 'commonName' },
+                    { data: 'order.name' },
+                    { data: 'family.name' },
+                    { data: 'genus.name' }
+                ]
+            });
+        }
+
         var getSelectedProperties = function (parent) {
             var data = [];
             var container = $('#' + parent);
             container.find('li').each(function (index, element) {
                 var chk = $(element).find('input');
                 if ($(chk).is(':checked')) {
-                    
+
                     data.push($($(element).find('label')).text());
                 }
-            }); 
+            });
             return data;
         }
 
@@ -130,12 +160,12 @@
             var habitat = getSelectedProperties('habitatContainer');
 
             var bird = {
-                Habitad: habitat,
+                Size: $('#txtAvgSize').val(),
+                Habitat: habitat,
                 Region: region
                 //public List<string> Habitat { get; set; }
                 //public List<string> Region { get; set; }
             };
-            console.log(bird);
             return bird;
 
         }
@@ -171,6 +201,41 @@
                     console.log("getData" + " errorThrown: " + errorThrown + " jqXHR: " + jqXHR + " textStatus " + textStatus);
                 }
             });
+        }
+
+        var executeFilterQuery = function () {
+            content = getQueryObject();
+            console.log(JSON.stringify(content));
+            $.ajax({
+                type: 'POST',
+                url: '@Url.Action("FilterBirdByLoc", "Ontology")',
+                contentType: 'application/json;charset=utf-8',
+                dataType: 'json',
+                data: JSON.stringify(content),
+
+                beforeSend: function () {
+                    $('#Loading').modal('show');
+                    //console.log(this.data);
+                },
+
+                success: function (data, id) {
+                    var result = data.data;
+                    if (data.error.code == 200) {
+                        setResultDataTable(result);
+                    }
+                    else {
+                        swal("Error!", 'Ocurrio un error al cargar tus datos...', "error");
+                    }
+                    $('#Loading').modal('hide');
+                },
+
+                error: function (jqXHR, textStatus, errorThrown) {
+                    $('#Loading').modal('hide');
+                    swal("Error!", errorThrown, "error");
+                    console.log("getData" + " errorThrown: " + errorThrown + " jqXHR: " + jqXHR + " textStatus " + textStatus);
+                }
+            });
+
         }
     </script>
 }

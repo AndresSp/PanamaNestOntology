@@ -218,6 +218,27 @@ namespace WebApp.Controllers
 
             return Json(response);
         }
+
+        [Route("filterbirdbyloc")]
+        [HttpPost]
+        public JsonResult FilterBirdByLoc([FromBody] Bird bird)
+        {
+            ResultResponseModel response = new ResultResponseModel();
+            try
+            {
+                SelectQueries query = new SelectQueries();
+                var result = query.FilterBirdLoc(bird);
+
+                response.data = result;
+                response.error = new Error(200, "OK");
+            }
+            catch (Exception ex)
+            {
+                response.error = new Error(500, ex.Message);
+            }
+
+            return Json(response);
+        }
         #endregion
 
         [Route("createbird")]
