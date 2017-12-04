@@ -193,7 +193,6 @@ namespace FusekiConnection
                     Entity specie = new Entity();
 
                     bird.Uri = result.Value("bird").ToString();
-                    Console.WriteLine(result.Value("bird").ToString());
                     if (result.HasBoundValue("name"))
                     {
                         bird.Name = result.Value("name").ToString();

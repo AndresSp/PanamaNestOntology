@@ -45,9 +45,9 @@
     
 
 
-    <!-- http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#CommonName -->
+    <!-- http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#CommonName -->
 
-    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#CommonName">
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#CommonName">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
     </owl:AnnotationProperty>
     
@@ -252,27 +252,27 @@
     
 
 
-    <!-- http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#BinomialName -->
+    <!-- http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#BinomialName -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#BinomialName"/>
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#BinomialName"/>
     
 
 
-    <!-- http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#Habitat -->
+    <!-- http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Habitat -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#Habitat"/>
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Habitat"/>
     
 
 
-    <!-- http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#Region -->
+    <!-- http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Region -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#Region"/>
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Region"/>
     
 
 
-    <!-- http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#Size -->
+    <!-- http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Size -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#Size"/>
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Size"/>
     
 
 
@@ -434,15 +434,15 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Black_Vulture">
         <rdf:type rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Life"/>
-        <BinomialName>Coragyps atratus</BinomialName>
-        <Habitat>Forest Area</Habitat>
-        <Habitat>Urban Area</Habitat>
-        <Region>Caribbean</Region>
-        <Region>Central America</Region>
-        <Region>North America</Region>
-        <Region>South America</Region>
-        <Size rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">58-69 cm</Size>
-        <CommonName>Black Vulture</CommonName>
+        <pno:BinomialName>Coragyps atratus</pno:BinomialName>
+        <pno:Habitat>Forest Area</pno:Habitat>
+        <pno:Habitat>Urban Area</pno:Habitat>
+        <pno:Region>Caribbean</pno:Region>
+        <pno:Region>Central America</pno:Region>
+        <pno:Region>North America</pno:Region>
+        <pno:Region>South America</pno:Region>
+        <pno:Size rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">58-69 cm</pno:Size>
+        <pno:CommonName>Black Vulture</pno:CommonName>
         <rdfs:label>Black_Vulture</rdfs:label>
     </owl:NamedIndividual>
     
@@ -502,12 +502,12 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Harpy_Eagle">
         <rdf:type rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Life"/>
-        <BinomialName>Harpia harpyja</BinomialName>
-        <Habitat>Forest Area</Habitat>
-        <Region>Central America</Region>
-        <Region>South America</Region>
-        <Size rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">89-100 cm</Size>
-        <CommonName>Harpy Eagle</CommonName>
+        <pno:BinomialName>Harpia harpyja</pno:BinomialName>
+        <pno:Habitat>Forest Area</pno:Habitat>
+        <pno:Region>Central America</pno:Region>
+        <pno:Region>South America</pno:Region>
+        <pno:Size rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">89-100 cm</pno:Size>
+        <pno:CommonName>Harpy Eagle</pno:CommonName>
         <rdfs:label>Harpy_Eagle</rdfs:label>
     </owl:NamedIndividual>
     
@@ -537,15 +537,15 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Snail_Kite">
         <rdf:type rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Life"/>
-        <BinomialName>Rostrhamus sociabilis</BinomialName>
-        <Habitat>Coastal Area</Habitat>
-        <Habitat>Wetlands</Habitat>
-        <Region>Caribbean</Region>
-        <Region>Central America</Region>
-        <Region>North America</Region>
-        <Region>South America</Region>
-        <Size rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">36-48 cm</Size>
-        <CommonName>Snail Kite</CommonName>
+        <pno:BinomialName>Rostrhamus sociabilis</pno:BinomialName>
+        <pno:Habitat>Coastal Area</pno:Habitat>
+        <pno:Habitat>Wetlands</pno:Habitat>
+        <pno:Region>Caribbean</pno:Region>
+        <pno:Region>Central America</pno:Region>
+        <pno:Region>North America</pno:Region>
+        <pno:Region>South America</pno:Region>
+        <pno:Size rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">36-48 cm</pno:Size>
+        <pno:CommonName>Snail Kite</pno:CommonName>
         <rdfs:label>Snail_Kite</rdfs:label>
     </owl:NamedIndividual>
     
@@ -555,12 +555,12 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Tiny_Hawk">
         <rdf:type rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Life"/>
-        <BinomialName>Accipiter superciliosus</BinomialName>
-        <Habitat>Forest Area</Habitat>
-        <Region>Central America</Region>
-        <Region>South America</Region>
-        <Size rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">20-26 cm</Size>
-        <CommonName>Tiny Hawk</CommonName>
+        <pno:BinomialName>Accipiter superciliosus</pno:BinomialName>
+        <pno:Habitat>Forest Area</pno:Habitat>
+        <pno:Region>Central America</pno:Region>
+        <pno:Region>South America</pno:Region>
+        <pno:Size rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">20-26 cm</pno:Size>
+        <pno:CommonName>Tiny Hawk</pno:CommonName>
         <rdfs:label>Tiny_Hawk</rdfs:label>
     </owl:NamedIndividual>
     
@@ -570,12 +570,12 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#White_Hawk">
         <rdf:type rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Life"/>
-        <BinomialName>Pseudastur albicollis</BinomialName>
-        <Habitat>Woodlands</Habitat>
-        <Region>Central America</Region>
-        <Region>South America</Region>
-        <Size rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">50 cm</Size>
-        <CommonName xml:lang="en">White Hawk</CommonName>
+        <pno:BinomialName>Pseudastur albicollis</pno:BinomialName>
+        <pno:Habitat>Woodlands</pno:Habitat>
+        <pno:Region>Central America</pno:Region>
+        <pno:Region>South America</pno:Region>
+        <pno:Size rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">50 cm</pno:Size>
+        <pno:CommonName xml:lang="en">White Hawk</pno:CommonName>
         <rdfs:label>White_Hawk</rdfs:label>
     </owl:NamedIndividual>
     

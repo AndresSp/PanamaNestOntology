@@ -1,4 +1,3 @@
-@prefix : <http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix pno: <http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#> .
@@ -32,8 +31,8 @@ terms:contributor rdf:type owl:AnnotationProperty .
 
 
 ###  http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#CommonName
-:CommonName rdf:type owl:AnnotationProperty ;
-            rdfs:subPropertyOf rdfs:label .
+pno:CommonName rdf:type owl:AnnotationProperty ;
+                              rdfs:subPropertyOf rdfs:label .
 
 
 #################################################################
@@ -164,6 +163,26 @@ pno:hasSpeciesChild rdf:type owl:ObjectProperty ;
 
 
 #################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#BinomialName
+pno:BinomialName rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#Habitat
+pno:Habitat rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#Region
+pno:Region rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#Size
+pno:Size rdf:type owl:DatatypeProperty .
+
+
+#################################################################
 #    Classes
 #################################################################
 
@@ -223,7 +242,8 @@ pno:Specie rdf:type owl:Class ;
 ###  http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Accipiter
 pno:Accipiter rdf:type owl:NamedIndividual ,
                        pno:Life ;
-              pno:hasSpeciesChild pno:superciliosus .
+              pno:hasSpeciesChild pno:superciliosus ;
+              rdfs:label "Accipitier" .
 
 
 ###  http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Accipitridae
@@ -232,124 +252,180 @@ pno:Accipitridae rdf:type owl:NamedIndividual ,
                  pno:hasGenusChild pno:Accipiter ,
                                    pno:Harpia ,
                                    pno:Pseudastur ,
-                                   pno:Rostrhamus .
+                                   pno:Rostrhamus ;
+                 rdfs:label "Accipitridae" .
 
 
 ###  http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Accipitriformes
 pno:Accipitriformes rdf:type owl:NamedIndividual ,
                              pno:Life ;
                     pno:hasFamilyChild pno:Accipitridae ,
-                                       pno:Cathartidae .
+                                       pno:Cathartidae ;
+                    rdfs:label "Accipitriformes" .
 
 
 ###  http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Animalia
 pno:Animalia rdf:type owl:NamedIndividual ,
                       pno:Life ;
-             pno:hasPhylumChild pno:Chordata .
+             pno:hasPhylumChild pno:Chordata ;
+             rdfs:label "Animalia" .
 
 
 ###  http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Aves
 pno:Aves rdf:type owl:NamedIndividual ,
                   pno:Life ;
-         pno:hasOrderChild pno:Accipitriformes .
+         pno:hasOrderChild pno:Accipitriformes ;
+         rdfs:label "Aves" .
 
 
 ###  http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Black_Vulture
 pno:Black_Vulture rdf:type owl:NamedIndividual ,
-                           pno:Life .
+                           pno:Life ;
+                  pno:BinomialName "Coragyps atratus" ;
+                  pno:Habitat "Forest Area" ,
+                                             "Urban Area" ;
+                  pno:Region "Caribbean" ,
+                                            "Central America" ,
+                                            "North America" ,
+                                            "South America" ;
+                  pno:Size "58-69 cm"^^rdfs:Literal ;
+                  pno:CommonName "Black Vulture" ;
+                  rdfs:label "Black_Vulture" .
 
 
 ###  http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Cathartidae
 pno:Cathartidae rdf:type owl:NamedIndividual ,
                          pno:Life ;
-                pno:hasGenusChild pno:Coragyps .
+                pno:hasGenusChild pno:Coragyps ;
+                rdfs:label "Cathartidae" .
 
 
 ###  http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Chordata
 pno:Chordata rdf:type owl:NamedIndividual ,
                       pno:Life ;
-             pno:hasClassChild pno:Aves .
+             pno:hasClassChild pno:Aves ;
+             rdfs:label "Chordata" .
 
 
 ###  http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Coragyps
 pno:Coragyps rdf:type owl:NamedIndividual ,
                       pno:Life ;
-             pno:hasSpeciesChild pno:atratus .
+             pno:hasSpeciesChild pno:atratus ;
+             rdfs:label "Coragyps" .
 
 
 ###  http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Eukarya
 pno:Eukarya rdf:type owl:NamedIndividual ,
                      pno:Life ;
-            pno:hasKingdomChild pno:Animalia .
+            pno:hasKingdomChild pno:Animalia ;
+            rdfs:label "Eukarya" .
 
 
 ###  http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Harpia
 pno:Harpia rdf:type owl:NamedIndividual ,
                     pno:Life ;
-           pno:hasSpeciesChild pno:harpyja .
+           pno:hasSpeciesChild pno:harpyja ;
+           rdfs:label "Harpia" .
 
 
 ###  http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Harpy_Eagle
 pno:Harpy_Eagle rdf:type owl:NamedIndividual ,
-                         pno:Life .
+                         pno:Life ;
+                pno:BinomialName "Harpia harpyja" ;
+                pno:Habitat "Forest Area" ;
+                pno:Region "Central America" ,
+                                          "South America" ;
+                pno:Size "89-100 cm"^^rdfs:Literal ;
+                pno:CommonName "Harpy Eagle" ;
+                rdfs:label "Harpy_Eagle" .
 
 
 ###  http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Pseudastur
 pno:Pseudastur rdf:type owl:NamedIndividual ,
                         pno:Life ;
-               pno:hasSpeciesChild pno:albicollis .
+               pno:hasSpeciesChild pno:albicollis ;
+               rdfs:label "Pseudastur" .
 
 
 ###  http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Rostrhamus
 pno:Rostrhamus rdf:type owl:NamedIndividual ,
                         pno:Life ;
-               pno:hasSpeciesChild pno:sociabilis .
+               pno:hasSpeciesChild pno:sociabilis ;
+               rdfs:label "Rostrhamus" .
 
 
 ###  http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Snail_Kite
 pno:Snail_Kite rdf:type owl:NamedIndividual ,
-                        pno:Life .
+                        pno:Life ;
+               pno:BinomialName "Rostrhamus sociabilis" ;
+               pno:Habitat "Coastal Area" ,
+                                          "Wetlands" ;
+               pno:Region "Caribbean" ,
+                                         "Central America" ,
+                                         "North America" ,
+                                         "South America" ;
+               pno:Size "36-48 cm"^^rdfs:Literal ;
+               pno:CommonName "Snail Kite" ;
+               rdfs:label "Snail_Kite" .
 
 
 ###  http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Tiny_Hawk
 pno:Tiny_Hawk rdf:type owl:NamedIndividual ,
-                       pno:Life .
+                       pno:Life ;
+              pno:BinomialName "Accipiter superciliosus" ;
+              pno:Habitat "Forest Area" ;
+              pno:Region "Central America" ,
+                                        "South America" ;
+              pno:Size "20-26 cm"^^rdfs:Literal ;
+              pno:CommonName "Tiny Hawk" ;
+              rdfs:label "Tiny_Hawk" .
 
 
 ###  http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#White_Hawk
 pno:White_Hawk rdf:type owl:NamedIndividual ,
                         pno:Life ;
-               :CommonName "White_Hawk"@en .
+               pno:BinomialName "Pseudastur albicollis" ;
+               pno:Habitat "Woodlands" ;
+               pno:Region "Central America" ,
+                                         "South America" ;
+               pno:Size "50 cm"^^rdfs:Literal ;
+               pno:CommonName "White Hawk"@en ;
+               rdfs:label "White_Hawk" .
 
 
 ###  http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#albicollis
 pno:albicollis rdf:type owl:NamedIndividual ,
                         pno:Life ;
-               pno:hasBirdChild pno:White_Hawk .
+               pno:hasBirdChild pno:White_Hawk ;
+               rdfs:label "albicollis" .
 
 
 ###  http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#atratus
 pno:atratus rdf:type owl:NamedIndividual ,
                      pno:Life ;
-            pno:hasBirdChild pno:Black_Vulture .
+            pno:hasBirdChild pno:Black_Vulture ;
+            rdfs:label "atratus" .
 
 
 ###  http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#harpyja
 pno:harpyja rdf:type owl:NamedIndividual ,
                      pno:Life ;
-            pno:hasBirdChild pno:Harpy_Eagle .
+            pno:hasBirdChild pno:Harpy_Eagle ;
+            rdfs:label "harpyja" .
 
 
 ###  http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#sociabilis
 pno:sociabilis rdf:type owl:NamedIndividual ,
                         pno:Life ;
-               pno:hasBirdChild pno:Snail_Kite .
+               pno:hasBirdChild pno:Snail_Kite ;
+               rdfs:label "sociabilis" .
 
 
 ###  http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#superciliosus
 pno:superciliosus rdf:type owl:NamedIndividual ,
                            pno:Life ;
-                  pno:hasBirdChild pno:Tiny_Hawk .
+                  pno:hasBirdChild pno:Tiny_Hawk ;
+                  rdfs:label "superciliosus" .
 
 
 ###  Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi
