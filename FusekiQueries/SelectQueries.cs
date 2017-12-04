@@ -43,7 +43,10 @@ namespace FusekiConnection
                     Entity entity = new Entity();
                     Entity child = new Entity();
 
-                    entity.Uri = result.Value("uri").ToString();
+                    if (result.HasBoundValue("uri"))
+                    {
+                        entity.Uri = result.Value("uri").ToString();
+                    }
                     if (result.HasBoundValue("name"))
                     {
                         entity.Name = result.Value("name").ToString();
@@ -164,6 +167,27 @@ namespace FusekiConnection
         {
             return SelectMaster(SparqlUtilities.QStrings.Birds, haveChilds:false);
         }
+
+        /// <summary>
+        /// *Habitat Master*
+        /// Select all Habitats
+        /// </summary>
+        /// <returns></returns>
+        public List<Entity> SelectHabitats()
+        {
+            return SelectMaster(SparqlUtilities.QStrings.Habitats, haveParents: false, haveChilds: false);
+        }
+
+        /// <summary>
+        /// *Region Master*
+        /// Select all Regions
+        /// </summary>
+        /// <returns></returns>
+        public List<Entity> SelectRegions()
+        {
+            return SelectMaster(SparqlUtilities.QStrings.Regions, haveParents: false, haveChilds: false);
+        }
+
         #endregion
 
         #region Specific Queries
