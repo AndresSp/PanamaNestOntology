@@ -315,6 +315,7 @@
             $('#EntityModal #btnAccept').bind('click', function () { setModalData(id, 'false') });
         }
 
+        //Esto es cuando es una nueva entidad 
         var setModalData = function (id, exist) {
             console.log('Se ejecuto el click ' + id);
             $('#' + id + ' #txtName').val($('#EntityModal #txtContent').val());
@@ -351,14 +352,7 @@
             });             
 
             $('#SelectEntityModal').modal('show');
-        }
-
-        clickModalAccept = function (id) {
-            console.log('id ' + id);
-            var data = global.table.rows('.selected').data();
-            $('#' + id + ' #txtName').val(data.name);
-            $('#' + id + ' #txtUri').val(data.uri);
-        }
+        }       
 
         var getSpeciesObject = function () {
             var bird = {
