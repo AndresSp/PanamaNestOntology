@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Entities.Model
 {
-    class Bird
+    public class Bird
     {
         public string Uri { get; set; }
         public string Name { get; set; }

@@ -24,7 +24,7 @@
                             <div class="row">
                                 <label class="col-sm-5 control-label text-right">Nombre Científico</label>
                                 <div class="col-sm-6">
-                                    <input type="text" class="form-control" id="resourceName" maxlength="50" />
+                                    <input type="text" class="form-control" id="txtBiName" maxlength="50" />
                                 </div>
                             </div>
                         </div>
@@ -34,7 +34,7 @@
                                     <label control-label text-right">Nombre Común</label>
                                 </div>
                                 <div class="col-sm-6">
-                                    <input type="text" class="form-control" id="resourceName" maxlength="50" />
+                                    <input type="text" class="form-control" id="txtCommonName" maxlength="50" />
                                 </div>
                             </div>
                         </div>
@@ -187,7 +187,7 @@
     <div>
         <div class="row">
             <div class="col-md-offset-8 col-md-3">
-                <button type="button" class="btn btn-danger" onclick="">
+                <button type="button" class="btn btn-danger" onclick="createSpecie()">
                     <i class="fa fa-plus"></i> Crear
                 </button>
             </div>
@@ -360,6 +360,41 @@
             $('#' + id + ' #txtUri').val(data.uri);
         }
 
+        var getSpeciesObject = function () {
+            var bird = {
+                Uri: "",
+                Name: "",
+                CommonName: $('#txtCommonName').val(),
+                BinomialName: $('#txtBiName').val(),
+                Order: {
+                    Uri: $('#Order #txtUri').val(),
+                    Name: $('#Order #txtName').val(),
+                    ParentUri: "",
+                    ParentName: "",
+                    Children: []
+                },
+                Family: {
+                    Uri: $('#Family #txtUri').val(),
+                    Name: $('#Family #txtName').val(),
+                    ParentUri: "",
+                    ParentName: "",
+                    Children: []
+                },
+                Genus: {
+                    Uri: $('#Gen #txtUri').val(),
+                    Name: $('#Gen #txtName').val(),
+                    ParentUri: "",
+                    ParentName: "",
+                    Children: []
+                },
+                Specie: {},
+                Habitat: [],
+                Region: []
+            };
+
+            return bird;
+        }
+
         var getEntities = function (action, id) {          
 
             global.item.id = id;
@@ -389,6 +424,41 @@
                         swal("Error!", 'Ocurrio un error al cargar tus datos...', "error");
                     }
                 },                
+
+                error: function (jqXHR, textStatus, errorThrown) {
+                    $('#Loading').modal('hide');
+                    swal("Error!", errorThrown, "error");
+                    console.log("getData" + " errorThrown: " + errorThrown + " jqXHR: " + jqXHR + " textStatus " + textStatus);
+                }
+            });
+        }
+
+        var createSpecie = function () {
+            var content = getSpeciesObject();
+            console.log(content);
+
+            $.ajax({
+                type: 'POST',
+                url:'@Url.Action("CreateBird", "Ontology")',
+                contentType: 'application/json;charset=utf-8',
+                dataType: 'json',
+                data: JSON.stringify(content),
+
+                beforeSend: function () {
+                    $('#Loading').modal('show');
+                    console.log(this.data);
+                },
+
+                success: function (data, id) {
+                    $('#Loading').modal('hide');
+                    var result = data.data;
+                    if (data.error.code == 200) {
+                        console.log(result);
+                    }
+                    else {
+                        swal("Error!", 'Ocurrio un error al cargar tus datos...', "error");
+                    }
+                },
 
                 error: function (jqXHR, textStatus, errorThrown) {
                     $('#Loading').modal('hide');
