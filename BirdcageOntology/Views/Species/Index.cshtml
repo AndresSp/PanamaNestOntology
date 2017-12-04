@@ -183,6 +183,16 @@
             @*<div class="panel-footer">Footer del panel</div>*@
         </div>
     </div>
+
+    <div>
+        <div class="row">
+            <div class="col-md-offset-8 col-md-3">
+                <button type="button" class="btn btn-danger" onclick="">
+                    <i class="fa fa-plus"></i> Crear
+                </button>
+            </div>
+        </div>
+    </div>
 </div>
 
 @section BodyArea {
@@ -269,6 +279,13 @@
 
         var global = {};
         $(document).ready(function () {
+
+            global.item = {
+                id: "",
+                name: "",
+                uri: ""
+            };
+
             global.table = $('#entityTable').DataTable();
 
             $('#entityTable tbody').on('click', 'tr', function () {
@@ -279,7 +296,15 @@
                     global.table.$('tr.selected').removeClass('selected');
                     $(this).addClass('selected');
                 }
-            });            
+            });  
+            $('#modalAccept').bind('click', function () { 
+                console.log('Estoy en el boton' + global.item.id);
+                data = global.table.rows('.selected').data()[0];
+                console.log(data);
+                $('#' + global.item.id + ' #txtName').val(data.name);
+                $('#' + global.item.id + ' #txtUri').val(data.uri);
+                global.item.id
+            });
         });
 
         var showNewEntityModal = function (modalTitle, id) {
@@ -300,7 +325,7 @@
             $('#EntityModal #txtContent').val('');
         }
 
-        var setDataTable = function (content, id) {
+        var setDataTable = function (content) {
             console.log('Antes de crear la tabla');
             console.log(content);
 
@@ -323,16 +348,21 @@
                     { data: 'uri' },
                     { data: 'name' }                    
                 ]
-            });  
+            });             
+
             $('#SelectEntityModal').modal('show');
-            $('#modalAccept').bind(function (id) { 
-                var data = global.table.rows('.selected').data();
-                $('#' + id + '#txtName').val(data.name);
-                $('#' + id + '#txtUri').val(data.uri);
-            });
+        }
+
+        clickModalAccept = function (id) {
+            console.log('id ' + id);
+            var data = global.table.rows('.selected').data();
+            $('#' + id + ' #txtName').val(data.name);
+            $('#' + id + ' #txtUri').val(data.uri);
         }
 
         var getEntities = function (action, id) {          
+
+            global.item.id = id;
 
             var string = '@Url.Action("GetOrders", "Ontology")';
             string = string.replace("getorders", action);
@@ -348,17 +378,21 @@
                     console.log(this.data);
                 },
 
-                success: function (data) {
-                    $('#Loading').modal('hide');
+                success: function (data, id) {
+                    $('#Loading').modal('hide');                    
                     var result = data.data;
                     if (data.error.code == 200) {
                         console.log(result);
-                        setDataTable(result, id);                        
+                        setDataTable(result);                        
                     }
-                },
+                    else {
+                        swal("Error!", 'Ocurrio un error al cargar tus datos...', "error");
+                    }
+                },                
 
                 error: function (jqXHR, textStatus, errorThrown) {
                     $('#Loading').modal('hide');
+                    swal("Error!", errorThrown, "error");
                     console.log("getData" + " errorThrown: " + errorThrown + " jqXHR: " + jqXHR + " textStatus " + textStatus);
                 }
             });
