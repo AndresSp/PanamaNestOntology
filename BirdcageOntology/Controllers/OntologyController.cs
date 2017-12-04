@@ -13,9 +13,9 @@ namespace WebApp.Controllers
     [Route("api/Ontology")]
     public class OntologyController : Controller
     {
-         [Route("getorders")]
-         [HttpGet]
-         public JsonResult GetOrders()
+        [Route("getorders")]
+        [HttpGet]
+        public JsonResult GetOrders()
          {
             ResultResponseModel response = new ResultResponseModel();
             try
@@ -107,6 +107,22 @@ namespace WebApp.Controllers
                 response.error = new Error(200, "OK");
             }
             catch (Exception ex)
+            {
+                response.error = new Error(500, ex.Message);
+            }
+            return Json(response);
+        }
+
+        [Route("createbird")]
+        [HttpPost]
+        public JsonResult CreateBird([FromBody] Bird bird)
+        {
+            ResultResponseModel response = new ResultResponseModel();
+            try
+            {
+                response.error = new Error(200, "OK");
+            }
+            catch(Exception ex)
             {
                 response.error = new Error(500, ex.Message);
             }
