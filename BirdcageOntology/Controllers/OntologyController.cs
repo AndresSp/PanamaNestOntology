@@ -133,6 +133,68 @@ namespace WebApp.Controllers
             }
             return Json(response);
         }
+
+        [Route("gethabitats")]
+        [HttpGet]
+        public JsonResult GetHabitats()
+        {
+            ResultResponseModel response = new ResultResponseModel();
+            try
+            {
+                SelectQueries query = new SelectQueries();
+                var result = query.SelectHabitats();
+
+                response.data = result;
+                response.error = new Error(200, "OK");
+            }
+            catch (Exception ex)
+            {
+                response.error = new Error(500, ex.Message);
+            }
+            return Json(response);
+        }
+
+
+        [Route("getregions")]
+        [HttpGet]
+        public JsonResult GetRegions()
+        {
+            ResultResponseModel response = new ResultResponseModel();
+            try
+            {
+                SelectQueries query = new SelectQueries();
+                var result = query.SelectRegions();
+
+                response.data = result;
+                response.error = new Error(200, "OK");
+            }
+            catch (Exception ex)
+            {
+                response.error = new Error(500, ex.Message);
+            }
+            return Json(response);
+        }
+
+        [Route("gethabitatregion")]
+        [HttpGet]
+        public JsonResult GetHabitatRegion()
+        {
+            ResultResponseModel response = new ResultResponseModel();
+            try
+            {
+                SelectQueries query = new SelectQueries();
+                var region = query.SelectRegions();
+                var habitat = query.SelectHabitats();
+
+                response.data = new { region, habitat };
+                response.error = new Error(200, "OK");
+            }
+            catch (Exception ex)
+            {
+                response.error = new Error(500, ex.Message);
+            }
+            return Json(response);
+        }
         #endregion
 
         #region Filtros
@@ -144,7 +206,7 @@ namespace WebApp.Controllers
             try
             {
                 SelectQueries query = new SelectQueries();
-                var result = query.FilterBird(bird);
+                var result = query.FilterBirdTaxon(bird);
 
                 response.data = result;
                 response.error = new Error(200, "OK");

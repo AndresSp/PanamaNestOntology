@@ -186,7 +186,7 @@
             });
         });
 
-        var getFilterObject = function () {
+        var getQueryObject = function () {
             var bird = {                
                 Order: {
                     Uri: $('#Order #txtUri').val(),
@@ -264,7 +264,7 @@
         }
 
         var getFilterBirds = function () {
-            var content = getFilterObject();
+            var content = getQueryObject();
             $.ajax({
                 type: 'POST',
                 url: '@Url.Action("FilterBirdByTax", "Ontology")',

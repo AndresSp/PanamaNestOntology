@@ -136,44 +136,41 @@
             <div class="panel-body">
                 <div>
                     <div class="row">
-                        <div class="col-md-12">
-                            <ul class="nav nav-pills">
-                                <li class="active">
-                                    <a href="#tabHabitat" data-toggle="tab" aria-expanded="true">Habitat</a>
-                                </li>
-                                <li>
-                                    <a href="#tabRegion" data-toggle="tab" aria-expanded="false">Región</a>
-                                </li>
-                                <li>
-                                    <a href="#tabInfo" data-toggle="tab" aria-expanded="false">Info.Adicional</a>
-                                </li>
-                            </ul>
-                            <div class="tab-content">
-                                <div class="tab-pane fade in active" id="tabHabitat">
-                                    <h4>Seleccione el Habitad</h4>
-                                    <p>Seleccione el habitad por favor</p>
+                        <div class="col-md-4">
+                            <span>Select Region</span>
+                            <div>
+                                <ul id="regionContainer">
+
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <span>Select Habitat</span>
+                            <div>
+                                <ul id="habitatContainer">
+
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <span>Additional Info</span>
+                            <div class="row" style="margin-top:15px; margin-bottom:15px">
+                                <label class="col-md-3 control-label text-right">Avg. Size</label>
+                                <div class="col-md-6">
+                                    <input type="text" class="col-md-3 form-control" id="txtAvgSize" maxlength="10" />
                                 </div>
-                                <div class="tab-pane" id="tabRegion">
-                                    <h4>Seleccione la Región</h4>
-                                    <p>Seleccione la region por favor</p>
+                            </div>
+                            <div class="row" style="margin-bottom:15px">
+                                <label class="col-md-3 control-label text-right">Body Color</label>
+                                <div class="col-md-6">
+                                    <input type="text" class="col-md-3 form-control" id="txtBodyColor" maxlength="10" />
                                 </div>
-                                <div class="tab-pane" id="tabInfo">
-                                    <div class="row" style="margin-bottom:15px; margin-top:15px">
-                                        <div class="col-md-6">
-                                            <label class="col-md-5 control-label text-right">Tamaño Promedio</label>
-                                            <div class="col-md-6">
-                                                <input type="text" class="col-md-3 form-control" id="txtAvgSize" maxlength="10" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <label class="col-md-5 control-label text-right">Color Promedio</label>
-                                            <div class="col-md-6">
-                                                <input type="text" class="form-control" id="txtAvgColor" maxlength="10" />
-                                            </div>
-                                        </div>
-                                    </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <button type="button" class="btn btn-danger btn-block" onclick="createSpecie()">
+                                        <i class="fa fa-plus"></i> Crear
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -181,16 +178,6 @@
                 </div>
             </div>
             @*<div class="panel-footer">Footer del panel</div>*@
-        </div>
-    </div>
-
-    <div>
-        <div class="row">
-            <div class="col-md-offset-8 col-md-3">
-                <button type="button" class="btn btn-danger" onclick="createSpecie()">
-                    <i class="fa fa-plus"></i> Crear
-                </button>
-            </div>
         </div>
     </div>
 </div>
@@ -275,8 +262,10 @@
 }
 
 @section Scripts{
+
     <script type="text/javascript">
 
+        //Ejecucion global
         var global = {};
         $(document).ready(function () {
 
@@ -305,8 +294,36 @@
                 $('#' + global.item.id + ' #txtUri').val(data.uri);
                 global.item.id
             });
+
+            getHabitatRegion();
         });
 
+        //Creacion de checkbox dinamico
+        var createCheckboxList = function (parent, data) {
+            var container = $('#' + parent);
+            $.each(data, function (index, value) {
+                var li = $('<li/>')
+                    //.addClass('ui-menu-item')
+                    //.attr('role', 'menuitem')
+                    .appendTo(container);
+
+                var div = $('<div/>')
+                    .addClass('checkbox')
+                    .appendTo(li);     
+
+                var label = $('<label/>')
+                    .text(value.name)
+                    .appendTo(div);
+
+                var input = $('<input/>')
+                    //.addClass('ui-all')
+                    .attr('type', 'checkbox')
+                    .prependTo(label);               
+
+            });
+        }
+
+        //Funciones 
         var showNewEntityModal = function (modalTitle, id) {
             $('#EntityModal').modal('show');
             $('#EntityModal #modalTitle').html(modalTitle);
@@ -352,7 +369,40 @@
             });             
 
             $('#SelectEntityModal').modal('show');
-        }       
+        }    
+
+        var getHabitatRegion = function () {
+            $.ajax({
+                type: 'GET',
+                url: '@Url.Action("GetHabitatRegion", "Ontology")',
+                contentType: 'application/json;charset=utf-8',
+                dataType: 'json',
+
+                beforeSend: function () {
+                    $('#Loading').modal('show');
+                    //console.log(this.data);
+                },
+
+                success: function (data, id) {                    
+                    var result = data.data;
+                    if (data.error.code == 200) {
+                        console.log(result);
+                        createCheckboxList('regionContainer', result.region);
+                        createCheckboxList('habitatContainer', result.habitat);
+                    }
+                    else {
+                        swal("Error!", 'Ocurrio un error al cargar tus datos...', "error");
+                    }
+                    $('#Loading').modal('hide');
+                },
+
+                error: function (jqXHR, textStatus, errorThrown) {
+                    $('#Loading').modal('hide');
+                    swal("Error!", errorThrown, "error");
+                    console.log("getData" + " errorThrown: " + errorThrown + " jqXHR: " + jqXHR + " textStatus " + textStatus);
+                }
+            });
+        }
 
         var getSpeciesObject = function () {
             var bird = {
