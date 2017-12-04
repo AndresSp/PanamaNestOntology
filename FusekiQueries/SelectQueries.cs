@@ -63,7 +63,10 @@ namespace FusekiConnection
 
                     if (haveChilds)
                     {
-                        child.Uri = result.Value("child").ToString();
+                        if (result.HasBoundValue("childname"))
+                        {
+                            child.Uri = result.Value("child").ToString();
+                        }
                         if (result.HasBoundValue("childname"))
                         {
                             child.Name = result.Value("childname").ToString();
@@ -192,7 +195,7 @@ namespace FusekiConnection
 
         #region Specific Queries
 
-        public List<Bird> FilterBird(Bird birdPrmts)
+        public List<Bird> FilterBirdTaxon(Bird birdPrmts)
         {
             List<Bird> list = new List<Bird>();
             SparqlParameterizedString sparqlprmtS = new SparqlParameterizedString();
@@ -270,6 +273,8 @@ namespace FusekiConnection
             }
             return list;
         }
+
+        
 
         #endregion
 

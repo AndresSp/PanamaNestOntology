@@ -17,13 +17,13 @@ namespace FusekiConnection
             //e = selectQueries.SelectKingdoms();
             //e = selectQueries.SelectPhylums();
             //e = selectQueries.SelectClasses();
-            //e = selectQueries.SelectOrders();
+            e = selectQueries.SelectOrders();
             //e = selectQueries.SelectFamilies();
             //e = selectQueries.SelectGenuses();
             //e = selectQueries.SelectSpecies();
             //e = selectQueries.SelectBirds();
             //e = selectQueries.SelectHabitats();
-            e = selectQueries.SelectRegions();
+            //e = selectQueries.SelectRegions();
 
             /*
             Bird bird = new Bird();
