@@ -34,8 +34,8 @@ namespace FusekiConnection
             Birds,
             Habitats,
             Regions,
-            Filter_Birds,
-            
+            Filter_Birds_Taxon,
+            Filter_Birds_Loc,
             Ontology_Classes,
         }
 
@@ -74,7 +74,8 @@ namespace FusekiConnection
                 case QStrings.Habitats: query = "SELECT DISTINCT ?name WHERE { ?x pno:Habitat ?name. }"; break;
                 case QStrings.Regions: query = "SELECT DISTINCT ?name WHERE { ?x pno:Region ?name. }"; break;
                 //Filter Queries
-                case QStrings.Filter_Birds: query = "SELECT DISTINCT * WHERE { ?bird pno:Habitat ?habitat. ?bird pno:Region ?region. ?bird pno:CommonName ?commonname. ?bird pno:BinomialName ?binomialname. ?domain pno:hasKingdomChild ?kingdom. ?kingdom pno:hasPhylumChild ?phylum. ?phylum pno:hasClassChild ?class. ?class pno:hasOrderChild ?order. ?order pno:hasFamilyChild ?family. ?family pno:hasGenusChild ?genus. ?genus pno:hasSpeciesChild ?specie. ?specie pno:hasBirdChild ?bird. OPTIONAL {?bird rdfs:label ?name} OPTIONAL {?order rdfs:label ?ordername} OPTIONAL {?family rdfs:label ?familyname} OPTIONAL {?genus rdfs:label ?genusname} OPTIONAL {?specie rdfs:label ?speciename} FILTER(?order = @o && ?genus = @g && ?family = @f) }"; break;
+                case QStrings.Filter_Birds_Taxon: query = "SELECT DISTINCT * WHERE { ?bird pno:CommonName ?commonname. ?bird pno:BinomialName ?binomialname. ?bird pno:Habitat ?habitat. ?bird pno:Region ?region. ?bird pno:Size ?size. ?domain pno:hasKingdomChild ?kingdom. ?kingdom pno:hasPhylumChild ?phylum. ?phylum pno:hasClassChild ?class. ?class pno:hasOrderChild ?order. ?order pno:hasFamilyChild ?family. ?family pno:hasGenusChild ?genus. ?genus pno:hasSpeciesChild ?specie. ?specie pno:hasBirdChild ?bird. OPTIONAL {?bird rdfs:label ?name} OPTIONAL {?order rdfs:label ?ordername} OPTIONAL {?family rdfs:label ?familyname} OPTIONAL {?genus rdfs:label ?genusname} OPTIONAL {?specie rdfs:label ?speciename}  FILTER(?order = @o && ?genus = @g && ?family = @f) }"; break;
+                case QStrings.Filter_Birds_Loc: query = "SELECT DISTINCT * WHERE { ?bird pno:CommonName ?commonname. ?bird pno:BinomialName ?binomialname. ?bird pno:Habitat ?habitat. ?bird pno:Region ?region. ?bird pno:Size ?size. ?domain pno:hasKingdomChild ?kingdom. ?kingdom pno:hasPhylumChild ?phylum. ?phylum pno:hasClassChild ?class. ?class pno:hasOrderChild ?order. ?order pno:hasFamilyChild ?family. ?family pno:hasGenusChild ?genus. ?genus pno:hasSpeciesChild ?specie. ?specie pno:hasBirdChild ?bird. OPTIONAL {?bird rdfs:label ?name} OPTIONAL {?order rdfs:label ?ordername} OPTIONAL {?family rdfs:label ?familyname} OPTIONAL {?genus rdfs:label ?genusname} OPTIONAL {?specie rdfs:label ?speciename} FILTER(?region = @r && ?habitat = @h && ?size = @s) }"; break;
             }
 
             sparqlprmtS.CommandText = query;
