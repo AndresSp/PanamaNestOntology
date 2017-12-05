@@ -101,6 +101,8 @@
                     <th><strong>Order</strong></th>
                     <th><strong>Family</strong></th>
                     <th><strong>Genus</strong></th>
+                    <th><strong>Region</strong></th>
+                    <th><strong>Habitad</strong></th>
                 </tr>
             </thead>
             <tbody></tbody>
@@ -226,7 +228,8 @@
                 }],
                 columns: [
                     { data: 'uri' },
-                    { data: 'name' }
+                    { data: 'name' },
+                    { data: 'childsCount'}
                 ]
             });
 
@@ -248,7 +251,7 @@
                     targets: 0,
                     render: function (data, type, row) {
                         return type === 'display' && data.length > 10 ?
-                            data.substr(0, 47) + '…' :
+                            data.substr(0, 40) + '…' :
                             data;
                     }
                 }],
@@ -258,7 +261,9 @@
                     { data: 'commonName' },                    
                     { data: 'order.name' },
                     { data: 'family.name' },
-                    { data: 'genus.name' }
+                    { data: 'genus.name' },
+                    { data: 'region' },
+                    { data: 'habitat' }
                 ]
             });
         }
