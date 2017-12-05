@@ -26,15 +26,39 @@ namespace FusekiConnection
 
         public bool CreateBird(Bird bird)
         {
-            foreach(var triple in store.Triples)
-            {
-                //Console.WriteLine(store.);
-            }
-            /*
             Graph graph = new Graph();
-            fuseki.LoadGraph(graph, );
 
-            fuseki.SaveGraph(graph);*/
+            //if(fuseki.UpdateSupported)
+            //{
+            //INode s = graph.CreateBlankNode();
+            //INode p = graph.CreateUriNode(new Uri(RdfSpecsHelper.RdfType));
+            //INode o = graph.CreateUriNode(new Uri("http://example.org/Example"));
+            //    Triple t = new Triple(s, p, o, sparqlUtilities.GraphPath);
+            //    //fuseki.Update(sparqlUtilities.UpdatePath.ToString(), null, new Triple[] { t });
+            //}
+
+            //fuseki.LoadGraph(graph, sparqlUtilities.GraphPath);
+
+            graph.LoadFromUri(sparqlUtilities.GraphPath, new RdfXmlParser());
+
+            
+            graph.NamespaceMap.AddNamespace("dc", new Uri("http://purl.org/dc/elements/1.1/"));
+            graph.NamespaceMap.AddNamespace("owl", new Uri("http://www.w3.org/2002/07/owl#"));
+            graph.NamespaceMap.AddNamespace("pno", new Uri("http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#"));
+            graph.NamespaceMap.AddNamespace("rdf", new Uri("http://www.w3.org/1999/02/22-rdf-syntax-ns#"));
+            graph.NamespaceMap.AddNamespace("xml", new Uri("http://www.w3.org/XML/1998/namespace"));
+            graph.NamespaceMap.AddNamespace("xsd", new Uri("http://www.w3.org/2001/XMLSchema#"));
+            graph.NamespaceMap.AddNamespace("rdfs", new Uri("http://www.w3.org/2000/01/rdf-schema#"));
+            graph.NamespaceMap.AddNamespace("terms", new Uri("http://purl.org/dc/terms/"));
+
+            INode s = graph.CreateUriNode("pno:birttest");
+            INode p = graph.CreateUriNode("rdfs:label");
+            INode o = graph.CreateLiteralNode("Bird Test");
+
+            graph.Assert(s, p, o);
+            fuseki.SaveGraph(graph);
+
+            Console.WriteLine("ya");
             return true;
         }
     }

@@ -272,6 +272,15 @@ namespace FusekiConnection
                     bird.Region.Add(result.Value("region").ToString());
                     bird.Size = result.Value("size").ToString();
 
+                    if (result.HasBoundValue("comment"))
+                    {
+                        bird.Description = result.Value("comment").ToString();
+                    }
+
+                    if (result.HasBoundValue("imgurl"))
+                    {
+                        bird.imgUrl = result.Value("imgurl").ToString();
+                    }
                     list.Add(bird);
                 }
             }
@@ -349,6 +358,16 @@ namespace FusekiConnection
                     bird.Habitat.Add(result.Value("habitat").ToString());
                     bird.Region.Add(result.Value("region").ToString());
                     bird.Size = result.Value("size").ToString();
+
+                    if (result.HasBoundValue("comment"))
+                    {
+                        bird.Description = result.Value("comment").ToString();
+                    }
+
+                    if (result.HasBoundValue("imgurl"))
+                    {
+                        bird.imgUrl = result.Value("imgurl").ToString();
+                    }
 
                     list.Add(bird);
                 }
