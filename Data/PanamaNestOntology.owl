@@ -409,6 +409,7 @@ Their social lives are endlessly fascinating: they store thousands of acorns eac
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#Alcedinidae">
         <rdf:type rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Life"/>
         <pno:hasGenusChild rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#Chloroceryle"/>
+        <rdfs:label>Alcedinidae</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -457,6 +458,7 @@ Coots live near water, typically inhabiting wetlands and open water bodies in No
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#Chloroceryle">
         <rdf:type rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Life"/>
         <pno:hasSpeciesChild rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#amazona"/>
+        <rdfs:label>Chloroceryle</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -466,6 +468,7 @@ Coots live near water, typically inhabiting wetlands and open water bodies in No
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#Coraciiformes">
         <rdf:type rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Life"/>
         <pno:hasFamilyChild rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#Alcedinidae"/>
+        <rdfs:label>Coraciiformes</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -475,6 +478,7 @@ Coots live near water, typically inhabiting wetlands and open water bodies in No
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#Formicivorus">
         <rdf:type rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Life"/>
         <pno:hasBirdChild rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#Acorn_Woodpecker"/>
+        <rdfs:label>Formicivorus</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -484,6 +488,7 @@ Coots live near water, typically inhabiting wetlands and open water bodies in No
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#Fulica">
         <rdf:type rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Life"/>
         <pno:hasSpeciesChild rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#americana"/>
+        <rdfs:label>Fulica</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -493,6 +498,7 @@ Coots live near water, typically inhabiting wetlands and open water bodies in No
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#Gruiformes">
         <rdf:type rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Life"/>
         <pno:hasFamilyChild rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#Rallidae"/>
+        <rdfs:label>Gruiformes</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -502,6 +508,7 @@ Coots live near water, typically inhabiting wetlands and open water bodies in No
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#Melanerpes">
         <rdf:type rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Life"/>
         <pno:hasSpeciesChild rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#Formicivorus"/>
+        <rdfs:label>Melanerpes</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -511,6 +518,7 @@ Coots live near water, typically inhabiting wetlands and open water bodies in No
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#Picidae">
         <rdf:type rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Life"/>
         <pno:hasGenusChild rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#Melanerpes"/>
+        <rdfs:label>Picidae</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -520,6 +528,7 @@ Coots live near water, typically inhabiting wetlands and open water bodies in No
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#Piciformes">
         <rdf:type rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Life"/>
         <pno:hasFamilyChild rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#Picidae"/>
+        <rdfs:label>Piciformes</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -529,6 +538,7 @@ Coots live near water, typically inhabiting wetlands and open water bodies in No
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#Psittacara">
         <rdf:type rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Life"/>
         <pno:hasSpeciesChild rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#finschi"/>
+        <rdfs:label>Psittacara</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -538,6 +548,7 @@ Coots live near water, typically inhabiting wetlands and open water bodies in No
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#Psittacidae">
         <rdf:type rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Life"/>
         <pno:hasGenusChild rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#Psittacara"/>
+        <rdfs:label>Psittacidae</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -547,6 +558,7 @@ Coots live near water, typically inhabiting wetlands and open water bodies in No
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#Psittaciformes">
         <rdf:type rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Life"/>
         <pno:hasFamilyChild rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#Psittacidae"/>
+        <rdfs:label>Psittaciformes</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -556,6 +568,7 @@ Coots live near water, typically inhabiting wetlands and open water bodies in No
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#Rallidae">
         <rdf:type rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Life"/>
         <pno:hasGenusChild rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#Fulica"/>
+        <rdfs:label>Rallidae</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -565,6 +578,7 @@ Coots live near water, typically inhabiting wetlands and open water bodies in No
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#amazona">
         <rdf:type rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Life"/>
         <pno:hasBirdChild rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#Amazon_Kingfisher"/>
+        <rdfs:label>amazona</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -574,6 +588,7 @@ Coots live near water, typically inhabiting wetlands and open water bodies in No
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#americana">
         <rdf:type rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Life"/>
         <pno:hasBirdChild rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#American_Coot"/>
+        <rdfs:label>americana</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -583,6 +598,7 @@ Coots live near water, typically inhabiting wetlands and open water bodies in No
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#finschi">
         <rdf:type rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Life"/>
         <pno:hasBirdChild rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#Finsch&apos;s_Parakeet"/>
+        <rdfs:label>finschi</rdfs:label>
     </owl:NamedIndividual>
     
 
