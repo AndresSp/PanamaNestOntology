@@ -612,9 +612,9 @@ Coots live near water, typically inhabiting wetlands and open water bodies in No
         <pno:Habitat>Wetlands</pno:Habitat>
         <pno:Region>Central America</pno:Region>
         <pno:Size>28 cm</pno:Size>
-        <pno:CommonName>Finsch&apos;s Parakeet</pno:CommonName>
+        <pno:CommonName>Finschs Parakeet</pno:CommonName>
         <rdfs:comment>The crimson-fronted parakeet (Psittacara finschi), also known as Finsch&apos;s parakeet, Finsch&apos;s conure, or Piru, is a small green Neotropical parrot. It is found in Nicaragua, Costa Rica and western Panama. Its natural habitats are subtropical or tropical moist lowland forests and heavily degraded former forest.</rdfs:comment>
-        <rdfs:label>Finsch&apos;s_Parakeet</rdfs:label>
+        <rdfs:label>Finschs_Parakeet</rdfs:label>
         <foaf:depiction>https://farm4.staticflickr.com/3629/3457941984_5d379fbd4d_b.jpg</foaf:depiction>
     </owl:NamedIndividual>
     
