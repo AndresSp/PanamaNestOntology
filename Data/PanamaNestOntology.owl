@@ -385,6 +385,225 @@
     
 
 
+    <!-- http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#Acorn_Woodpecker -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#Acorn_Woodpecker">
+        <rdf:type rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Life"/>
+        <pno:BinomialName>Melanerpes Formicivorus</pno:BinomialName>
+        <pno:Habitat>Forest Area</pno:Habitat>
+        <pno:Region>Central America</pno:Region>
+        <pno:Region>North America</pno:Region>
+        <pno:Size>21 cm</pno:Size>
+        <pno:CommonName>Acorn Woodpecker</pno:CommonName>
+        <rdfs:comment>Reminiscent of a troupe of wide-eyed clowns, Acorn Woodpeckers live in large groups in western oak woodlands.
+
+Their social lives are endlessly fascinating: they store thousands of acorns each year by jamming them into specially made holes in trees.</rdfs:comment>
+        <rdfs:label>Acorn_Woodpecker</rdfs:label>
+        <foaf:depiction>http://cdn.audubon.org/cdn/farfuture/Xvy2mPrde6pNMaFGhDFU1l0cqbz02kFO6bDTKXM3I1s/mtime:1422550244/sites/default/files/Acorn_Woodpecker_s52-13-008_l_0.jpg</foaf:depiction>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#Alcedinidae -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#Alcedinidae">
+        <rdf:type rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Life"/>
+        <pno:hasGenusChild rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#Chloroceryle"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#Amazon_Kingfisher -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#Amazon_Kingfisher">
+        <rdf:type rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Life"/>
+        <pno:BinomialName>Chloroceryle amazona</pno:BinomialName>
+        <pno:Habitat>Forest Area</pno:Habitat>
+        <pno:Region>Caribbean</pno:Region>
+        <pno:Region>Central America</pno:Region>
+        <pno:Region>South America</pno:Region>
+        <pno:Size>29 cm</pno:Size>
+        <pno:CommonName>Amazon Kingfisher</pno:CommonName>
+        <rdfs:comment>The Amazon Kingfisher is a resident of lakeshores and large-slow flowing rivers from northern Mexico south to central Argentina.
+Amazon Kingfishers hunt fish and crustaceans from a perch, diving into the water to catch their prey and then returning to the same perch before stunning their prey and swallowing it head first.</rdfs:comment>
+        <rdfs:label>Amazon_Kingfisher</rdfs:label>
+        <foaf:depiction>https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Amazon_Kingfisher.jpg/1200px-Amazon_Kingfisher.jpg</foaf:depiction>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#American_Coot -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#American_Coot">
+        <rdf:type rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Life"/>
+        <pno:BinomialName> Fulica americana</pno:BinomialName>
+        <pno:Habitat>Wetlands</pno:Habitat>
+        <pno:Region>Caribbean</pno:Region>
+        <pno:Region>Central America</pno:Region>
+        <pno:Region>North America</pno:Region>
+        <pno:Region>South America</pno:Region>
+        <pno:Size>34-43 cm</pno:Size>
+        <pno:CommonName>American Coot</pno:CommonName>
+        <rdfs:comment>The American coot, also known as a mud hen, is a bird of the family Rallidae. Though commonly mistaken to be ducks, American coots belong to a distinct order.
+Coots live near water, typically inhabiting wetlands and open water bodies in North America. Groups of coots are called covers or rafts.</rdfs:comment>
+        <rdfs:label>American_Coot</rdfs:label>
+        <foaf:depiction>http://cdn.audubon.org/cdn/farfuture/oZcpoEhAR2Q3BcE3idYFfEhbmIXssieFjBJ_c3_96wc/mtime:1422550456/sites/default/files/American_Coot_c22-38-007_l_0.jpg</foaf:depiction>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#Chloroceryle -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#Chloroceryle">
+        <rdf:type rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Life"/>
+        <pno:hasSpeciesChild rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#amazona"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#Coraciiformes -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#Coraciiformes">
+        <rdf:type rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Life"/>
+        <pno:hasFamilyChild rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#Alcedinidae"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#Formicivorus -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#Formicivorus">
+        <rdf:type rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Life"/>
+        <pno:hasBirdChild rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#Acorn_Woodpecker"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#Fulica -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#Fulica">
+        <rdf:type rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Life"/>
+        <pno:hasSpeciesChild rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#americana"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#Gruiformes -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#Gruiformes">
+        <rdf:type rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Life"/>
+        <pno:hasFamilyChild rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#Rallidae"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#Melanerpes -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#Melanerpes">
+        <rdf:type rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Life"/>
+        <pno:hasSpeciesChild rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#Formicivorus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#Picidae -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#Picidae">
+        <rdf:type rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Life"/>
+        <pno:hasGenusChild rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#Melanerpes"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#Piciformes -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#Piciformes">
+        <rdf:type rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Life"/>
+        <pno:hasFamilyChild rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#Picidae"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#Psittacara -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#Psittacara">
+        <rdf:type rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Life"/>
+        <pno:hasSpeciesChild rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#finschi"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#Psittacidae -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#Psittacidae">
+        <rdf:type rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Life"/>
+        <pno:hasGenusChild rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#Psittacara"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#Psittaciformes -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#Psittaciformes">
+        <rdf:type rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Life"/>
+        <pno:hasFamilyChild rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#Psittacidae"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#Rallidae -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#Rallidae">
+        <rdf:type rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Life"/>
+        <pno:hasGenusChild rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#Fulica"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#amazona -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#amazona">
+        <rdf:type rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Life"/>
+        <pno:hasBirdChild rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#Amazon_Kingfisher"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#americana -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#americana">
+        <rdf:type rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Life"/>
+        <pno:hasBirdChild rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#American_Coot"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#finschi -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#finschi">
+        <rdf:type rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Life"/>
+        <pno:hasBirdChild rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#Finsch&apos;s_Parakeet"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#Finsch&apos;s_Parakeet -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#Finsch&apos;s_Parakeet">
+        <rdf:type rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Life"/>
+        <pno:BinomialName>Psittacara finschi</pno:BinomialName>
+        <pno:Habitat>Forest Area</pno:Habitat>
+        <pno:Habitat>Wetlands</pno:Habitat>
+        <pno:Region>Central America</pno:Region>
+        <pno:Size>28 cm</pno:Size>
+        <pno:CommonName>Finsch&apos;s Parakeet</pno:CommonName>
+        <rdfs:comment>The crimson-fronted parakeet (Psittacara finschi), also known as Finsch&apos;s parakeet, Finsch&apos;s conure, or Piru, is a small green Neotropical parrot. It is found in Nicaragua, Costa Rica and western Panama. Its natural habitats are subtropical or tropical moist lowland forests and heavily degraded former forest.</rdfs:comment>
+        <rdfs:label>Finsch&apos;s_Parakeet</rdfs:label>
+        <foaf:depiction>https://farm4.staticflickr.com/3629/3457941984_5d379fbd4d_b.jpg</foaf:depiction>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Accipiter -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Accipiter">
@@ -399,6 +618,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Accipitridae">
         <rdf:type rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Life"/>
+        <pno:hasGenusChild rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology#Fulica"/>
         <pno:hasGenusChild rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Accipiter"/>
         <pno:hasGenusChild rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Harpia"/>
         <pno:hasGenusChild rdf:resource="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#Pseudastur"/>
@@ -450,7 +670,7 @@
         <pno:Region>Central America</pno:Region>
         <pno:Region>North America</pno:Region>
         <pno:Region>South America</pno:Region>
-        <pno:Size rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">58-69 cm</pno:Size>
+        <pno:Size>58-69 cm</pno:Size>
         <pno:CommonName>Black Vulture</pno:CommonName>
         <rdfs:comment>The Black Vulture, also known as the American Black Vullture, is among the most common, widespread and easily visible of all American birds. 
 It&apos;s a large raptor bird who feeds mostly of carrion. At times also eats eggs of other birds, turtles, lizards.</rdfs:comment>
@@ -518,7 +738,7 @@ It&apos;s a large raptor bird who feeds mostly of carrion. At times also eats eg
         <pno:Habitat>Forest Area</pno:Habitat>
         <pno:Region>Central America</pno:Region>
         <pno:Region>South America</pno:Region>
-        <pno:Size rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">89-100 cm</pno:Size>
+        <pno:Size>89-100 cm</pno:Size>
         <pno:CommonName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harpy Eagle</pno:CommonName>
         <rdfs:comment>The Harpy Eagle is a neotropical species of eagle. It is also called the American Harpy Eagle to distinguish it from the Papuan Eagle. It is the largest and most powerful raptor found in the rainforest, and among the largest extant species of eagles in the world.
 The Harpy Eagle is the national bird of Panama and is depicted on the coat of arms of Panama.</rdfs:comment>
@@ -559,10 +779,11 @@ The Harpy Eagle is the national bird of Panama and is depicted on the coat of ar
         <pno:Region>Central America</pno:Region>
         <pno:Region>North America</pno:Region>
         <pno:Region>South America</pno:Region>
-        <pno:Size rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">36-48 cm</pno:Size>
+        <pno:Size>36-48 cm</pno:Size>
         <pno:CommonName>Snail Kite</pno:CommonName>
         <rdfs:comment>The Snail Kite is a bird of tropical marshlands. This specialized hawk feeds primarily on snails.</rdfs:comment>
         <rdfs:label>Snail_Kite</rdfs:label>
+        <foaf:depiction>http://cdn.audubon.org/cdn/farfuture/zOSpNxy7SWUaAsERL0H5JaLzrO7KyhGLBcH5cX4xV8Y/mtime:1422549349/sites/default/files/Snail_Kite_s52-12-227_l.jpg</foaf:depiction>
     </owl:NamedIndividual>
     
 
@@ -575,11 +796,11 @@ The Harpy Eagle is the national bird of Panama and is depicted on the coat of ar
         <pno:Habitat>Forest Area</pno:Habitat>
         <pno:Region>Central America</pno:Region>
         <pno:Region>South America</pno:Region>
-        <pno:Size rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">20-26 cm</pno:Size>
+        <pno:Size>20-26 cm</pno:Size>
         <pno:CommonName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tiny Hawk</pno:CommonName>
         <rdfs:comment>The Tiny Hawk is among the most poorly known members of its genus in the Neotropics. Name for its diminutive size, the male Tiny Hawk is only about 75 g although females exceed 100 g. With relatively elongated toes the Tiny Hawk is highly specialized for preying on birds.</rdfs:comment>
         <rdfs:label>Tiny_Hawk</rdfs:label>
-        <foaf:depiction>https://download.ams.birds.cornell.edu/api/v1/asset/51046611/large</foaf:depiction>
+        <foaf:depiction>http://3.bp.blogspot.com/-beW1RoOlwoc/UfGhU2GgNYI/AAAAAAAAAuk/0fb29BDGCSw/s1600/DSCN2537.jpg</foaf:depiction>
     </owl:NamedIndividual>
     
 
@@ -592,7 +813,7 @@ The Harpy Eagle is the national bird of Panama and is depicted on the coat of ar
         <pno:Habitat>Woodlands</pno:Habitat>
         <pno:Region>Central America</pno:Region>
         <pno:Region>South America</pno:Region>
-        <pno:Size rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">50 cm</pno:Size>
+        <pno:Size>50 cm</pno:Size>
         <pno:CommonName xml:lang="en">White Hawk</pno:CommonName>
         <rdfs:comment>White Hawk is a widespread raptor of Neotropical forests. They feed on a large assortment of prey items, but reptiles make up a major percentage of their diet.</rdfs:comment>
         <rdfs:label>White_Hawk</rdfs:label>
