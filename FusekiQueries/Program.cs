@@ -8,8 +8,8 @@ namespace FusekiConnection
     {
         public static void Main(string[] args)
         {
-            InsertQueries insertQueries = new InsertQueries();
-            insertQueries.CreateBird(new Bird());
+            //InsertQueries insertQueries = new InsertQueries();
+            //insertQueries.CreateBird(new Bird());
             
             SelectQueries selectQueries = new SelectQueries();
             List<Entity> e = new List<Entity>();
@@ -41,7 +41,7 @@ namespace FusekiConnection
             //bird.Family = family;
             //b = selectQueries.FilterBirdTaxon(bird);
 
-
+            
             Bird bird = new Bird();
             List<string> h = new List<string>();
             h.Add("Woodlands");
@@ -102,6 +102,8 @@ namespace FusekiConnection
                 }
 
                 Console.WriteLine("Size: " + bird.Size);
+                Console.WriteLine("Description:" + bird.Description);
+                Console.WriteLine("Img:" + bird.imgUrl);
                 Console.WriteLine();
             }
         }

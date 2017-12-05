@@ -8,17 +8,11 @@ namespace FusekiConnection
     public class SparqlUtilities
     {
         #region Server Uri
-        private Uri fileUploadPath = new Uri("http://localhost:3030/Main/upload");
-        public Uri FileUploadPath { get => fileUploadPath; private set => fileUploadPath = value; }
-
-        private Uri sparqlPath = new Uri("http://localhost:3030/Main/sparql");
-        public Uri SparqlPath { get => sparqlPath; private set => sparqlPath = value; }
-
-        private Uri graphPath = new Uri("http://localhost:3030/Main/data");
-        public Uri GraphPath { get => graphPath; set => graphPath = value; }
-
-        private Uri mainPath = new Uri("http://localhost:3030/Main/");
-        public Uri MainPath { get => mainPath; set => mainPath = value; }
+        public Uri FileUploadPath { get; private set; }
+        public Uri SparqlPath { get; private set; }
+        public Uri GraphPath { get; private set; }
+        public Uri MainPath { get; private set; }
+        public Uri UpdatePath { get; private set; }
         #endregion
 
         public enum QStrings
@@ -41,10 +35,16 @@ namespace FusekiConnection
 
         public SparqlUtilities()
         {
+            FileUploadPath = new Uri("http://localhost:3030/Main/upload");
+            SparqlPath = new Uri("http://localhost:3030/Main/sparql");
+            GraphPath = new Uri("http://localhost:3030/Main/data");
+            MainPath = new Uri("http://localhost:3030/Main/");
+            UpdatePath = new Uri("http://localhost:3030/Main/update");
         }
 
         private void AddNamespaces(SparqlParameterizedString sparqlprmtS)
         {
+            sparqlprmtS.Namespaces.AddNamespace("", new Uri("http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#"));
             sparqlprmtS.Namespaces.AddNamespace("dc", new Uri("http://purl.org/dc/elements/1.1/"));
             sparqlprmtS.Namespaces.AddNamespace("owl", new Uri("http://www.w3.org/2002/07/owl#"));
             sparqlprmtS.Namespaces.AddNamespace("pno", new Uri("http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#"));
@@ -53,6 +53,7 @@ namespace FusekiConnection
             sparqlprmtS.Namespaces.AddNamespace("xsd", new Uri("http://www.w3.org/2001/XMLSchema#"));
             sparqlprmtS.Namespaces.AddNamespace("rdfs", new Uri("http://www.w3.org/2000/01/rdf-schema#"));
             sparqlprmtS.Namespaces.AddNamespace("terms", new Uri("http://purl.org/dc/terms/"));
+            sparqlprmtS.Namespaces.AddNamespace("foaf", new Uri("http://xmlns.com/foaf/0.1/"));
         }
 
         public void AddQueryCommand(SparqlParameterizedString sparqlprmtS, QStrings qStrings)
@@ -74,8 +75,8 @@ namespace FusekiConnection
                 case QStrings.Habitats: query = "SELECT DISTINCT ?name WHERE { ?x pno:Habitat ?name. }"; break;
                 case QStrings.Regions: query = "SELECT DISTINCT ?name WHERE { ?x pno:Region ?name. }"; break;
                 //Filter Queries
-                case QStrings.Filter_Birds_Taxon: query = "SELECT DISTINCT * WHERE { ?bird pno:CommonName ?commonname. ?bird pno:BinomialName ?binomialname. ?bird pno:Habitat ?habitat. ?bird pno:Region ?region. ?bird pno:Size ?size. ?domain pno:hasKingdomChild ?kingdom. ?kingdom pno:hasPhylumChild ?phylum. ?phylum pno:hasClassChild ?class. ?class pno:hasOrderChild ?order. ?order pno:hasFamilyChild ?family. ?family pno:hasGenusChild ?genus. ?genus pno:hasSpeciesChild ?specie. ?specie pno:hasBirdChild ?bird. OPTIONAL {?bird rdfs:label ?name} OPTIONAL {?order rdfs:label ?ordername} OPTIONAL {?family rdfs:label ?familyname} OPTIONAL {?genus rdfs:label ?genusname} OPTIONAL {?specie rdfs:label ?speciename}  FILTER(?order = @o && ?genus = @g && ?family = @f) }"; break;
-                case QStrings.Filter_Birds_Loc: query = "SELECT DISTINCT * WHERE { ?bird pno:CommonName ?commonname. ?bird pno:BinomialName ?binomialname. ?bird pno:Habitat ?habitat. ?bird pno:Region ?region. ?bird pno:Size ?size. ?domain pno:hasKingdomChild ?kingdom. ?kingdom pno:hasPhylumChild ?phylum. ?phylum pno:hasClassChild ?class. ?class pno:hasOrderChild ?order. ?order pno:hasFamilyChild ?family. ?family pno:hasGenusChild ?genus. ?genus pno:hasSpeciesChild ?specie. ?specie pno:hasBirdChild ?bird. OPTIONAL {?bird rdfs:label ?name} OPTIONAL {?order rdfs:label ?ordername} OPTIONAL {?family rdfs:label ?familyname} OPTIONAL {?genus rdfs:label ?genusname} OPTIONAL {?specie rdfs:label ?speciename} FILTER(?region = @r && ?habitat = @h && ?size = @s) }"; break;
+                case QStrings.Filter_Birds_Taxon: query = "SELECT * WHERE { ?bird pno:CommonName ?commonname. ?bird pno:BinomialName ?binomialname. ?bird pno:Habitat ?habitat. ?bird pno:Region ?region. ?bird pno:Size ?size. OPTIONAL {?bird rdfs:comment ?comment} OPTIONAL {?bird foaf:depiction ?imgurl} ?domain pno:hasKingdomChild ?kingdom. ?kingdom pno:hasPhylumChild ?phylum. ?phylum pno:hasClassChild ?class. ?class pno:hasOrderChild ?order. ?order pno:hasFamilyChild ?family. ?family pno:hasGenusChild ?genus. ?genus pno:hasSpeciesChild ?specie. ?specie pno:hasBirdChild ?bird. OPTIONAL {?bird rdfs:label ?name} OPTIONAL {?order rdfs:label ?ordername} OPTIONAL {?family rdfs:label ?familyname} OPTIONAL {?genus rdfs:label ?genusname} OPTIONAL {?specie rdfs:label ?speciename} FILTER(?order = @o && ?genus = @g && ?family = @f) }"; break;
+                case QStrings.Filter_Birds_Loc: query = "SELECT * WHERE { ?bird pno:CommonName ?commonname. ?bird pno:BinomialName ?binomialname. ?bird pno:Habitat ?habitat. ?bird pno:Region ?region. ?bird pno:Size ?size. OPTIONAL {?bird rdfs:comment ?comment} OPTIONAL {?bird foaf:depiction ?imgurl} ?domain pno:hasKingdomChild ?kingdom. ?kingdom pno:hasPhylumChild ?phylum. ?phylum pno:hasClassChild ?class. ?class pno:hasOrderChild ?order. ?order pno:hasFamilyChild ?family. ?family pno:hasGenusChild ?genus. ?genus pno:hasSpeciesChild ?specie. ?specie pno:hasBirdChild ?bird. OPTIONAL {?bird rdfs:label ?name} OPTIONAL {?order rdfs:label ?ordername} OPTIONAL {?family rdfs:label ?familyname} OPTIONAL {?genus rdfs:label ?genusname} OPTIONAL {?specie rdfs:label ?speciename} FILTER(?region = @r && ?habitat = @h && ?size = @s) }"; break;
             }
 
             sparqlprmtS.CommandText = query;

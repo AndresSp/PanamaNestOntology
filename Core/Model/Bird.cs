@@ -17,6 +17,8 @@ namespace Entities.Model
         public List<string> Habitat { get; set; }
         public List<string> Region { get; set; }
         public string Size { get; set; }
+        public string Description { get; set; }
+        public string imgUrl { get; set; }
 
         public Bird()
         {
