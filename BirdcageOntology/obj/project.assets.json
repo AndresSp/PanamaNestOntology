@@ -8205,7 +8205,7 @@
       ]
     },
     "Newtonsoft.Json/10.0.3": {
-      "sha512": "hSXaFmh7hNCuEoC4XNY5DrRkLDzYHqPx/Ik23R4J86Z7PE/Y6YidhG602dFVdLBRSdG6xp9NabH3dXpcoxWvww==",
+      "sha512": "wBM7i7i3U2WX0ecor4zdVGvgrwFUjuigBoHKiL+nH39fCOpCPjBY3RDqJM32edvdyTAVdjzlccHsg41+/+zpSA==",
       "type": "package",
       "path": "newtonsoft.json/10.0.3",
       "files": [
@@ -13588,7 +13588,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Usuario\\.nuget\\packages\\": {},
+    "C:\\Users\\omarg\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
@@ -13597,17 +13597,17 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\Usuario\\Documents\\GitHub\\PanamenianNestOntology\\BirdcageOntology\\WebApp.csproj",
+      "projectUniqueName": "C:\\Users\\omarg\\Documents\\GitHub\\PanamenianNestOntology\\BirdcageOntology\\WebApp.csproj",
       "projectName": "WebApp",
-      "projectPath": "C:\\Users\\Usuario\\Documents\\GitHub\\PanamenianNestOntology\\BirdcageOntology\\WebApp.csproj",
-      "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Usuario\\Documents\\GitHub\\PanamenianNestOntology\\BirdcageOntology\\obj\\",
+      "projectPath": "C:\\Users\\omarg\\Documents\\GitHub\\PanamenianNestOntology\\BirdcageOntology\\WebApp.csproj",
+      "packagesPath": "C:\\Users\\omarg\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\omarg\\Documents\\GitHub\\PanamenianNestOntology\\BirdcageOntology\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\omarg\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -13620,11 +13620,11 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "C:\\Users\\Usuario\\Documents\\GitHub\\PanamenianNestOntology\\Core\\Entities.csproj": {
-              "projectPath": "C:\\Users\\Usuario\\Documents\\GitHub\\PanamenianNestOntology\\Core\\Entities.csproj"
+            "C:\\Users\\omarg\\Documents\\GitHub\\PanamenianNestOntology\\Core\\Entities.csproj": {
+              "projectPath": "C:\\Users\\omarg\\Documents\\GitHub\\PanamenianNestOntology\\Core\\Entities.csproj"
             },
-            "C:\\Users\\Usuario\\Documents\\GitHub\\PanamenianNestOntology\\FusekiQueries\\FusekiConnection.csproj": {
-              "projectPath": "C:\\Users\\Usuario\\Documents\\GitHub\\PanamenianNestOntology\\FusekiQueries\\FusekiConnection.csproj"
+            "C:\\Users\\omarg\\Documents\\GitHub\\PanamenianNestOntology\\FusekiQueries\\FusekiConnection.csproj": {
+              "projectPath": "C:\\Users\\omarg\\Documents\\GitHub\\PanamenianNestOntology\\FusekiQueries\\FusekiConnection.csproj"
             }
           }
         }

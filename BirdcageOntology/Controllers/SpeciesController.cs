@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Entities.Model;
 
 namespace WebApp.Controllers
 {
@@ -13,9 +14,11 @@ namespace WebApp.Controllers
             return View();
         }        
 
-        public IActionResult ViewSpecie()
+        [Route("viewspeciesdetail")]
+        [HttpPost]
+        public IActionResult ViewSpecie([FromBody] Bird bird)
         {
-            return View();
+            return View(bird);
         }
     }
 }

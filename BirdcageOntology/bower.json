@@ -11,7 +11,7 @@
     "datatables-responsive": "2.2.0",
     "metisMenu": "v2.7.1",
     "bootstrap": "v3.3.7",
-    "sweetalert": "bootstrap-sweetalert#v0.3.1"
+    "sweetalert2": "v7.0.7"
   },
   "resolutions": {
     "jquery": "3.2.1",
