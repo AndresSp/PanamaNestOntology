@@ -8,6 +8,7 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:dc="http://purl.org/dc/elements/1.1/">
     <owl:Ontology rdf:about="http://www.semanticweb.org/team/ontologies/2017/10/PanamaNestOntology">
         <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jackelin Chong</terms:contributor>
@@ -49,6 +50,14 @@
 
     <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/team/ontologies/2017/10/PanamenianNestOntology#CommonName">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/depiction -->
+
+    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/depiction">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
     </owl:AnnotationProperty>
     
 
@@ -443,7 +452,10 @@
         <pno:Region>South America</pno:Region>
         <pno:Size rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">58-69 cm</pno:Size>
         <pno:CommonName>Black Vulture</pno:CommonName>
+        <rdfs:comment>The Black Vulture, also known as the American Black Vullture, is among the most common, widespread and easily visible of all American birds. 
+It&apos;s a large raptor bird who feeds mostly of carrion. At times also eats eggs of other birds, turtles, lizards.</rdfs:comment>
         <rdfs:label>Black_Vulture</rdfs:label>
+        <foaf:depiction rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://cdn.audubon.org/cdn/farfuture/BFHbgPLws8WJiO5hjpdDhhAvalxP3S-Y_5Fl7fHDzOA/mtime:1422549324/sites/default/files/Black%2520Vulture%2520w02-43-005_l.jpg</foaf:depiction>
     </owl:NamedIndividual>
     
 
@@ -507,8 +519,11 @@
         <pno:Region>Central America</pno:Region>
         <pno:Region>South America</pno:Region>
         <pno:Size rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">89-100 cm</pno:Size>
-        <pno:CommonName>Harpy Eagle</pno:CommonName>
+        <pno:CommonName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harpy Eagle</pno:CommonName>
+        <rdfs:comment>The Harpy Eagle is a neotropical species of eagle. It is also called the American Harpy Eagle to distinguish it from the Papuan Eagle. It is the largest and most powerful raptor found in the rainforest, and among the largest extant species of eagles in the world.
+The Harpy Eagle is the national bird of Panama and is depicted on the coat of arms of Panama.</rdfs:comment>
         <rdfs:label>Harpy_Eagle</rdfs:label>
+        <foaf:depiction>https://assets.peregrinefund.org/visualmedia/photos/conservation/legacy-harpy/harpy-03.jpg</foaf:depiction>
     </owl:NamedIndividual>
     
 
@@ -546,6 +561,7 @@
         <pno:Region>South America</pno:Region>
         <pno:Size rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">36-48 cm</pno:Size>
         <pno:CommonName>Snail Kite</pno:CommonName>
+        <rdfs:comment>The Snail Kite is a bird of tropical marshlands. This specialized hawk feeds primarily on snails.</rdfs:comment>
         <rdfs:label>Snail_Kite</rdfs:label>
     </owl:NamedIndividual>
     
@@ -560,8 +576,10 @@
         <pno:Region>Central America</pno:Region>
         <pno:Region>South America</pno:Region>
         <pno:Size rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">20-26 cm</pno:Size>
-        <pno:CommonName>Tiny Hawk</pno:CommonName>
+        <pno:CommonName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tiny Hawk</pno:CommonName>
+        <rdfs:comment>The Tiny Hawk is among the most poorly known members of its genus in the Neotropics. Name for its diminutive size, the male Tiny Hawk is only about 75 g although females exceed 100 g. With relatively elongated toes the Tiny Hawk is highly specialized for preying on birds.</rdfs:comment>
         <rdfs:label>Tiny_Hawk</rdfs:label>
+        <foaf:depiction>https://download.ams.birds.cornell.edu/api/v1/asset/51046611/large</foaf:depiction>
     </owl:NamedIndividual>
     
 
@@ -576,7 +594,9 @@
         <pno:Region>South America</pno:Region>
         <pno:Size rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">50 cm</pno:Size>
         <pno:CommonName xml:lang="en">White Hawk</pno:CommonName>
+        <rdfs:comment>White Hawk is a widespread raptor of Neotropical forests. They feed on a large assortment of prey items, but reptiles make up a major percentage of their diet.</rdfs:comment>
         <rdfs:label>White_Hawk</rdfs:label>
+        <foaf:depiction rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.birdforum.net/opus/images/8/82/WhiteHawk2.jpg</foaf:depiction>
     </owl:NamedIndividual>
     
 
