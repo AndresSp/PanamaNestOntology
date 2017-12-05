@@ -72,6 +72,13 @@
             <tbody></tbody>
         </table>
     </div>
+    <div class="row" style="margin-top:15px"> 
+        <div class="col-md-4 col-md-offset-8">
+            <button type="button" class="btn btn-warning btn-block hidden" onclick="viewSpeciesDetail()" id="btnViewDetails">
+                <i class="fa fa-pagelines"></i> View Details
+            </button>
+        </div>
+    </div>
 </div>
 
 @section BodyArea{ 
@@ -85,6 +92,30 @@
         $(document).ready(function () {
             global.resultTable = $('#resultTable').DataTable();
             getHabitatRegion();
+
+            $('#resultTable tbody').on('click', 'tr', function () {
+                if ($(this).hasClass('selected')) {
+                    $(this).removeClass('selected');
+                }
+                else {
+                    global.resultTable.$('tr.selected').removeClass('selected');
+                    $(this).addClass('selected');
+
+                    global.viewmodel = global.resultTable.row(this).data();
+                    //console.log(data);
+                }
+
+                if (global.resultTable.$('tr.selected').length > 0) {
+                    $('#btnViewDetails').removeClass('hidden');
+
+                }
+                else {
+                    if (!$('#btnViewDetails').hasClass('hidden')) {
+                        $('#btnViewDetails').addClass('hidden');
+
+                    }
+                }
+            });
         });
 
         //Creacion de checkbox dinamico
@@ -154,6 +185,39 @@
             });
             return data;
         }
+
+        @*var viewSpeciesDetail = function () {
+            var content = global.viewmodel;
+            $.ajax({
+                type: 'POST',
+                url: '@Url.Action("ViewSpecie", "Species", )',
+                contentType: 'application/json;charset=utf-8',
+                dataType: 'json',
+                data: JSON.stringify(content),
+
+                beforeSend: function () {
+                    $('#Loading').modal('show');
+                    //console.log(this.data);
+                },
+
+                success: function (data, id) {
+                    //var result = data.data;
+                    //if (data.error.code == 200) {
+                    //    //setResultDataTable(result);
+                    //}
+                    //else {
+                    //    swal("Error!", 'Ocurrio un error al cargar tus datos...', "error");
+                    //}
+                    $('#Loading').modal('hide');
+                },
+
+                error: function (jqXHR, textStatus, errorThrown) {
+                    $('#Loading').modal('hide');
+                    swal("Error!", errorThrown, "error");
+                    console.log("getData" + " errorThrown: " + errorThrown + " jqXHR: " + jqXHR + " textStatus " + textStatus);
+                }
+            });
+        }*@
 
         var getQueryObject = function () {
             var region = getSelectedProperties('regionContainer');
