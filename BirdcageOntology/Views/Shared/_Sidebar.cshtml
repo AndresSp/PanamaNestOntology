@@ -14,26 +14,26 @@
         <li>
             <a href="@Url.Action("About", "Home")">About</a>
 
-            <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">Ontología</a>
+            <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">Ontology</a>
             <ul class="collapse list-unstyled" id="pageSubmenu">
-                <li><a href="@Url.Action("Index", "Species")">Crear Especie</a></li>
-                <li><a href="@Url.Action("ViewSpecie", "Species")">Ver Especie</a></li>     
+                <li><a href="@Url.Action("Index", "Species")">Add Specie</a></li>
+                @*<li><a href="@Url.Action("ViewSpecie", "Species")">Ver Especie</a></li>*@     
             </ul>
         </li>
         <li>
            
             <a href="#pageSubmenu2" data-toggle="collapse" aria-expanded="false">Queries</a>
             <ul class="collapse list-unstyled" id="pageSubmenu2">
-                <li><a href="@Url.Action("Querie1", "Query")">Querie 1</a></li>
-                <li><a href="@Url.Action("Querie2", "Query")">Querie 2</a></li>
+                <li><a href="@Url.Action("Querie1", "Query")">Filter By Taxonomy</a></li>
+                <li><a href="@Url.Action("Querie2", "Query")">Filter By Location</a></li>
             </ul>
         </li>
         <li>
             <a href="@Url.Action("Contact", "Home")">Contact</a>
         </li>
     </ul>
-    <ul class="list-unstyled CTAs">
+    @*<ul class="list-unstyled CTAs">
         <li><a href="https://bootstrapious.com/tutorial/files/sidebar.zip" class="download">Download source</a></li>
         <li><a href="https://bootstrapious.com/p/bootstrap-sidebar" class="article">Back to article</a></li>
-    </ul>
+    </ul>*@
 </nav>

@@ -8,62 +8,49 @@
         <li data-target="#myCarousel" data-slide-to="1"></li>
         <li data-target="#myCarousel" data-slide-to="2"></li>
         <li data-target="#myCarousel" data-slide-to="3"></li>
-        <li data-target="#myCarousel" data-slide-to="4"></li>
+        @*<li data-target="#myCarousel" data-slide-to="4"></li>*@
 
     </ol>
     <div class="carousel-inner" role="listbox">
         <div class="item active">
             <img src="~/images/bluebird.jpg" class="img-responsive" alt="Bluebird" style="width:100%;height:100%"/>
             <div class="carousel-caption" role="option">
-                <p>
-                    <font color="white">
-                    
-                    </font>
-                </p>
+                <h2>
+                    <font color="white">The Panama Nest Ontology<br /></font>
+                </h2>
             </div>
         </div>
-        <div class="item">
+        @*<div class="item">
             <img src="~/images/wetland.jpg" alt="Wetland" class="img-responsive" style="width:100%;height:100%" />
             <div class="carousel-caption" role="option">
-                <p>
-                    <font color="white">
-                       
-                    </font>
-                </p>
+               
+            </div>
+        </div>*@
+        <div class="item">
+            <img src="~/images/redguacamaya.jpg" alt="Guacamayas" class="img-responsive" style="width:100%;height:100%" />
+            <div class="carousel-caption" role="option">
+                <font color="white">
+                    <h2>Query the Ontology </h2>
+                    <p><font color="white">Use one of our predefined queries to search for our local birds</font></p>
+                </font>
             </div>
         </div>
         <div class="item">
             <img src="~/images/birdband.jpg" alt="Bird Band" class="img-responsive" style="width:100%;height:100%" />
             <div class="carousel-caption" role="option">
-                <p>
-                    <font color="white">
-                        
-                    </font>
-                </p>
+                <font color="white">
+                    <h2>Expand Our Database</h2>
+                    <p><font color="white">Register new species in the Ontology</font></p>
+                </font>
             </div>
-        </div>
-
-
-        <div class="item">
-            <img src="~/images/redguacamaya.jpg" alt="Guacamayas" class="img-responsive" style="width:100%;height:100%" />
-            <div class="carousel-caption" role="option">
-                <p>
-                    <font color="white">
-                    
-                    </font>
-                </p>
-            </div>
-        </div>
-
-
+        </div>    
         <div class="item">
             <img src="~/images/roundbird.jpg" alt="Microsoft Azure" class="img-responsive" style="width:100%;height:100%" />
             <div class="carousel-caption" role="option">
-                <p>
-                    <font color="white">
-                   
-                    </font>
-                </p>
+                <font color="white">
+                    <h2>Learn More About This Project</h2>
+                    <p><font color="white">Why use and ontology and the academic value behind it</font></p>
+                </font>
             </div>
         </div>
     </div>
@@ -77,17 +64,166 @@
     </a>
 </div>
 
-<div class="row">
-    <div class="col-md-3">
-        <h2>How to</h2>
-        
+<div class="row" style="margin-top:15px">
+    <div class="col-md-4">
+        <div class="panel panel-green">
+            <div class="panel-heading">
+                <div class="row">
+                    <div class="col-xs-3">
+                        <i class="fa fa-pagelines fa-5x"></i>
+                    </div>
+                    <div class="col-xs-9 text-right">
+                        <div class="huge">10</div>
+                        <div>Species in Ontology</div>
+                    </div>
+                </div>
+            </div>
+            <a href="@Url.Action("Index", "Species")">
+                <div class="panel-footer">
+                    <span class="pull-left">Add New Species</span>
+                    <span class="pull-right">
+                        <i class="fa fa-arrow-circle-right"></i>
+                    </span>
+                    <div class="clearfix"></div>
+                </div>
+            </a>
+        </div>
     </div>
-    <div class="col-md-3">
-        <h2>Overview</h2>
-        
+
+    <div class="col-md-4">
+        <div class="panel panel-red">
+            <div class="panel-heading">
+                <div class="row">
+                    <div class="col-xs-3">
+                        <i class="fa  fa-search fa-5x"></i>
+                    </div>
+                    <div class="col-xs-9 text-right">
+                        <div class="huge">2</div>
+                        <div>Available Queries</div>
+                    </div>
+                </div>
+            </div>
+            <a href="@Url.Action("Querie1", "Query")">
+                <div class="panel-footer">
+                    <span class="pull-left">Filter by Bird Taxon</span>
+                    <span class="pull-right">
+                        <i class="fa fa-arrow-circle-right"></i>
+                    </span>
+                    <div class="clearfix"></div>
+                </div>
+            </a>
+            <a href="@Url.Action("Querie2", "Query")">
+                <div class="panel-footer">
+                    <span class="pull-left">Filter by Bird Location</span>
+                    <span class="pull-right">
+                        <i class="fa fa-arrow-circle-right"></i>
+                    </span>
+                    <div class="clearfix"></div>
+                </div>
+            </a>
+        </div>
     </div>
-    <div class="col-md-3">
-        <h2>Run &amp; Deploy</h2>
-      
+
+    <div class="col-md-4">
+        <div class="panel panel-yellow">
+            <div class="panel-heading">
+                <div class="row">
+                    <div class="col-xs-3">
+                        <i class="fa fa-group fa-5x"></i>
+                    </div>
+                    <div class="col-xs-9 text-right">
+                        <div class="huge">*</div>
+                        <div>Read More About This Project</div>
+                    </div>
+                </div>
+            </div>
+            <a href="@Url.Action("About", "Home")">
+                <div class="panel-footer">
+                    <span class="pull-left">Why use an Ontology</span>
+                    <span class="pull-right">
+                        <i class="fa fa-arrow-circle-right"></i>
+                    </span>
+                    <div class="clearfix"></div>
+                </div>
+            </a>
+        </div>
     </div>
 </div>
+
+@*<div class="row" style="margin-top:50px;text-align:center">
+    <div class="col-md-3">
+        <a class="topic" href="Species">
+            <!--referencia-->
+            <div class="modal-content" style="background-color:lightskyblue">
+                <h3 class="modal-title" style="margin-top:25px">Add</h3>
+                <div class="fa fa-plus-square" style="font-size:50px">
+                    <!--imagen del add-->
+                </div>
+                <div class="modal-body">
+                    <p>
+                        <font color="black">
+                            Some text in the modal.
+                        </font>
+                    </p>
+                </div>
+            </div>
+        </a> <!--fin de la referencia-->
+    </div>
+
+    <div class="col-md-3">
+        <a class="topic" href="Species/ViewSpecie">
+            <!--referencia-->
+            <div class="modal-content" style="background-color:lightblue">
+                <h3 class="modal-title" style="margin-top:25px">View</h3>
+                <div class="fa fa-eye" style="font-size:50px">
+                    <!--imagen del view-->
+                </div>
+                <div class="modal-body">
+                    <p>
+                        <font color="black">
+                            Some text in the modal.
+                        </font>
+                    </p>
+                </div>
+            </div>
+        </a> <!--fin de la referencia-->
+    </div>
+
+    <div class="col-md-3">
+        <a class="topic" href="Query/Querie1">
+            <!--referencia-->
+            <div class="modal-content" style="background-color:darkred">
+                <h3 class="modal-title" style="margin-top:25px">Query 1</h3>
+                <div class="fa fa-search" style="font-size:50px">
+                    <!--imagen del query-->
+                </div>
+                <div class="modal-body">
+                    <p>
+                        <font color="black">
+                            Some text in the modal.
+                        </font>
+                    </p>
+                </div>
+            </div>
+        </a> <!--fin de la referencia-->
+    </div>
+
+    <div class="col-md-3">
+        <a class="topic" href="Query/Querie2">
+            <!--referencia-->
+            <div class="modal-content" style="background-color:#5bc0de">
+                <h3 class="modal-title" style="margin-top:25px">Query 2</h3>
+                <div class="fa fa-search" style="font-size:50px">
+                    <!--imagen del query-->
+                </div>
+                <div class="modal-body">
+                    <p>
+                        <font color="black">
+                            Some text in the modal.
+                        </font>
+                    </p>
+                </div>
+            </div>
+        </a> <!--fin de la referencia-->
+    </div>
+</div>*@
